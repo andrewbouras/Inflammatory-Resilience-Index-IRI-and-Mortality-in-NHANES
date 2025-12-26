@@ -1,0 +1,10 @@
+outcome,model,term,hr_ci,p_value
+All-cause,Model 1,iri_q_refQ1,4.03 (2.04-7.94),0.0001
+All-cause,Model 1,iri_q_refQ2,1.98 (1.09-3.59),0.0239
+All-cause,Model 1,iri_q_refQ3,1.59 (0.79-3.20),0.1974
+All-cause,Model 2,iri_q_refQ1,3.24 (1.28-8.18),0.0129
+All-cause,Model 2,iri_q_refQ2,1.68 (0.83-3.40),0.1519
+All-cause,Model 2,iri_q_refQ3,1.42 (0.70-2.88),0.3289
+All-cause,Model 3,iri_q_refQ1,2.87 (1.30-6.31),0.0088
+All-cause,Model 3,iri_q_refQ2,1.61 (0.82-3.17),0.1709
+All-cause,Model 3,iri_q_refQ3,1.38 (0.69-2.78),0.3666

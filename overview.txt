@@ -1,0 +1,53 @@
+Title
+Inflammatory Resilience Index (IRI) Combining hs-CRP, Albumin, and Grip Strength as a Predictor of Mortality: A Prospective NHANES Cohort Study
+
+Design
+Prospective cohort analysis leveraging NHANES examination data and linked mortality files.
+
+Population
+Inclusion: Adults ≥18 years with
+• hs-CRP,
+• serum albumin,
+• grip strength,
+• eligibility for mortality linkage.
+Exclusion:
+• pregnancy,
+• hs-CRP >10 mg/L in primary analysis.
+
+Exposure
+Components:
+• hs-CRP (log-transformed),
+• serum albumin (g/dL),
+• grip strength (kg; sex-standardized).
+Construct the IRI by standardizing each component:
+• hs-CRP z-score multiplied by −1 (higher = worse inflammation),
+• albumin z-score (higher = better protein reserve/anti-inflammatory proxy),
+• grip strength z-score (higher = better functional reserve).
+IRI = (−z hs-CRP) + z albumin + z grip strength.
+Higher IRI indicates greater resilience.
+
+Analyze IRI as a continuous variable and in quartiles.
+
+Outcomes
+Primary: Cardiovascular mortality.
+Secondary: Heart failure mortality, all-cause mortality.
+
+Covariates
+Demographics, socioeconomic factors, lifestyle variables, BMI, hypertension, diabetes, dyslipidemia, kidney function, and self-reported cardiovascular disease.
+
+Statistical Plan
+• Use appropriate NHANES survey weights, strata, and PSUs.
+• Describe baseline characteristics by IRI quartiles.
+• Fit Cox proportional hazards models with sequential adjustment:
+	1.	age, sex, race/ethnicity,
+	2.	socioeconomic and lifestyle factors,
+	3.	clinical comorbidities.
+• Compare IRI against hs-CRP alone to assess incremental prognostic value (change in C-statistics and likelihood ratio tests).
+• Conduct prespecified subgroup analyses (age, sex, obesity, baseline CVD).
+• Perform sensitivity analyses excluding early deaths and incorporating hs-CRP >10 mg/L.
+
+Rationale and Novelty
+Existing inflammatory markers predict risk but do not fully capture functional reserve. Grip strength and albumin each correlate with frailty, inflammation, and long-term prognosis. Combining hs-CRP with markers of physiologic reserve provides an integrated measure of systemic resilience. The IRI offers a simple, interpretable composite that may outperform hs-CRP alone in predicting mortality.
+
+Expected Contribution
+The IRI may serve as a clinically useful, low-cost prognostic tool. The study tests whether integrating inflammation and functional biomarkers offers improved discrimination over inflammation alone, using a large, nationally representative dataset with long follow-up.
