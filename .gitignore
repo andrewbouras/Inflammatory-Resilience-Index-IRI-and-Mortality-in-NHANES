@@ -1,0 +1,15 @@
+# Data (large, re-downloadable)
+data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# R
+.Rhistory
+.RData
+
+# OS
+.DS_Store
+
