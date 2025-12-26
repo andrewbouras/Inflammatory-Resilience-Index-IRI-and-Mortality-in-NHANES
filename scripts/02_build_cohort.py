@@ -92,6 +92,10 @@ def process_cycle(cycle: str, cycle_dir: Path) -> pd.DataFrame:
         ("TRIGLY", "Triglycerides"),
         ("SMQ", "Smoking"),
         ("MCQ", "Medical conditions"),
+        # Functional outcomes
+        ("HUQ", "Health status (self-rated)"),
+        ("PFQ", "Physical functioning"),
+        ("DPQ", "Depression (PHQ-9)"),
     ]
     
     for pattern, desc in components:
@@ -169,6 +173,8 @@ def build_iri_cohort(df: pd.DataFrame) -> pd.DataFrame:
     df['height_m'] = df.get('BMXHT', pd.Series([np.nan] * len(df), index=df.index)) / 100
     
     # ALM index (ALM / height^2) - similar to SMI (skeletal muscle index)
+    # Treat ALM=0 as missing (DEXA not performed, not true zero)
+    df['alm_kg'] = df['alm_kg'].replace(0, np.nan)
     df['almi'] = df['alm_kg'] / (df['height_m'] ** 2)
     
     # ==========================================================================
@@ -260,6 +266,48 @@ def build_iri_cohort(df: pd.DataFrame) -> pd.DataFrame:
     df['cancer_history'] = (cancer == 1).astype(int)
     
     # ==========================================================================
+    # FUNCTIONAL OUTCOMES
+    # ==========================================================================
+    
+    # Self-rated health (HUQ010): 1=Excellent, 2=Very good, 3=Good, 4=Fair, 5=Poor
+    df['self_rated_health'] = df.get('HUQ010', pd.Series([np.nan] * len(df), index=df.index))
+    df.loc[df['self_rated_health'] > 5, 'self_rated_health'] = np.nan  # 7,9 = refused/don't know
+    # Binary: Fair/Poor vs Excellent/Very good/Good
+    df['poor_health'] = (df['self_rated_health'] >= 4).astype(float)
+    df.loc[df['self_rated_health'].isna(), 'poor_health'] = np.nan
+    
+    # Mobility limitations (PFQ049): Difficulty walking 1/4 mile
+    # 1 = Some difficulty or unable, 2 = No difficulty
+    pfq049 = df.get('PFQ049', pd.Series([np.nan] * len(df), index=df.index))
+    df['difficulty_walking'] = (pfq049 == 1).astype(float)
+    df.loc[pfq049.isna() | (pfq049 > 2), 'difficulty_walking'] = np.nan
+    
+    # Difficulty climbing stairs (PFQ054)
+    pfq054 = df.get('PFQ054', pd.Series([np.nan] * len(df), index=df.index))
+    df['difficulty_stairs'] = (pfq054 == 1).astype(float)
+    df.loc[pfq054.isna() | (pfq054 > 2), 'difficulty_stairs'] = np.nan
+    
+    # PHQ-9 Depression score (DPQ010-DPQ090, each 0-3)
+    phq_items = ['DPQ010', 'DPQ020', 'DPQ030', 'DPQ040', 'DPQ050', 
+                 'DPQ060', 'DPQ070', 'DPQ080', 'DPQ090']
+    phq_cols = [c for c in phq_items if c in df.columns]
+    if phq_cols:
+        # Replace 7,9 with NaN
+        for col in phq_cols:
+            df.loc[df[col] > 3, col] = np.nan
+        df['phq9_score'] = df[phq_cols].sum(axis=1, min_count=9)  # require all 9
+        # Depression: PHQ-9 >= 10 (moderate-severe)
+        df['depression'] = (df['phq9_score'] >= 10).astype(float)
+        df.loc[df['phq9_score'].isna(), 'depression'] = np.nan
+    else:
+        df['phq9_score'] = np.nan
+        df['depression'] = np.nan
+    
+    print(f"  Self-rated health available: {df['self_rated_health'].notna().sum():,}")
+    print(f"  Mobility limitation data: {df['difficulty_walking'].notna().sum():,}")
+    print(f"  PHQ-9 available: {df['phq9_score'].notna().sum():,}")
+    
+    # ==========================================================================
     # ELIGIBILITY
     # ==========================================================================
     
@@ -324,6 +372,10 @@ def main():
         'smoking_status', 'current_smoker',
         'egfr', 'ckd',
         'cvd_history', 'cancer_history',
+        # Functional outcomes
+        'self_rated_health', 'poor_health',
+        'difficulty_walking', 'difficulty_stairs',
+        'phq9_score', 'depression',
         'eligible',
     ]
     

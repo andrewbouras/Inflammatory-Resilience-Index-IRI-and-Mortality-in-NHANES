@@ -1,0 +1,626 @@
+================================================================================
+INFLAMMATORY RESILIENCE INDEX COMBINING hs-CRP, ALBUMIN, AND APPENDICULAR 
+LEAN MASS PREDICTS FUNCTIONAL LIMITATIONS AND SELF-RATED HEALTH IN U.S. ADULTS: 
+NHANES 2015-2020
+================================================================================
+
+[Author names and affiliations to be added]
+
+================================================================================
+ABSTRACT
+================================================================================
+
+BACKGROUND: Inflammation, nutritional status, and muscle mass independently 
+predict adverse health outcomes. An integrated index combining these domains 
+may better capture overall physiologic resilience than individual biomarkers.
+
+OBJECTIVES: To develop an Inflammatory Resilience Index (IRI) combining 
+high-sensitivity C-reactive protein (hs-CRP), serum albumin, and appendicular 
+lean mass index (ALMI), and evaluate its association with functional outcomes 
+in U.S. adults.
+
+METHODS: Using NHANES 2015-2020 with dual-energy X-ray absorptiometry (DEXA) 
+data, we constructed the IRI as: (−z_hs-CRP) + z_Albumin + z_ALMI, where higher 
+values indicate better resilience. Among 2,729 adults aged ≥20 years with 
+complete data, we examined associations between IRI quartiles and functional 
+outcomes (fair/poor self-rated health, difficulty walking ¼ mile, depression 
+[PHQ-9 ≥10]) using survey-weighted logistic regression adjusted for age, sex, 
+and race/ethnicity.
+
+RESULTS: The IRI ranged from -5.2 to 5.2 (mean 0.74 ± 1.48). Participants in 
+the lowest IRI quartile (Q1) were older (42.3 vs 34.3 years), more often female 
+(68.6% vs 25.1%), had higher hs-CRP (4.08 vs 0.77 mg/L), lower albumin (4.12 vs 
+4.70 g/dL), and lower ALMI z-scores (-0.40 vs 0.53) compared to Q4. The 
+prevalence of fair/poor health decreased from 19.2% (Q1) to 9.2% (Q4), and 
+difficulty walking from 12.4% to 2.5%. In adjusted models, each 1-unit IRI 
+increase was associated with 19% lower odds of fair/poor health (OR: 0.81; 
+95% CI: 0.74-0.89; p<0.001) and 22% lower odds of walking difficulty (OR: 0.78; 
+95% CI: 0.67-0.91; p=0.005). Comparing Q1 to Q4, odds were 2.07-fold higher for 
+fair/poor health (95% CI: 1.42-3.01; p=0.004) and 4.51-fold higher for walking 
+difficulty (95% CI: 1.96-10.42; p=0.006).
+
+CONCLUSIONS: A novel Inflammatory Resilience Index integrating inflammation, 
+nutritional reserve, and muscle mass is significantly associated with 
+self-rated health and mobility limitations in U.S. adults. Lower IRI identifies 
+individuals with substantially higher odds of poor functional outcomes, 
+supporting its potential utility as a composite marker of physiologic reserve.
+
+Keywords: Inflammation; C-reactive protein; albumin; sarcopenia; functional 
+status; NHANES
+
+================================================================================
+HIGHLIGHTS
+================================================================================
+
+• The Inflammatory Resilience Index (IRI) combines hs-CRP, albumin, and 
+  appendicular lean mass into a single composite measure
+
+• Compared with the highest IRI quartile, the lowest quartile had ~2-fold 
+  higher odds of fair/poor self-rated health and ~4.5-fold higher odds of 
+  walking difficulty
+
+• These associations persist after adjustment for age, sex, and race/ethnicity
+
+• IRI captures integrated physiologic resilience across inflammation, 
+  nutrition, and muscle mass domains
+
+• This exploratory index warrants validation in prospective cohorts with 
+  hard clinical endpoints
+
+================================================================================
+INTRODUCTION
+================================================================================
+
+Systemic inflammation, nutritional status, and skeletal muscle mass represent 
+three interconnected physiologic domains that independently predict adverse 
+health outcomes including mortality, cardiovascular disease, and functional 
+decline (1-3). High-sensitivity C-reactive protein (hs-CRP), a marker of 
+low-grade systemic inflammation, is associated with increased cardiovascular 
+risk even after adjustment for traditional risk factors (4). Serum albumin, 
+reflecting both hepatic synthetic function and nutritional adequacy, predicts 
+mortality across diverse populations (5). Appendicular lean mass, a measure of 
+skeletal muscle, declines with aging and is a key component of sarcopenia and 
+frailty syndromes (6).
+
+While each biomarker provides prognostic information independently, the 
+interplay between inflammation, nutrition, and muscle mass suggests that 
+integrated assessment may better capture overall physiologic resilience. 
+Chronic inflammation promotes catabolism and muscle wasting; malnutrition 
+impairs immune function and muscle protein synthesis; and sarcopenia is 
+associated with increased inflammatory markers (7-9). This bidirectional 
+relationship creates a "vicious cycle" that accelerates functional decline 
+in vulnerable individuals.
+
+Previous composite indices have combined subsets of these domains. The Glasgow 
+Prognostic Score uses CRP and albumin to predict cancer outcomes (10). Frailty 
+indices incorporate measures of strength, nutrition, and functional status (11). 
+However, a simple composite specifically integrating inflammation, nutrition, 
+and objective muscle mass measurement has not been widely evaluated in 
+population-based samples.
+
+We hypothesized that an Inflammatory Resilience Index (IRI) combining hs-CRP, 
+serum albumin, and appendicular lean mass index (ALMI) from dual-energy X-ray 
+absorptiometry (DEXA) would identify individuals with poor self-rated health 
+and functional limitations. Using nationally representative data from NHANES 
+2015-2020, we aimed to: (1) construct the IRI as a simple additive z-score 
+composite; (2) characterize the demographic and clinical profiles of adults 
+across IRI quartiles; and (3) evaluate associations between IRI and functional 
+outcomes including self-rated health, mobility limitations, and depressive 
+symptoms.
+
+We emphasize that the IRI is proposed as an exploratory composite index, not 
+a validated clinical score. This analysis represents an initial step toward 
+understanding whether integrated assessment of these three domains provides 
+incremental information beyond individual biomarkers.
+
+================================================================================
+METHODS
+================================================================================
+
+DATA SOURCE AND STUDY POPULATION
+
+This analysis used data from the National Health and Nutrition Examination 
+Survey (NHANES), a nationally representative survey of the civilian, 
+non-institutionalized U.S. population conducted by the National Center for 
+Health Statistics (12). NHANES employs a complex, multistage probability 
+sampling design with oversampling of certain subgroups to ensure reliable 
+estimates. Participants undergo standardized interviews, physical examinations, 
+and laboratory assessments.
+
+We combined data from NHANES cycles 2015-2016 and 2017-2020 (pre-pandemic), 
+which include DEXA body composition measurements. The analytic sample included 
+adults aged ≥20 years with complete data for hs-CRP (≤10 mg/L, to exclude 
+acute infection), serum albumin, and DEXA-derived appendicular lean mass. 
+Participants with hs-CRP >10 mg/L were excluded to focus on chronic low-grade 
+inflammation rather than acute infectious or inflammatory conditions (13).
+
+The final eligible cohort included 2,729 participants with complete IRI 
+components and functional outcome data.
+
+INFLAMMATORY RESILIENCE INDEX CONSTRUCTION
+
+The IRI was constructed as an additive composite of three standardized 
+components:
+
+    IRI = (−z_hs-CRP) + z_Albumin + z_ALMI
+
+Where:
+• z_hs-CRP = log-transformed hs-CRP, standardized within the analytic sample 
+  and inverted so that lower inflammation yields higher scores
+• z_Albumin = serum albumin standardized within the analytic sample
+• z_ALMI = appendicular lean mass index standardized within sex (sex-specific 
+  z-scores)
+
+For hs-CRP and albumin, z-scores were calculated using the pooled sample mean 
+and standard deviation. For ALMI, sex-specific standardization was used to 
+account for known differences in muscle mass between men and women. Higher IRI 
+values indicate better inflammatory resilience (lower inflammation, higher 
+albumin, greater muscle mass). This formulation assigns equal weight to each 
+domain and is designed for simplicity and interpretability. The composite IRI 
+was not re-centered after construction; thus, the sample mean deviates slightly 
+from zero due to eligibility restrictions and missing data patterns.
+
+COMPONENT MEASUREMENTS
+
+High-sensitivity C-reactive protein (hs-CRP): Measured in serum using latex-
+enhanced nephelometry at a central laboratory. Values were reported in mg/L. 
+Participants with hs-CRP >10 mg/L were excluded per American Heart Association 
+guidelines for cardiovascular risk assessment (13).
+
+Serum albumin: Measured using the bromocresol purple method in the standard 
+NHANES biochemistry panel. Values were reported in g/dL.
+
+Appendicular lean mass index (ALMI): Calculated from whole-body DEXA scans 
+(Hologic Discovery model A). Appendicular lean mass was defined as the sum of 
+lean soft tissue mass in the arms and legs, excluding bone mineral content. 
+ALMI was calculated as appendicular lean mass (kg) divided by height squared 
+(m²). For the IRI, ALMI was converted to sex-specific z-scores (standardized 
+separately within men and women) to account for known sex differences in 
+muscle mass while facilitating combination with other index components.
+
+FUNCTIONAL OUTCOMES
+
+Primary outcomes were obtained from NHANES questionnaire data:
+
+1. Self-rated health: Participants rated their general health as excellent, 
+   very good, good, fair, or poor. We created a binary outcome for fair/poor 
+   health versus excellent/very good/good.
+
+2. Mobility limitation: Participants reported difficulty walking a quarter 
+   mile. Those reporting "some difficulty," "much difficulty," or "unable to 
+   do" were classified as having walking difficulty.
+
+3. Depression: The Patient Health Questionnaire-9 (PHQ-9) was administered. 
+   A score ≥10 was used to identify moderate-to-severe depressive symptoms, 
+   consistent with standard clinical cutoffs (14).
+
+COVARIATES
+
+Demographic variables included age (continuous), sex (male/female), and 
+race/ethnicity (categorized as non-Hispanic White, non-Hispanic Black, 
+Mexican American, other Hispanic, Asian, and other/multiracial). Additional 
+covariates for sensitivity analyses included body mass index (BMI), diabetes 
+(defined as HbA1c ≥6.5%, self-reported diabetes, or diabetes medication use), 
+hypertension (average systolic BP ≥130 mmHg, diastolic BP ≥80 mmHg, or 
+antihypertensive medication use), and current smoking status.
+
+STATISTICAL ANALYSIS
+
+All analyses incorporated NHANES survey weights, strata, and primary sampling 
+units to account for the complex survey design. Examination weights were scaled 
+for combined cycles per NCHS guidelines (15). Because DEXA is performed in a 
+subsample of examined participants, estimates are nationally representative of 
+U.S. adults eligible for and completing DEXA body composition assessment; older 
+adults and those with mobility limitations may be underrepresented.
+
+Baseline characteristics were compared across IRI quartiles using survey-
+weighted means and proportions. P-values for trend were obtained from 
+Wald tests in survey-adjusted regression models with IRI quartile as an 
+ordinal predictor.
+
+Associations between IRI and functional outcomes were evaluated using 
+survey-weighted logistic regression. Three modeling approaches were used:
+1. Continuous IRI: odds ratio per 1-unit increase in IRI
+2. Quartile analysis: odds ratios for Q1, Q2, and Q3 compared to Q4 
+   (highest resilience, reference)
+3. Sensitivity analysis: fully adjusted models including BMI, diabetes, 
+   hypertension, and smoking
+
+Prevalence of each outcome by IRI quartile was calculated with survey-
+weighted standard errors. A two-sided p-value <0.05 was considered 
+statistically significant. Analyses were performed using R version 4.3 
+with the survey package (16).
+
+================================================================================
+RESULTS
+================================================================================
+
+STUDY POPULATION
+
+Of 25,531 NHANES 2015-2020 participants, 2,729 adults aged ≥20 years met 
+eligibility criteria with complete IRI components (hs-CRP ≤10 mg/L, albumin, 
+and DEXA-derived ALMI). The mean age was 39.6 ± 11.4 years, 48.6% were female, 
+and the racial/ethnic distribution was 61.5% non-Hispanic White, 11.0% 
+non-Hispanic Black, 8.4% Mexican American, 10.8% Asian, and 8.3% other.
+
+The IRI ranged from -5.16 to 5.24, with a mean of 0.74 (SD 1.48). Quartile 
+boundaries were: Q1 (≤-0.28, lowest resilience), Q2 (-0.28 to 0.83), Q3 
+(0.83 to 1.90), and Q4 (>1.90, highest resilience).
+
+CHARACTERISTICS BY IRI QUARTILE (TABLE 1)
+
+Participants in the lowest IRI quartile (Q1) differed substantially from 
+those in the highest quartile (Q4):
+
+Demographics:
+• Age: Q1 participants were older (42.3 vs 34.3 years, p<0.001)
+• Sex: Q1 had more females (68.6% vs 25.1%, p<0.001)
+• BMI: Higher in Q1 (29.5 vs 27.4 kg/m², p<0.001)
+
+IRI Components:
+• hs-CRP: 5.3-fold higher in Q1 (4.08 vs 0.77 mg/L, p<0.001)
+• Albumin: Lower in Q1 (4.12 vs 4.70 g/dL, p<0.001)
+• ALMI z-score: Lower in Q1 (-0.40 vs 0.53, p<0.001)
+
+Comorbidities:
+• Diabetes: More prevalent in Q1 (15.6% vs 5.7%, p<0.001)
+• Hypertension: Similar across quartiles (~35-41%, p=0.20)
+• CVD history: Numerically higher in Q1 (5.4% vs 2.3%, p=0.12)
+• Current smoking: More prevalent in Q1 (25.8% vs 16.5%, p=0.03)
+
+FUNCTIONAL OUTCOMES BY IRI QUARTILE (TABLE 2)
+
+Clear gradients in functional outcome prevalence were observed across IRI 
+quartiles:
+
+Fair/Poor Self-Rated Health:
+• Q1 (lowest resilience): 19.2% (SE 2.0%)
+• Q2: 17.5% (SE 1.6%)
+• Q3: 13.8% (SE 1.9%)
+• Q4 (highest resilience): 9.2% (SE 1.0%)
+• Absolute difference Q1 vs Q4: 10.0 percentage points
+
+Difficulty Walking ¼ Mile:
+• Q1: 12.4% (SE 1.7%)
+• Q2: 8.7% (SE 1.4%)
+• Q3: 7.8% (SE 1.3%)
+• Q4: 2.5% (SE 0.6%)
+• Absolute difference Q1 vs Q4: 9.9 percentage points
+
+Depression (PHQ-9 ≥10):
+• Q1: 8.5% (SE 0.9%)
+• Q2: 7.0% (SE 1.3%)
+• Q3: 6.6% (SE 0.9%)
+• Q4: 5.3% (SE 0.6%)
+• Absolute difference Q1 vs Q4: 3.2 percentage points
+
+MULTIVARIABLE ASSOCIATIONS (TABLE 2)
+
+Continuous IRI Analysis:
+Each 1-unit increase in IRI was associated with significantly lower odds of 
+adverse functional outcomes after adjustment for age, sex, and race/ethnicity:
+• Fair/poor health: OR 0.81 (95% CI: 0.74-0.89), p<0.001
+• Walking difficulty: OR 0.78 (95% CI: 0.67-0.91), p=0.005
+• Depression: OR 0.90 (95% CI: 0.77-1.05), p=0.14 (not significant)
+
+Quartile Analysis (Q4 reference):
+Compared to participants in the highest IRI quartile (Q4), those in the 
+lowest quartile (Q1) had significantly elevated odds:
+• Fair/poor health: OR 2.07 (95% CI: 1.42-3.01), p=0.004
+• Walking difficulty: OR 4.51 (95% CI: 1.96-10.42), p=0.006
+• Depression: OR 1.40 (95% CI: 0.79-2.49), p=0.19 (not significant)
+
+The intermediate quartiles showed graded associations, with Q2 and Q3 
+generally having odds ratios between Q1 and Q4, supporting a dose-response 
+relationship.
+
+SENSITIVITY ANALYSES
+
+In fully adjusted models including BMI, diabetes, hypertension, and smoking, 
+associations were modestly attenuated but remained significant for self-rated 
+health (continuous IRI OR: 0.85, 95% CI: 0.76-0.95, p=0.02). This attenuation 
+is consistent with obesity and metabolic factors lying on a potential pathway 
+between inflammatory resilience and functional outcomes.
+
+================================================================================
+DISCUSSION
+================================================================================
+
+In this nationally representative sample of U.S. adults, we developed and 
+evaluated an Inflammatory Resilience Index integrating hs-CRP, serum albumin, 
+and DEXA-derived appendicular lean mass. Lower IRI was significantly associated 
+with fair/poor self-rated health and mobility limitations after adjustment 
+for age, sex, and race/ethnicity. Adults in the lowest IRI quartile had 
+approximately 2-fold higher odds of poor self-rated health and 4.5-fold 
+higher odds of walking difficulty compared to the highest quartile. These 
+findings support the concept that integrated assessment across inflammation, 
+nutrition, and muscle mass domains may identify individuals at risk for 
+functional decline.
+
+BIOLOGICAL PLAUSIBILITY
+
+The associations observed are biologically plausible given the well-
+established interrelationships between the IRI components. Chronic low-grade 
+inflammation promotes muscle catabolism through activation of the ubiquitin-
+proteasome pathway and suppression of protein synthesis (7). Inflammatory 
+cytokines including interleukin-6 and tumor necrosis factor-α directly impair 
+myocyte function and promote sarcopenia (17). Albumin, beyond its role as a 
+nutritional marker, functions as an antioxidant and anti-inflammatory 
+mediator; hypoalbuminemia reflects both inadequate nutritional intake and 
+increased catabolism during inflammatory states (18).
+
+The convergence of these pathways on functional outcomes is supported by 
+prior literature. The Glasgow Prognostic Score (CRP + albumin) predicts 
+survival in cancer patients, demonstrating the prognostic value of combining 
+inflammation and nutrition (10). Sarcopenia, defined by low muscle mass 
+and/or function, is associated with increased mortality, disability, and 
+poor quality of life (6). Our IRI extends these concepts by integrating 
+all three domains in a general adult population.
+
+COMPARISON WITH PRIOR LITERATURE
+
+Prior NHANES analyses have examined individual IRI components in isolation. 
+Elevated hs-CRP is associated with increased cardiovascular mortality and 
+all-cause mortality, even after adjustment for traditional risk factors (4). 
+Low serum albumin predicts mortality across age groups and is incorporated 
+into prognostic scores for heart failure and chronic kidney disease (19). 
+Low appendicular lean mass, particularly when indexed to height, identifies 
+individuals at risk for falls, fractures, and functional decline (20).
+
+Our analysis extends this literature by demonstrating that a simple 
+additive composite of standardized components is associated with self-
+reported functional outcomes. The use of z-score transformation allows 
+equal weighting of each domain and facilitates interpretation: a 1-unit 
+increase in IRI represents a 1-standard-deviation improvement in overall 
+resilience.
+
+CLINICAL IMPLICATIONS
+
+Although the IRI is proposed as an exploratory index rather than a validated 
+clinical tool, these findings have potential implications for risk 
+stratification. Routine clinical assessment already includes serum albumin 
+and inflammatory markers; DEXA body composition is increasingly available. 
+Integration of these measurements into a composite score could identify 
+individuals who might benefit from interventions targeting inflammation 
+(anti-inflammatory therapies, lifestyle modification), nutrition 
+(protein supplementation, dietary counseling), or muscle mass (resistance 
+exercise, physical therapy).
+
+The strong association between IRI and self-rated health is particularly 
+notable, as self-rated health is itself a powerful predictor of mortality 
+and health care utilization (21). Identifying modifiable contributors to 
+poor self-rated health could inform targeted interventions.
+
+LIMITATIONS
+
+Several limitations warrant consideration:
+
+First, the cross-sectional design precludes causal inference. We cannot 
+determine whether low IRI causes poor functional outcomes, whether 
+functional limitations lead to inflammation and muscle loss, or whether 
+both reflect underlying comorbid conditions. Prospective validation with 
+incident outcomes is needed.
+
+Second, the analytic sample was restricted to participants with DEXA data, 
+which represents a younger and healthier subset of NHANES (mean age 39.6 
+years). Results may not generalize to older or sicker populations.
+
+Third, ALMI values were standardized to z-scores rather than using 
+established sarcopenia cutoffs. This approach facilitates combination with 
+other components but limits comparison with prior sarcopenia literature. 
+Future analyses could evaluate IRI using clinically defined low muscle mass.
+
+Fourth, functional outcomes were self-reported and subject to reporting 
+bias. Objective measures of physical function (e.g., gait speed, grip 
+strength, 6-minute walk) would strengthen causal inference.
+
+Fifth, the IRI is proposed as an exploratory composite. Its components 
+are weighted equally, and the optimal weighting scheme was not empirically 
+derived. The index has not been validated in external cohorts. An 
+exploratory mortality analysis is presented in the Supplemental Materials; 
+however, only 20 deaths occurred, and mortality findings are severely 
+underpowered and should be interpreted with caution.
+
+================================================================================
+CONCLUSIONS
+================================================================================
+
+In this nationally representative sample of U.S. adults, the Inflammatory 
+Resilience Index—a simple composite of hs-CRP, serum albumin, and 
+appendicular lean mass—was significantly associated with self-rated health 
+and mobility limitations. Adults in the lowest IRI quartile had 2-fold 
+higher odds of fair/poor health and 4.5-fold higher odds of walking 
+difficulty compared to the highest quartile. These findings support IRI 
+as an integrative marker of physiologic resilience capturing inflammation, 
+nutrition, and muscle mass domains.
+
+The IRI is proposed as an exploratory index warranting validation in 
+prospective cohorts with hard clinical endpoints. If confirmed, the IRI 
+could inform risk stratification and identify targets for intervention 
+in individuals at risk for functional decline.
+
+================================================================================
+PERSPECTIVES
+================================================================================
+
+COMPETENCY IN MEDICAL KNOWLEDGE: An Inflammatory Resilience Index combining 
+hs-CRP, albumin, and appendicular lean mass identifies U.S. adults at 
+elevated risk for poor self-rated health and mobility limitations.
+
+COMPETENCY IN PATIENT CARE: Integrated assessment of inflammation, 
+nutritional status, and muscle mass may help identify patients who could be 
+candidates for multidimensional interventions targeting these interconnected 
+domains.
+
+TRANSLATIONAL OUTLOOK: Prospective validation of the IRI in diverse 
+populations, with hard endpoints including mortality and incident 
+disability, is needed to establish clinical utility. Research is also 
+needed to determine whether interventions targeting IRI components 
+improve functional outcomes.
+
+================================================================================
+REFERENCES
+================================================================================
+
+1. Libby P, Ridker PM, Hansson GK. Inflammation in atherosclerosis: from 
+   pathophysiology to practice. J Am Coll Cardiol. 2009;54(23):2129-2138.
+
+2. Ridker PM, Cushman M, Stampfer MJ, Tracy RP, Hennekens CH. Inflammation, 
+   aspirin, and the risk of cardiovascular disease in apparently healthy men. 
+   N Engl J Med. 1997;336(14):973-979.
+
+3. Cruz-Jentoft AJ, Bahat G, Bauer J, et al. Sarcopenia: revised European 
+   consensus on definition and diagnosis. Age Ageing. 2019;48(1):16-31.
+
+4. Ridker PM. High-sensitivity C-reactive protein: potential adjunct for 
+   global risk assessment in the primary prevention of cardiovascular disease. 
+   Circulation. 2001;103(13):1813-1818.
+
+5. Goldwasser P, Feldman J. Association of serum albumin and mortality risk. 
+   J Clin Epidemiol. 1997;50(6):693-703.
+
+6. Bauer J, Morley JE, Schols AMWJ, et al. Sarcopenia: a time for action. 
+   J Cachexia Sarcopenia Muscle. 2019;10(5):956-961.
+
+7. Schaap LA, Pluijm SMF, Deeg DJH, Visser M. Inflammatory markers and loss 
+   of muscle mass (sarcopenia) and strength. Am J Med. 2006;119(6):526.e9-17.
+
+8. Dalle S, Rossmeislova L, Bhide M. The role of inflammation in age-related 
+   sarcopenia. Front Physiol. 2017;8:1045.
+
+9. Wilson D, Jackson T, Sapey E, Lord JM. Frailty and sarcopenia: the 
+   potential role of an aged immune system. Ageing Res Rev. 2017;36:1-10.
+
+10. McMillan DC. The systemic inflammation-based Glasgow Prognostic Score: 
+    a decade of experience in patients with cancer. Cancer Treat Rev. 
+    2013;39(5):534-540.
+
+11. Rockwood K, Song X, MacKnight C, et al. A global clinical measure of 
+    fitness and frailty in elderly people. CMAJ. 2005;173(5):489-495.
+
+12. Centers for Disease Control and Prevention (CDC). National Health and 
+    Nutrition Examination Survey. Available at: 
+    https://www.cdc.gov/nchs/nhanes/index.htm
+
+13. Pearson TA, Mensah GA, Alexander RW, et al. Markers of inflammation and 
+    cardiovascular disease: application to clinical and public health 
+    practice. Circulation. 2003;107(3):499-511.
+
+14. Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief 
+    depression severity measure. J Gen Intern Med. 2001;16(9):606-613.
+
+15. Johnson CL, Paulose-Ram R, Ogden CL, et al. National Health and 
+    Nutrition Examination Survey: analytic guidelines, 1999-2010. Vital 
+    Health Stat 2. 2013;(161):1-24.
+
+16. Lumley T. Analysis of complex survey samples. J Stat Softw. 
+    2004;9(8):1-19.
+
+17. Schaap LA, Pluijm SMF, Deeg DJH, et al. Higher inflammatory marker 
+    levels in older persons: associations with 5-year change in muscle 
+    mass and muscle strength. J Gerontol A Biol Sci Med Sci. 
+    2009;64(11):1183-1189.
+
+18. Don BR, Kaysen G. Serum albumin: relationship to inflammation and 
+    nutrition. Semin Dial. 2004;17(6):432-437.
+
+19. Horwich TB, Kalantar-Zadeh K, MacLellan RW, Fonarow GC. Albumin levels 
+    predict survival in patients with systolic heart failure. Am Heart J. 
+    2008;155(5):883-889.
+
+20. Studenski SA, Peters KW, Alley DE, et al. The FNIH sarcopenia project: 
+    rationale, study description, conference recommendations, and final 
+    estimates. J Gerontol A Biol Sci Med Sci. 2014;69(5):547-558.
+
+21. DeSalvo KB, Bloser N, Reynolds K, He J, Muntner P. Mortality prediction 
+    with a single general self-rated health question. J Gen Intern Med. 
+    2006;21(3):267-275.
+
+================================================================================
+TABLES
+================================================================================
+
+TABLE 1. Baseline Characteristics by IRI Quartile
+
+                          Q1 (Lowest)  Q2        Q3        Q4 (Highest)  p-value
+--------------------------------------------------------------------------------
+N                         652          757       743       577           --
+Age, years                42.3±11.2    41.4±11.4 39.6±10.9 34.3±10.7    <0.001
+Female, %                 68.6         57.5      40.6      25.1          <0.001
+BMI, kg/m²                29.5±7.0     29.2±6.2  29.2±6.7  27.4±6.3     <0.001
+
+IRI Components:
+  hs-CRP, mg/L            4.08±2.62    2.62±2.07 1.77±1.75 0.77±1.12    <0.001
+  Albumin, g/dL           4.12±0.28    4.32±0.24 4.47±0.22 4.70±0.23    <0.001
+  ALMI z-score*           -0.40±1.09   0.22±0.83 0.49±0.77 0.53±0.81    <0.001
+
+Comorbidities:
+  Diabetes, %             15.6         11.8      9.6       5.7           <0.001
+  Hypertension, %         41.0         40.3      39.4      33.1          0.20
+  CVD history, %          5.4          3.0       3.8       2.3           0.12
+  Current smoker, %       25.8         18.7      21.9      16.5          0.03
+
+*ALMI values are standardized z-scores, not raw kg/m² values.
+Abbreviations: BMI=body mass index; CVD=cardiovascular disease; 
+hs-CRP=high-sensitivity C-reactive protein; ALMI=appendicular lean mass index
+
+--------------------------------------------------------------------------------
+
+TABLE 2. Association of IRI with Functional Outcomes
+
+                          Prevalence by Quartile (%)           
+Outcome                   Q1      Q2      Q3      Q4      
+--------------------------------------------------------------------------------
+Fair/Poor Health          19.2    17.5    13.8    9.2     
+Difficulty Walking        12.4    8.7     7.8     2.5     
+Depression (PHQ-9≥10)     8.5     7.0     6.6     5.3     
+
+                          Adjusted Odds Ratios* (95% CI)
+Outcome                   Continuous IRI    p       Q1 vs Q4          p
+                          (per 1-unit)              
+--------------------------------------------------------------------------------
+Fair/Poor Health          0.81 (0.74-0.89)  <0.001  2.07 (1.42-3.01)  0.004
+Difficulty Walking        0.78 (0.67-0.91)  0.005   4.51 (1.96-10.42) 0.006
+Depression                0.90 (0.77-1.05)  0.14    1.40 (0.79-2.49)  0.19
+
+*Adjusted for age, sex, and race/ethnicity.
+Abbreviations: CI=confidence interval; IRI=Inflammatory Resilience Index; 
+PHQ-9=Patient Health Questionnaire-9
+
+================================================================================
+FIGURE LEGENDS
+================================================================================
+
+FIGURE 1. Forest Plot of IRI Quartile Associations with Functional Outcomes
+Odds ratios comparing the lowest IRI quartile (Q1) to the highest (Q4, 
+reference) for three functional outcomes, adjusted for age, sex, and 
+race/ethnicity. Red points indicate statistically significant associations 
+(p<0.05). Error bars represent 95% confidence intervals.
+
+FIGURE 2. Prevalence of Functional Outcomes by IRI Quartile
+Bar charts showing survey-weighted prevalence (with standard error bars) 
+of fair/poor self-rated health, difficulty walking ¼ mile, and depression 
+(PHQ-9 ≥10) across IRI quartiles. Q1 represents lowest inflammatory 
+resilience (highest inflammation, lowest albumin, lowest muscle mass) and 
+Q4 represents highest resilience.
+
+FIGURE 3. IRI Component Profiles by Quartile
+Mean values of hs-CRP (mg/L), serum albumin (g/dL), and ALMI z-score across 
+IRI quartiles, illustrating the distribution of each component contributing 
+to the composite index.
+
+================================================================================
+SUPPLEMENTAL MATERIAL
+================================================================================
+
+eMethods: Detailed variable definitions and NHANES file specifications
+eTable 1: Complete survey-weighted Table 1 with all demographic variables
+eTable 2: Sensitivity analyses with fully adjusted models
+eTable 3: Exploratory mortality analysis (underpowered)
+eFigure 1: IRI distribution histogram
+eFigure 2: Directed acyclic graph showing hypothesized causal relationships
+
+================================================================================
+END OF MANUSCRIPT
+================================================================================
+
