@@ -101,5 +101,5 @@ Where:
 
 ---
 
-*Analysis completed: December 2024*
+*Analysis completed: December 2025*
 
