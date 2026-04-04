@@ -126,13 +126,10 @@ def main():
             all_mort.append(mort_df)
     
     if not all_mort:
-        print("\nNo mortality data loaded. Creating placeholder mortality variables...")
-        # Create placeholder - analysis will need actual mortality data
-        df['mortstat'] = np.nan
-        df['mort_all'] = np.nan
-        df['mort_cv'] = np.nan
-        df['mort_heart'] = np.nan
-        df['followup_years'] = np.nan
+        print("\nERROR: No mortality data loaded. Cannot proceed without mortality linkage.")
+        print("Download mortality files first (see 01_download_data.py).")
+        import sys
+        sys.exit(1)
     else:
         # Combine mortality data
         combined_mort = pd.concat(all_mort, ignore_index=True)

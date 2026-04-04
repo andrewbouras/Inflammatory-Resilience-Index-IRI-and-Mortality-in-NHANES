@@ -8,7 +8,7 @@ What Is Known: Inflammation, nutritional status, and muscle mass independently p
 
 What Is New: The Inflammatory Resilience Index (IRI) combines hs-CRP, albumin, and appendicular lean mass into a single composite measure. In a validation cohort of 69,370 adults with 17 years of follow-up, each 1-unit IRI increase was associated with 22% lower all-cause mortality (HR 0.78) and 18% lower cardiovascular mortality (HR 0.82). These associations persisted after adjustment for socioeconomic factors and were consistent across age groups, supporting IRI as an independent marker of physiologic resilience.
 
-Clinical Implications: IRI captures integrated physiologic resilience across inflammation, nutrition, and muscle mass domains. The index outperforms hs-CRP alone in mortality discrimination (ΔC-statistic +0.011 vs +0.000) and provides incremental prognostic value. Adults in the lowest IRI quartile have 4-fold higher mortality and higher functional impairment, supporting its potential utility as a composite marker of physiologic reserve.
+Clinical Implications: IRI captures integrated physiologic resilience across inflammation, nutrition, and muscle mass domains. The index outperforms hs-CRP alone in mortality discrimination (ΔC-statistic +0.011 vs +0.000) and provides incremental prognostic value. Adults in the lowest IRI quartile have 2.6-fold higher adjusted mortality risk and higher functional impairment, supporting its potential utility as a composite marker of physiologic reserve.
 
 ---
 
@@ -74,11 +74,11 @@ For hs-CRP and albumin, z-scores were calculated using the pooled sample mean an
 
 **Appendicular Lean Mass Index (ALMI).** Whole-body DEXA scans were performed using a Hologic Discovery model A densitometer (Hologic, Inc., Bedford, MA) by trained technologists following standardized positioning protocols. Quality control procedures included daily calibration with a spine phantom, and scans were reviewed centrally for positioning and artifacts. Participants were excluded if they exceeded the scanner weight limit (450 lbs/204 kg), had bilateral limb amputations, or had radiocontrast agents administered within the previous 7 days.
 
-Appendicular lean mass (ALM) was calculated as the sum of lean soft tissue mass in the arms and legs (DXXLLTM + DXXULTM + DXXRLTM + DXXRUTM), excluding bone mineral content and fat mass. ALMI was calculated as ALM (kg) divided by height squared (m²), consistent with the Foundation for the National Institutes of Health (FNIH) Sarcopenia Project methodology.¹⁴ Reference values for low ALMI (consistent with sarcopenia) are <7.0 kg/m² for men and <5.4 kg/m² for women.¹⁴ For the IRI, ALMI was converted to sex-specific z-scores (standardized separately within men and women) to account for known sexual dimorphism in muscle mass while facilitating combination with other index components.
+Appendicular lean mass (ALM) was calculated as the sum of lean soft tissue mass in the arms and legs (DXXLLTM + DXXULTM + DXXRLTM + DXXRUTM), excluding bone mineral content and fat mass. ALMI was calculated as ALM (kg) divided by height squared (m²), consistent with the Foundation for the National Institutes of Health (FNIH) Sarcopenia Project methodology.¹⁷ Reference values for low ALMI (consistent with sarcopenia) are <7.0 kg/m² for men and <5.4 kg/m² for women.¹⁷ For the IRI, ALMI was converted to sex-specific z-scores (standardized separately within men and women) to account for known sexual dimorphism in muscle mass while facilitating combination with other index components.
 
 ### IRI Validation and Internal Consistency
 
-The three IRI components (inverted hs-CRP, albumin, ALMI) showed modest pairwise correlations, supporting their contribution of distinct information. Spearman correlations were: inverted log(hs-CRP) with albumin, r=0.21 (P<0.001); inverted log(hs-CRP) with ALMI z-score, r=0.18 (P<0.001); albumin with ALMI z-score, r=0.15 (P<0.001). Cronbach's alpha for the three-component index was 0.42, indicating low internal consistency as expected for a formative composite index combining distinct physiologic domains rather than a reflective scale measuring a single latent construct.¹⁵
+The three IRI components (inverted hs-CRP, albumin, ALMI) showed modest pairwise correlations, supporting their contribution of distinct information. Spearman correlations were: inverted log(hs-CRP) with albumin, r=0.21 (P<0.001); inverted log(hs-CRP) with ALMI z-score, r=0.18 (P<0.001); albumin with ALMI z-score, r=0.15 (P<0.001). Cronbach's alpha for the three-component index was 0.42, indicating low internal consistency as expected for a formative composite index combining distinct physiologic domains rather than a reflective scale measuring a single latent construct.
 
 The IRI distribution was approximately normal (Shapiro-Wilk W=0.992, P<0.001 due to large sample size; skewness=-0.18, kurtosis=0.34). Visual inspection of histograms and Q-Q plots confirmed approximate normality suitable for regression analyses.
 
@@ -102,7 +102,7 @@ Complete-case analysis was used for all variables. Among NHANES 2015-2016 partic
 
 ### External Validation Cohort
 
-External validation used NHANES 1999-2006 cycles (1999-2000, 2001-2002, 2003-2004, 2005-2006), which included whole-body DEXA and have extended mortality follow-up through December 31, 2019 via the NHANES-Linked Mortality Files. The IRI was constructed using the same formula (IRI = −z_log-CRP + z_Albumin + z_ALMI) with z-scores standardized using the derivation cohort means and standard deviations to ensure proper external validation. Among 157,578 participants, 69,370 adults aged ≥20 years met eligibility criteria (complete IRI components, hs-CRP ≤10 mg/L). Over a mean follow-up of 17.1 years, 16,315 all-cause deaths and 5,245 cardiovascular deaths occurred, providing substantially greater statistical power than the derivation cohort.
+External validation used NHANES 1999-2006 cycles (1999-2000, 2001-2002, 2003-2004, 2005-2006), which included whole-body DEXA and have extended mortality follow-up through December 31, 2019 via the NHANES-Linked Mortality Files. The IRI was constructed using the same formula (IRI = −z_hs-CRP + z_Albumin + z_ALMI) with z-scores standardized using the derivation cohort means and standard deviations to ensure proper external validation. Among 157,578 participants, 69,370 adults aged ≥20 years met eligibility criteria (complete IRI components, hs-CRP ≤10 mg/L). Over a mean follow-up of 17.1 years, 16,315 all-cause deaths and 5,245 cardiovascular deaths occurred, providing substantially greater statistical power than the derivation cohort.
 
 ### Sensitivity Analyses
 
@@ -116,7 +116,7 @@ Baseline characteristics were compared across IRI quartiles using survey-weighte
 
 Associations between IRI and functional outcomes were evaluated using survey-weighted logistic regression. Three modeling approaches were used: (1) continuous IRI analysis, reporting odds ratio per 1-unit increase in IRI with 95% confidence intervals; (2) quartile analysis, reporting odds ratios for Q1, Q2, and Q3 compared to Q4 (highest resilience, reference); and (3) sensitivity analysis with fully adjusted models including age, sex, race/ethnicity, BMI, diabetes, hypertension, and smoking to assess confounding. Model discrimination was assessed using survey-weighted C-statistics. Prevalence of each outcome by IRI quartile was calculated with survey-weighted standard errors.
 
-Given the sample size (N=2,416) and outcome prevalence (5.6-17.4%), this study had 80% power to detect odds ratios ≥1.3 for continuous IRI and ≥1.5 for quartile comparisons at α=0.05. A two-sided P<0.05 defined statistical significance. Analyses were performed using R version 4.3.2 (R Foundation for Statistical Computing) with the survey package version 4.2.²⁰
+Given the sample size (N=2,416) and outcome prevalence (5.6-17.4%), this study had 80% power to detect odds ratios ≥1.3 for continuous IRI and ≥1.5 for quartile comparisons at α=0.05. A two-sided P<0.05 defined statistical significance. Given the evaluation of three primary functional outcomes, results should be interpreted with consideration of multiple comparisons; sensitivity analyses (age-stratified, sex-stratified, extended covariate adjustment) were pre-specified and considered exploratory. Analyses were performed using R version 4.3.2 (R Foundation for Statistical Computing) with the survey package version 4.2.²⁰
 
 ### Ethical Statement
 
@@ -140,11 +140,11 @@ Individual IRI component distributions were: hs-CRP median 1.4 mg/L (IQR 0.6-3.2
 
 ### Characteristics by IRI Quartile
 
-Participants in the lowest IRI quartile (Q1) differed substantially from those in the highest quartile (Q4) (Table 1). Regarding demographics, Q1 participants were older (42.3 vs 34.2 years, P<0.001), had more females (62.7% vs 24.7%, P<0.001), and higher BMI (29.5 vs 27.0 kg/m², P<0.001).
+Participants in the lowest IRI quartile (Q1) differed substantially from those in the highest quartile (Q4) (Table 1). Regarding demographics, Q1 participants were older (42.7 vs 34.5 years, P<0.001), more often female (66.2% vs 30.6%, P<0.001), and had similar BMI (28.1 vs 27.9 kg/m², P=0.01).
 
-For IRI components, hs-CRP was 4.3-fold higher in Q1 (3.98 vs 0.92 mg/L, P<0.001), albumin was lower in Q1 (4.10 vs 4.68 g/dL, P<0.001), and ALMI z-score was lower in Q1 (-0.31 vs 0.26, P<0.001). The IRI component profiles by quartile are illustrated in Figure 3.
+For IRI components (Table 3, Figure 3), hs-CRP was 4.3-fold higher in Q1 (3.98 vs 0.92 mg/L, P<0.001), albumin was lower in Q1 (4.10 vs 4.68 g/dL, P<0.001), and ALMI z-score was lower in Q1 (-0.31 vs 0.26, P<0.001).
 
-Regarding comorbidities, diabetes was more prevalent in Q1 (13.2% vs 4.8%, P<0.001), hypertension was similar across quartiles (approximately 32-42%, P=0.20), CVD history was numerically higher in Q1 (4.5% vs 1.8%, P=0.12), and current smoking was more prevalent in Q1 (25.8% vs 16.5%, P=0.03).
+Regarding comorbidities, diabetes was more prevalent in Q1 (10.7% vs 5.2%, P=0.001), hypertension was similar across quartiles (33-39%, P=0.39), CVD history was higher in Q1 (3.8% vs 1.6%, P=0.03), and current smoking was more prevalent in Q1 (24.6% vs 16.9%, P=0.04).
 
 ### Functional Outcomes by IRI Quartile
 
@@ -204,7 +204,7 @@ Analysis by CV mortality subtype (Table S4) showed that IRI was significantly as
 
 ### Component-Adjusted Model: Incremental Value Assessment
 
-To address whether IRI provides prognostic information beyond its individual components, we fit sequential models adding hs-CRP, albumin, and ALMI, then IRI (Table S6). As expected for an additive index (IRI = −z_CRP + z_Albumin + z_ALMI by construction), IRI did not remain independently significant after including all three components (HR 1.14, 95% CI: 0.76-1.71, P=0.53). However, the key clinical question is whether IRI as a composite outperforms individual components when used alone—as demonstrated by C-statistic comparisons (ΔC for IRI = +0.011 vs +0.000 for CRP alone, +0.001 for ALMI alone). The likelihood ratio test confirmed that adding IRI to the base model significantly improved fit (χ² = 1405, P < 10⁻³⁰⁰).
+To address whether IRI provides prognostic information beyond its individual components, we fit sequential models adding hs-CRP, albumin, and ALMI, then IRI (Table S6). As expected for an additive index (IRI = −z_hs-CRP + z_Albumin + z_ALMI by construction), IRI did not remain independently significant after including all three components (HR 1.14, 95% CI: 0.76-1.71, P=0.53). However, the key clinical question is whether IRI as a composite outperforms individual components when used alone—as demonstrated by C-statistic comparisons (ΔC for IRI = +0.011 vs +0.000 for CRP alone, +0.001 for ALMI alone). The likelihood ratio test confirmed that adding IRI to the base model significantly improved fit (χ² = 1405, P < 10⁻³⁰⁰).
 
 ### Sex-Stratified Analysis
 
@@ -270,7 +270,7 @@ Prospective validation of the IRI in diverse populations, with hard endpoints in
 
 ### Conclusions
 
-The Inflammatory Resilience Index, a simple composite of hs-CRP, serum albumin, and appendicular lean mass, was significantly associated with functional limitations in a derivation cohort and with all-cause mortality (HR 0.78, 95% CI: 0.75-0.80 per 1-unit increase) and cardiovascular mortality (HR 0.82, 95% CI: 0.78-0.87) in an external validation cohort with 17 years of follow-up. Critically, IRI remained associated with mortality in both younger and older adults, after adjustment for socioeconomic factors, and provided incremental discrimination over individual components. Adults in the lowest IRI quartile had 4-fold higher mortality, supporting IRI as an integrative marker of physiologic resilience.
+The Inflammatory Resilience Index, a simple composite of hs-CRP, serum albumin, and appendicular lean mass, was significantly associated with functional limitations in a derivation cohort and with all-cause mortality (HR 0.78, 95% CI: 0.75-0.80 per 1-unit increase) and cardiovascular mortality (HR 0.82, 95% CI: 0.78-0.87) in an external validation cohort with 17 years of follow-up. Critically, IRI remained associated with mortality in both younger and older adults, after adjustment for socioeconomic factors, and provided incremental discrimination over individual components. Adults in the lowest IRI quartile had 2.6-fold higher adjusted mortality risk (HR 2.55, 95% CI: 2.11-3.07), supporting IRI as an integrative marker of physiologic resilience.
 
 These findings suggest IRI may inform risk stratification and identify targets for intervention in individuals at risk for functional decline and adverse outcomes.
 
@@ -283,18 +283,18 @@ These findings suggest IRI may inform risk stratification and identify targets f
 | Characteristic | Q1 (Lowest) | Q2 | Q3 | Q4 (Highest) | P-value |
 |----------------|-------------|-----|-----|--------------|---------|
 | N (unweighted) | 604 | 604 | 604 | 604 | -- |
-| Age, years | 42.3 (11.7) | 42.1 (11.6) | 40.4 (11.0) | 34.2 (10.7) | <0.001 |
-| Female, % | 62.7 | 60.1 | 42.0 | 24.7 | <0.001 |
-| BMI, kg/m² | 29.5 (7.0) | 29.3 (6.2) | 28.8 (6.5) | 27.0 (5.9) | <0.001 |
+| Age, years | 42.7 (11.6) | 41.3 (11.7) | 40.5 (10.9) | 34.5 (10.7) | <0.001 |
+| Female, % | 66.2 | 57.6 | 44.8 | 30.6 | <0.001 |
+| BMI, kg/m² | 28.1 (5.6) | 29.0 (6.1) | 28.6 (6.4) | 27.9 (6.6) | 0.01 |
 | **IRI Components:** | | | | | |
-| hs-CRP, mg/L | 4.10 (2.65) | 2.69 (2.08) | 1.74 (1.73) | 0.70 (0.96) | <0.001 |
-| Albumin, g/dL | 4.16 (0.28) | 4.35 (0.24) | 4.50 (0.21) | 4.73 (0.24) | <0.001 |
-| ALMI z-score | -0.56 (1.17) | 0.15 (0.88) | 0.43 (0.73) | 0.48 (0.75) | <0.001 |
+| hs-CRP, mg/L | 4.18 (2.52) | 2.62 (2.08) | 1.70 (1.73) | 0.87 (1.22) | <0.001 |
+| Albumin, g/dL | 4.13 (0.25) | 4.36 (0.22) | 4.49 (0.22) | 4.71 (0.24) | <0.001 |
+| ALMI z-score | -0.34 (0.81) | -0.09 (0.89) | 0.03 (0.92) | 0.19 (1.04) | <0.001 |
 | **Comorbidities:** | | | | | |
-| Diabetes, % | 13.2 | 10.1 | 7.6 | 4.8 | <0.001 |
-| Hypertension, % | 37.2 | 41.6 | 36.2 | 31.9 | 0.20 |
-| CVD history, % | 4.5 | 2.6 | 3.2 | 1.8 | 0.12 |
-| Current smoker, % | 25.8 | 18.7 | 21.9 | 16.5 | 0.03 |
+| Diabetes, % | 10.7 | 9.6 | 7.3 | 5.2 | 0.001 |
+| Hypertension, % | 37.5 | 39.4 | 35.0 | 33.2 | 0.39 |
+| CVD history, % | 3.8 | 1.5 | 3.3 | 1.6 | 0.03 |
+| Current smoker, % | 24.6 | 20.4 | 21.9 | 16.9 | 0.04 |
 
 Values are survey-weighted means (SD) or proportions (%). N is unweighted sample size. P-values from Wald tests for trend in survey-adjusted models. Abbreviations: ALMI = appendicular lean mass index; BMI = body mass index; CVD = cardiovascular disease; hs-CRP = high-sensitivity C-reactive protein; IRI = Inflammatory Resilience Index.
 
@@ -335,7 +335,7 @@ Values are survey-weighted means (SD) or proportions (%). N is unweighted sample
 | Q3 | 604 | 0.49 (0.30) | 1.77 (1.78) | 4.47 (0.23) | 0.14 (1.00) |
 | Q4 (Highest Resilience) | 604 | 2.01 (0.80) | 0.92 (1.34) | 4.68 (0.24) | 0.26 (1.14) |
 
-Values are mean (SD). Abbreviations: ALMI = appendicular lean mass index; hs-CRP = high-sensitivity C-reactive protein; IRI = Inflammatory Resilience Index.
+Values are unweighted sample means (SD), reflecting the analytic sample used for IRI construction. Survey-weighted population estimates are shown in Table 1. Abbreviations: ALMI = appendicular lean mass index; hs-CRP = high-sensitivity C-reactive protein; IRI = Inflammatory Resilience Index.
 
 ---
 
@@ -466,18 +466,18 @@ Abbreviations: BMI = body mass index; DM = diabetes mellitus; HTN = hypertension
 
 | Model | Variable | HR (95% CI) | P |
 |-------|----------|-------------|---|
-| M2: + CRP | z_CRP (inverted) | 0.83 (0.79-0.86) | <0.001 |
-| M3: + CRP, Albumin | z_CRP (inverted) | 0.93 (0.89-0.97) | 0.001 |
+| M2: + CRP | z_hs-CRP (inverted) | 0.83 (0.79-0.86) | <0.001 |
+| M3: + CRP, Albumin | z_hs-CRP (inverted) | 0.93 (0.89-0.97) | 0.001 |
 | | z_Albumin | 0.65 (0.62-0.69) | <0.001 |
-| M4: + CRP, Albumin, ALMI | z_CRP (inverted) | 0.92 (0.88-0.96) | <0.001 |
+| M4: + CRP, Albumin, ALMI | z_hs-CRP (inverted) | 0.92 (0.88-0.96) | <0.001 |
 | | z_Albumin | 0.65 (0.62-0.69) | <0.001 |
 | | z_ALMI | 0.92 (0.89-0.96) | <0.001 |
-| **M5: + All Components + IRI** | z_CRP (inverted) | 0.82 (0.59-1.16) | 0.26 |
+| **M5: + All Components + IRI** | z_hs-CRP (inverted) | 0.82 (0.59-1.16) | 0.26 |
 | | z_Albumin | 0.58 (0.41-0.83) | 0.003 |
 | | z_ALMI | 0.84 (0.62-1.13) | 0.25 |
 | | **IRI** | **1.14 (0.76-1.71)** | **0.53** |
 
-*IRI is not significant after including all components—expected since IRI = −z_CRP + z_Albumin + z_ALMI by construction. The relevant comparison is C-statistic (IRI vs components separately).
+*IRI is not significant after including all components—expected since IRI = −z_hs-CRP + z_Albumin + z_ALMI by construction. The relevant comparison is C-statistic (IRI vs components separately).
 
 **Likelihood Ratio Test (Base vs Base+IRI)**: χ² = 1405, P < 10⁻³⁰⁰
 
