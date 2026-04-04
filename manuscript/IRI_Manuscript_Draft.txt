@@ -27,10 +27,10 @@ outcomes (fair/poor self-rated health, difficulty walking ¼ mile, depression
 [PHQ-9 ≥10]) using survey-weighted logistic regression adjusted for age, sex, 
 and race/ethnicity.
 
-RESULTS: The IRI ranged from -5.2 to 5.2 (mean 0.74 ± 1.48). Participants in 
-the lowest IRI quartile (Q1) were older (42.3 vs 34.3 years), more often female 
-(68.6% vs 25.1%), had higher hs-CRP (4.08 vs 0.77 mg/L), lower albumin (4.12 vs 
-4.70 g/dL), and lower ALMI z-scores (-0.40 vs 0.53) compared to Q4. The 
+RESULTS: The IRI ranged from -6.6 to 5.4 (mean 0.00 ± 1.57). Participants in
+the lowest IRI quartile (Q1) were older (42.8 vs 34.4 years), more often female
+(67.7% vs 30.1%), had higher hs-CRP (3.98 vs 0.92 mg/L), lower albumin (4.10 vs
+4.68 g/dL), and lower ALMI z-scores (-0.31 vs 0.26) compared to Q4. The 
 prevalence of fair/poor health decreased from 17.4% (Q1) to 9.3% (Q4), and
 difficulty walking from 3.5% to 1.2%. In adjusted models, each 1-unit IRI 
 increase was associated with 16% lower odds of fair/poor health (OR: 0.84;
@@ -240,34 +240,34 @@ STUDY POPULATION
 
 Of 25,531 NHANES 2015-2016 participants, 2,416 adults aged ≥20 years met 
 eligibility criteria with complete IRI components (hs-CRP ≤10 mg/L, albumin, 
-and DEXA-derived ALMI). The mean age was 39.6 ± 11.4 years, 48.6% were female, 
+and DEXA-derived ALMI). The mean age was 39.3 ± 11.3 years, 49.2% were female, 
 and the racial/ethnic distribution was 61.5% non-Hispanic White, 11.0% 
 non-Hispanic Black, 8.4% Mexican American, 10.8% Asian, and 8.3% other.
 
-The IRI ranged from -5.16 to 5.24, with a mean of 0.74 (SD 1.48). Quartile 
-boundaries were: Q1 (≤-0.28, lowest resilience), Q2 (-0.28 to 0.83), Q3 
-(0.83 to 1.90), and Q4 (>1.90, highest resilience).
+The IRI ranged from -6.58 to 5.43, with a mean of 0.00 (SD 1.57). Quartile
+boundaries were: Q1 (≤-1.09, lowest resilience), Q2 (-1.09 to 0.01), Q3
+(0.01 to 1.05), and Q4 (>1.05, highest resilience).
 
 CHARACTERISTICS BY IRI QUARTILE (TABLE 1)
 
 Participants in the lowest IRI quartile (Q1) differed substantially from 
 those in the highest quartile (Q4):
 
-Demographics (survey-weighted):
-• Age: Q1 participants were older (42.3 vs 34.2 years, p<0.001)
-• Sex: Q1 had more females (62.7% vs 24.7%, p<0.001)
-• BMI: Higher in Q1 (29.5 vs 27.0 kg/m², p<0.001)
+Demographics:
+• Age: Q1 participants were older (42.8 vs 34.4 years, p<0.001)
+• Sex: Q1 had more females (67.7% vs 30.1%, p<0.001)
+• BMI: Similar across quartiles (28.2 vs 28.1 kg/m², p=0.011)
 
-IRI Components (survey-weighted):
-• hs-CRP: 5.9-fold higher in Q1 (4.10 vs 0.70 mg/L, p<0.001)
-• Albumin: Lower in Q1 (4.16 vs 4.73 g/dL, p<0.001)
-• ALMI z-score: Lower in Q1 (-0.56 vs 0.48, p<0.001)
+IRI Components:
+• hs-CRP: 4.3-fold higher in Q1 (3.98 vs 0.92 mg/L, p<0.001)
+• Albumin: Lower in Q1 (4.10 vs 4.68 g/dL, p<0.001)
+• ALMI z-score: Lower in Q1 (-0.31 vs 0.26, p<0.001)
 
-Comorbidities (survey-weighted):
-• Diabetes: More prevalent in Q1 (13.2% vs 4.8%, p<0.001)
-• Hypertension: Similar across quartiles (~32-42%, p=0.20)
-• CVD history: Numerically higher in Q1 (4.5% vs 1.8%, p=0.12)
-• Current smoking: More prevalent in Q1 (25.8% vs 16.5%, p=0.03)
+Comorbidities:
+• Diabetes: More prevalent in Q1 (13.6% vs 6.5%, p=0.001)
+• Hypertension: Similar across quartiles (~34-39%, p=0.39)
+• CVD history: Numerically higher in Q1 (4.6% vs 2.0%, p=0.03)
+• Current smoking: More prevalent in Q1 (24.6% vs 16.9%, p=0.04)
 
 FUNCTIONAL OUTCOMES BY IRI QUARTILE (TABLE 2)
 
@@ -545,21 +545,21 @@ TABLE 1. Baseline Characteristics by IRI Quartile
 
                           Q1 (Lowest)  Q2        Q3        Q4 (Highest)  p-value
 --------------------------------------------------------------------------------
-N (unweighted)            604          757       743       577           --
-Age, years                42.3±11.7    42.1±11.6 40.4±11.0 34.2±10.7    <0.001
-Female, %                 62.7         60.1      42.0      24.7          <0.001
-BMI, kg/m²                29.5±7.0     29.3±6.2  28.8±6.5  27.0±5.9     <0.001
+N (unweighted)            604          604       604       604           --
+Age, years                42.8±11.2    40.5±11.4 39.6±10.8 34.4±10.7    <0.001
+Female, %                 67.7         56.0      42.9      30.1          <0.001
+BMI, kg/m²                28.2±5.8     28.8±6.0  29.2±6.7  28.1±6.9     0.011
 
 IRI Components:
-  hs-CRP, mg/L            4.10±2.65    2.69±2.08 1.74±1.73 0.70±0.96    <0.001
-  Albumin, g/dL           4.16±0.28    4.35±0.24 4.50±0.21 4.73±0.24    <0.001
-  ALMI z-score*           -0.56±1.17   0.15±0.88 0.43±0.73 0.48±0.75    <0.001
+  hs-CRP, mg/L            3.98±2.53    2.53±2.00 1.77±1.78 0.92±1.34    <0.001
+  Albumin, g/dL           4.10±0.26    4.34±0.22 4.47±0.23 4.68±0.24    <0.001
+  ALMI z-score*           -0.31±0.85   -0.09±0.89 0.14±1.00 0.26±1.14   <0.001
 
 Comorbidities:
-  Diabetes, %             13.2         10.1      7.6       4.8           <0.001
-  Hypertension, %         37.2         41.6      36.2      31.9          0.20
-  CVD history, %          4.5          2.6       3.2       1.8           0.12
-  Current smoker, %       25.8         18.7      21.9      16.5          0.03
+  Diabetes, %             13.6         10.9      9.8       6.5           0.001
+  Hypertension, %         39.1         38.4      39.2      34.1          0.390
+  CVD history, %          4.6          2.3       3.6       2.0           0.033
+  Current smoker, %       24.6         20.4      21.9      16.9          0.037
 
 *All values are survey-weighted population estimates. ALMI z-scores are sex-specific.
 Abbreviations: BMI=body mass index; CVD=cardiovascular disease; 
@@ -574,7 +574,7 @@ Outcome                   Q1      Q2      Q3      Q4
 --------------------------------------------------------------------------------
 Fair/Poor Health          17.4    17.4    13.7    9.3
 Difficulty Walking        3.5     4.3     3.8     1.2
-Depression (PHQ-9≥10)     7.7     7.0     6.6     5.6     
+Depression (PHQ-9≥10)     7.7     7.0     6.7     5.6
 
                           Adjusted Odds Ratios* (95% CI)
 Outcome                   Continuous IRI    p       Q1 vs Q4          p
