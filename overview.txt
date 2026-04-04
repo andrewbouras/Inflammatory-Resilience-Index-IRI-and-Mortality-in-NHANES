@@ -1,14 +1,16 @@
 Title
-Inflammatory Resilience Index (IRI) Combining hs-CRP, Albumin, and Grip Strength as a Predictor of Mortality: A Prospective NHANES Cohort Study
+Inflammatory Resilience Index (IRI) Combining hs-CRP, Albumin, and Appendicular Lean Mass Index (ALMI) as a Predictor of Mortality and Functional Limitations: A Two-Cohort NHANES Study
 
 Design
-Prospective cohort analysis leveraging NHANES examination data and linked mortality files.
+Prospective cohort analysis leveraging NHANES examination data (with DEXA body composition) and linked mortality files.
 
 Population
+Derivation cohort: NHANES 2015-2020, adults ≥18 years with DEXA body composition data.
+Validation cohort: NHANES 1999-2006, adults ≥18 years with hs-CRP, albumin, and BMI-estimated ALMI.
 Inclusion: Adults ≥18 years with
 • hs-CRP,
 • serum albumin,
-• grip strength,
+• ALMI (appendicular lean mass index from DEXA or BMI-based estimation),
 • eligibility for mortality linkage.
 Exclusion:
 • pregnancy,
@@ -18,12 +20,12 @@ Exposure
 Components:
 • hs-CRP (log-transformed),
 • serum albumin (g/dL),
-• grip strength (kg; sex-standardized).
+• ALMI (appendicular lean mass index, kg/m²; sex-standardized z-score).
 Construct the IRI by standardizing each component:
 • hs-CRP z-score multiplied by −1 (higher = worse inflammation),
 • albumin z-score (higher = better protein reserve/anti-inflammatory proxy),
-• grip strength z-score (higher = better functional reserve).
-IRI = (−z hs-CRP) + z albumin + z grip strength.
+• ALMI z-score (higher = better muscle mass reserve).
+IRI = (−z_log_hs-CRP) + z_albumin + z_ALMI.
 Higher IRI indicates greater resilience.
 
 Analyze IRI as a continuous variable and in quartiles.
@@ -47,7 +49,7 @@ Statistical Plan
 • Perform sensitivity analyses excluding early deaths and incorporating hs-CRP >10 mg/L.
 
 Rationale and Novelty
-Existing inflammatory markers predict risk but do not fully capture functional reserve. Grip strength and albumin each correlate with frailty, inflammation, and long-term prognosis. Combining hs-CRP with markers of physiologic reserve provides an integrated measure of systemic resilience. The IRI offers a simple, interpretable composite that may outperform hs-CRP alone in predicting mortality.
+Existing inflammatory markers predict risk but do not fully capture functional reserve. Muscle mass (ALMI) and albumin each correlate with frailty, inflammation, and long-term prognosis. Combining hs-CRP with markers of physiologic reserve provides an integrated measure of systemic resilience. The IRI offers a simple, interpretable composite that may outperform hs-CRP alone in predicting mortality and functional limitations.
 
 Expected Contribution
-The IRI may serve as a clinically useful, low-cost prognostic tool. The study tests whether integrating inflammation and functional biomarkers offers improved discrimination over inflammation alone, using a large, nationally representative dataset with long follow-up.
+The IRI may serve as a clinically useful, low-cost prognostic tool. The study tests whether integrating inflammation and functional biomarkers offers improved discrimination over inflammation alone, using a large, nationally representative dataset with long follow-up. A derivation-validation design across two independent NHANES cohorts strengthens the evidence for IRI's prognostic value.

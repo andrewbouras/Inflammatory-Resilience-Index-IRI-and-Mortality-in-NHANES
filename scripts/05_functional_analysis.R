@@ -8,14 +8,21 @@ library(tidyr)
 # Handle single PSU strata
 options(survey.lonely.psu = "adjust")
 
+# Project paths
+project_root <- normalizePath(file.path(dirname(sys.frame(1)$ofile %||% "."), ".."), mustWork = FALSE)
+if (!dir.exists(project_root)) {
+  project_root <- normalizePath(file.path(getwd(), ".."), mustWork = FALSE)
+}
+
 # Load data
-dat <- read.csv("/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/data/processed/iri_functional_cohort.csv")
+dat <- read.csv(file.path(project_root, "data", "processed", "iri_functional_cohort.csv"))
 
 cat("="," IRI FUNCTIONAL OUTCOMES ANALYSIS ", "=\n", sep = paste(rep("=", 20), collapse = ""))
 cat("\nTotal eligible participants:", nrow(dat), "\n")
 
-# Scale weights for pooled cycles (2 cycles)
-dat$wt_scaled <- dat$mec_weight / 2
+# DEXA data only available in 2015-2016 (single 2-year cycle).
+# Per NCHS guidelines, use WTMEC2YR directly without dividing.
+dat$wt_scaled <- dat$mec_weight
 
 # Create survey design
 svy <- svydesign(
@@ -237,12 +244,14 @@ pval3q <- summary(mod3_quart)$coefficients["iri_qQ1", "Pr(>|t|)"]
 cat(sprintf("%-20s OR = %.2f (%.2f-%.2f), p = %.4f\n", "Depression", or3q, ci3q[1], ci3q[2], pval3q))
 
 cat("\n\nCONCLUSION:\n")
-cat("Lower IRI (worse inflammatory resilience) is significantly associated with:\n")
-cat("- Higher odds of fair/poor self-rated health (p < 0.001)\n")
-cat("- Higher odds of mobility limitations (p = 0.005)\n")
-cat("- Trend toward higher depression (p = 0.14, not significant)\n")
-cat("\nQ1 vs Q4 comparisons show 2-4.5x higher odds of poor outcomes\n")
-cat("in the lowest resilience quartile.\n")
+cat("Lower IRI (worse inflammatory resilience) is associated with:\n")
+cat(sprintf("- Higher odds of fair/poor self-rated health (p = %.4f)\n", pval1))
+cat(sprintf("- Trend toward mobility limitations (p = %.4f)\n", pval2))
+cat(sprintf("- No significant association with depression (p = %.4f)\n", pval3))
+cat("\nQ1 vs Q4 comparisons:\n")
+cat(sprintf("  Fair/Poor Health: OR = %.2f (p = %.4f)\n", or1q, pval1q))
+cat(sprintf("  Difficulty Walking: OR = %.2f (p = %.4f)\n", or2q, pval2q))
+cat(sprintf("  Depression: OR = %.2f (p = %.4f)\n", or3q, pval3q))
 
 # ============================================================================
 # SAVE RESULTS TO CSV
@@ -259,6 +268,6 @@ results <- data.frame(
   p_Q1vsQ4 = c(pval1q, pval2q, pval3q)
 )
 
-write.csv(results, "/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/output/functional_outcomes_results.csv", row.names = FALSE)
+write.csv(results, file.path(project_root, "output", "functional_outcomes_results.csv"), row.names = FALSE)
 cat("\nResults saved to output/functional_outcomes_results.csv\n")
 

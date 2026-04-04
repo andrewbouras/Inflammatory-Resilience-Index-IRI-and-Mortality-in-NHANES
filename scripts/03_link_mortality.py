@@ -89,6 +89,10 @@ def define_cause_specific_mortality(df: pd.DataFrame) -> pd.DataFrame:
     df['mort_cancer'] = ((df['mortstat'] == 1) & 
                          (df['ucod_leading'] == 2)).astype(int)
     
+    # Stroke/cerebrovascular mortality
+    df['mort_stroke'] = ((df['mortstat'] == 1) & 
+                          (df['ucod_leading'] == 5)).astype(int)
+    
     return df
 
 
@@ -111,11 +115,9 @@ def main():
     mort_files = list(DATA_MORTALITY.glob("*.dat"))
     
     if not mort_files:
-        print("No mortality files found. Attempting download...")
-        # Try alternative: use the mortality data from RIR project if available
-        alt_mort = Path("/Users/andrewbouras/Documents/VishrutNHANES/Residual Inflammatory Risk (RIR) in Statin-Treated Adults: NHANES Analysis/data/mortality")
-        if alt_mort.exists():
-            mort_files = list(alt_mort.glob("*.dat"))
+        print("ERROR: No mortality files found in data/mortality/.")
+        print("Run 01_download_data.py first to download mortality files.")
+        return
     
     all_mort = []
     for mort_file in mort_files:
@@ -140,7 +142,7 @@ def main():
         print(f"\nCombined mortality data: {len(combined_mort):,} records")
         
         # Merge with cohort
-        mort_vars = ['SEQN', 'mortstat', 'permth_exm', 'mort_all', 'mort_cv', 'mort_heart', 'mort_cancer']
+        mort_vars = ['SEQN', 'mortstat', 'permth_exm', 'mort_all', 'mort_cv', 'mort_heart', 'mort_stroke', 'mort_cancer']
         df = df.merge(combined_mort[mort_vars], on='SEQN', how='left')
         
         # Fill NaN mortality (not linked = assumed alive through follow-up)
@@ -148,6 +150,7 @@ def main():
         df['mort_all'] = df['mort_all'].fillna(0).astype(int)
         df['mort_cv'] = df['mort_cv'].fillna(0).astype(int)
         df['mort_heart'] = df['mort_heart'].fillna(0).astype(int)
+        df['mort_stroke'] = df['mort_stroke'].fillna(0).astype(int)
         df['mort_cancer'] = df['mort_cancer'].fillna(0).astype(int)
         
         # Calculate follow-up time
@@ -175,6 +178,7 @@ def main():
     print(f"Deaths (all-cause): {eligible['mort_all'].sum():,.0f}")
     print(f"CV deaths: {eligible['mort_cv'].sum():,.0f}")
     print(f"Heart disease deaths: {eligible['mort_heart'].sum():,.0f}")
+    print(f"Stroke deaths: {eligible['mort_stroke'].sum():,.0f}")
     print(f"Mean follow-up: {eligible['followup_years'].mean():.1f} years")
     
     print("\nMortality by IRI quartile:")

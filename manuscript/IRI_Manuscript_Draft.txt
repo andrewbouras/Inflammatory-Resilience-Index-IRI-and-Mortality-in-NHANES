@@ -1,7 +1,7 @@
 ================================================================================
 INFLAMMATORY RESILIENCE INDEX COMBINING hs-CRP, ALBUMIN, AND APPENDICULAR 
 LEAN MASS PREDICTS FUNCTIONAL LIMITATIONS AND SELF-RATED HEALTH IN U.S. ADULTS: 
-NHANES 2015-2020
+NHANES 2015-2016
 ================================================================================
 
 [Author names and affiliations to be added]
@@ -19,9 +19,9 @@ high-sensitivity C-reactive protein (hs-CRP), serum albumin, and appendicular
 lean mass index (ALMI), and evaluate its association with functional outcomes 
 in U.S. adults.
 
-METHODS: Using NHANES 2015-2020 with dual-energy X-ray absorptiometry (DEXA) 
+METHODS: Using NHANES 2015-2016 with dual-energy X-ray absorptiometry (DEXA) 
 data, we constructed the IRI as: (−z_hs-CRP) + z_Albumin + z_ALMI, where higher 
-values indicate better resilience. Among 2,729 adults aged ≥20 years with 
+values indicate better resilience. Among 2,416 adults aged ≥20 years with 
 complete data, we examined associations between IRI quartiles and functional 
 outcomes (fair/poor self-rated health, difficulty walking ¼ mile, depression 
 [PHQ-9 ≥10]) using survey-weighted logistic regression adjusted for age, sex, 
@@ -31,19 +31,20 @@ RESULTS: The IRI ranged from -5.2 to 5.2 (mean 0.74 ± 1.48). Participants in
 the lowest IRI quartile (Q1) were older (42.3 vs 34.3 years), more often female 
 (68.6% vs 25.1%), had higher hs-CRP (4.08 vs 0.77 mg/L), lower albumin (4.12 vs 
 4.70 g/dL), and lower ALMI z-scores (-0.40 vs 0.53) compared to Q4. The 
-prevalence of fair/poor health decreased from 19.2% (Q1) to 9.2% (Q4), and 
-difficulty walking from 12.4% to 2.5%. In adjusted models, each 1-unit IRI 
-increase was associated with 19% lower odds of fair/poor health (OR: 0.81; 
-95% CI: 0.74-0.89; p<0.001) and 22% lower odds of walking difficulty (OR: 0.78; 
-95% CI: 0.67-0.91; p=0.005). Comparing Q1 to Q4, odds were 2.07-fold higher for 
-fair/poor health (95% CI: 1.42-3.01; p=0.004) and 4.51-fold higher for walking 
-difficulty (95% CI: 1.96-10.42; p=0.006).
+prevalence of fair/poor health decreased from 17.4% (Q1) to 9.3% (Q4), and
+difficulty walking from 3.5% to 1.2%. In adjusted models, each 1-unit IRI 
+increase was associated with 16% lower odds of fair/poor health (OR: 0.84;
+95% CI: 0.75-0.93; p=0.005) and a trend toward 14% lower odds of walking difficulty (OR: 0.86;
+95% CI: 0.72-1.03; p=0.08). Comparing Q1 to Q4, odds were 1.64-fold higher for
+fair/poor health (95% CI: 1.02-2.64; p=0.04) and a non-significant trend for walking
+difficulty (OR 1.82; 95% CI: 0.74-4.48; p=0.15).
 
-CONCLUSIONS: A novel Inflammatory Resilience Index integrating inflammation, 
-nutritional reserve, and muscle mass is significantly associated with 
-self-rated health and mobility limitations in U.S. adults. Lower IRI identifies 
-individuals with substantially higher odds of poor functional outcomes, 
-supporting its potential utility as a composite marker of physiologic reserve.
+CONCLUSIONS: A novel Inflammatory Resilience Index integrating inflammation,
+nutritional reserve, and muscle mass is significantly associated with
+self-rated health, with a non-significant trend for mobility limitations,
+in U.S. adults. Lower IRI identifies individuals with higher odds of poor
+functional outcomes, supporting its potential utility as a composite marker
+of physiologic reserve.
 
 Keywords: Inflammation; C-reactive protein; albumin; sarcopenia; functional 
 status; NHANES
@@ -55,9 +56,9 @@ HIGHLIGHTS
 • The Inflammatory Resilience Index (IRI) combines hs-CRP, albumin, and 
   appendicular lean mass into a single composite measure
 
-• Compared with the highest IRI quartile, the lowest quartile had ~2-fold 
-  higher odds of fair/poor self-rated health and ~4.5-fold higher odds of 
-  walking difficulty
+• Compared with the highest IRI quartile, the lowest quartile had ~1.6-fold
+  higher odds of fair/poor self-rated health and a non-significant trend
+  toward higher odds of walking difficulty (OR 1.82)
 
 • These associations persist after adjustment for age, sex, and race/ethnicity
 
@@ -101,8 +102,8 @@ population-based samples.
 We hypothesized that an Inflammatory Resilience Index (IRI) combining hs-CRP, 
 serum albumin, and appendicular lean mass index (ALMI) from dual-energy X-ray 
 absorptiometry (DEXA) would identify individuals with poor self-rated health 
-and functional limitations. Using nationally representative data from NHANES 
-2015-2020, we aimed to: (1) construct the IRI as a simple additive z-score 
+and functional limitations. Using nationally representative data from NHANES
+2015-2016, we aimed to: (1) construct the IRI as a simple additive z-score 
 composite; (2) characterize the demographic and clinical profiles of adults 
 across IRI quartiles; and (3) evaluate associations between IRI and functional 
 outcomes including self-rated health, mobility limitations, and depressive 
@@ -127,14 +128,14 @@ sampling design with oversampling of certain subgroups to ensure reliable
 estimates. Participants undergo standardized interviews, physical examinations, 
 and laboratory assessments.
 
-We combined data from NHANES cycles 2015-2016 and 2017-2020 (pre-pandemic), 
-which include DEXA body composition measurements. The analytic sample included 
+We used data from the NHANES 2015-2016 cycle,
+which includes DEXA body composition measurements. The analytic sample included 
 adults aged ≥20 years with complete data for hs-CRP (≤10 mg/L, to exclude 
 acute infection), serum albumin, and DEXA-derived appendicular lean mass. 
 Participants with hs-CRP >10 mg/L were excluded to focus on chronic low-grade 
 inflammation rather than acute infectious or inflammatory conditions (13).
 
-The final eligible cohort included 2,729 participants with complete IRI 
+The final eligible cohort included 2,416 participants with complete IRI 
 components and functional outcome data.
 
 INFLAMMATORY RESILIENCE INDEX CONSTRUCTION
@@ -207,8 +208,8 @@ antihypertensive medication use), and current smoking status.
 STATISTICAL ANALYSIS
 
 All analyses incorporated NHANES survey weights, strata, and primary sampling 
-units to account for the complex survey design. Examination weights were scaled 
-for combined cycles per NCHS guidelines (15). Because DEXA is performed in a 
+units to account for the complex survey design. Examination weights were applied
+per NCHS guidelines (15). Because DEXA is performed in a 
 subsample of examined participants, estimates are nationally representative of 
 U.S. adults eligible for and completing DEXA body composition assessment; older 
 adults and those with mobility limitations may be underrepresented.
@@ -237,7 +238,7 @@ RESULTS
 
 STUDY POPULATION
 
-Of 25,531 NHANES 2015-2020 participants, 2,729 adults aged ≥20 years met 
+Of 25,531 NHANES 2015-2016 participants, 2,416 adults aged ≥20 years met 
 eligibility criteria with complete IRI components (hs-CRP ≤10 mg/L, albumin, 
 and DEXA-derived ALMI). The mean age was 39.6 ± 11.4 years, 48.6% were female, 
 and the racial/ethnic distribution was 61.5% non-Hispanic White, 11.0% 
@@ -252,20 +253,20 @@ CHARACTERISTICS BY IRI QUARTILE (TABLE 1)
 Participants in the lowest IRI quartile (Q1) differed substantially from 
 those in the highest quartile (Q4):
 
-Demographics:
-• Age: Q1 participants were older (42.3 vs 34.3 years, p<0.001)
-• Sex: Q1 had more females (68.6% vs 25.1%, p<0.001)
-• BMI: Higher in Q1 (29.5 vs 27.4 kg/m², p<0.001)
+Demographics (survey-weighted):
+• Age: Q1 participants were older (42.3 vs 34.2 years, p<0.001)
+• Sex: Q1 had more females (62.7% vs 24.7%, p<0.001)
+• BMI: Higher in Q1 (29.5 vs 27.0 kg/m², p<0.001)
 
-IRI Components:
-• hs-CRP: 5.3-fold higher in Q1 (4.08 vs 0.77 mg/L, p<0.001)
-• Albumin: Lower in Q1 (4.12 vs 4.70 g/dL, p<0.001)
-• ALMI z-score: Lower in Q1 (-0.40 vs 0.53, p<0.001)
+IRI Components (survey-weighted):
+• hs-CRP: 5.9-fold higher in Q1 (4.10 vs 0.70 mg/L, p<0.001)
+• Albumin: Lower in Q1 (4.16 vs 4.73 g/dL, p<0.001)
+• ALMI z-score: Lower in Q1 (-0.56 vs 0.48, p<0.001)
 
-Comorbidities:
-• Diabetes: More prevalent in Q1 (15.6% vs 5.7%, p<0.001)
-• Hypertension: Similar across quartiles (~35-41%, p=0.20)
-• CVD history: Numerically higher in Q1 (5.4% vs 2.3%, p=0.12)
+Comorbidities (survey-weighted):
+• Diabetes: More prevalent in Q1 (13.2% vs 4.8%, p<0.001)
+• Hypertension: Similar across quartiles (~32-42%, p=0.20)
+• CVD history: Numerically higher in Q1 (4.5% vs 1.8%, p=0.12)
 • Current smoking: More prevalent in Q1 (25.8% vs 16.5%, p=0.03)
 
 FUNCTIONAL OUTCOMES BY IRI QUARTILE (TABLE 2)
@@ -274,40 +275,40 @@ Clear gradients in functional outcome prevalence were observed across IRI
 quartiles:
 
 Fair/Poor Self-Rated Health:
-• Q1 (lowest resilience): 19.2% (SE 2.0%)
-• Q2: 17.5% (SE 1.6%)
-• Q3: 13.8% (SE 1.9%)
-• Q4 (highest resilience): 9.2% (SE 1.0%)
-• Absolute difference Q1 vs Q4: 10.0 percentage points
+• Q1 (lowest resilience): 17.4% (SE 2.0%)
+• Q2: 17.4% (SE 1.6%)
+• Q3: 13.7% (SE 1.9%)
+• Q4 (highest resilience): 9.3% (SE 1.0%)
+• Absolute difference Q1 vs Q4: 8.1 percentage points
 
 Difficulty Walking ¼ Mile:
-• Q1: 12.4% (SE 1.7%)
-• Q2: 8.7% (SE 1.4%)
-• Q3: 7.8% (SE 1.3%)
-• Q4: 2.5% (SE 0.6%)
-• Absolute difference Q1 vs Q4: 9.9 percentage points
+• Q1: 3.5% (SE 1.7%)
+• Q2: 4.3% (SE 1.4%)
+• Q3: 3.8% (SE 1.3%)
+• Q4: 1.2% (SE 0.6%)
+• Absolute difference Q1 vs Q4: 2.3 percentage points
 
 Depression (PHQ-9 ≥10):
-• Q1: 8.5% (SE 0.9%)
+• Q1: 7.7% (SE 0.9%)
 • Q2: 7.0% (SE 1.3%)
 • Q3: 6.6% (SE 0.9%)
-• Q4: 5.3% (SE 0.6%)
-• Absolute difference Q1 vs Q4: 3.2 percentage points
+• Q4: 5.6% (SE 0.6%)
+• Absolute difference Q1 vs Q4: 2.1 percentage points
 
 MULTIVARIABLE ASSOCIATIONS (TABLE 2)
 
 Continuous IRI Analysis:
-Each 1-unit increase in IRI was associated with significantly lower odds of 
+Each 1-unit increase in IRI was associated with lower odds of
 adverse functional outcomes after adjustment for age, sex, and race/ethnicity:
-• Fair/poor health: OR 0.81 (95% CI: 0.74-0.89), p<0.001
-• Walking difficulty: OR 0.78 (95% CI: 0.67-0.91), p=0.005
+• Fair/poor health: OR 0.84 (95% CI: 0.75-0.93), p=0.005
+• Walking difficulty: OR 0.86 (95% CI: 0.72-1.03), p=0.08 (not significant)
 • Depression: OR 0.90 (95% CI: 0.77-1.05), p=0.14 (not significant)
 
 Quartile Analysis (Q4 reference):
 Compared to participants in the highest IRI quartile (Q4), those in the 
-lowest quartile (Q1) had significantly elevated odds:
-• Fair/poor health: OR 2.07 (95% CI: 1.42-3.01), p=0.004
-• Walking difficulty: OR 4.51 (95% CI: 1.96-10.42), p=0.006
+lowest quartile (Q1) had elevated odds:
+• Fair/poor health: OR 1.64 (95% CI: 1.02-2.64), p=0.04
+• Walking difficulty: OR 1.82 (95% CI: 0.74-4.48), p=0.15 (not significant)
 • Depression: OR 1.40 (95% CI: 0.79-2.49), p=0.19 (not significant)
 
 The intermediate quartiles showed graded associations, with Q2 and Q3 
@@ -328,14 +329,14 @@ DISCUSSION
 
 In this nationally representative sample of U.S. adults, we developed and 
 evaluated an Inflammatory Resilience Index integrating hs-CRP, serum albumin, 
-and DEXA-derived appendicular lean mass. Lower IRI was significantly associated 
-with fair/poor self-rated health and mobility limitations after adjustment 
-for age, sex, and race/ethnicity. Adults in the lowest IRI quartile had 
-approximately 2-fold higher odds of poor self-rated health and 4.5-fold 
-higher odds of walking difficulty compared to the highest quartile. These 
-findings support the concept that integrated assessment across inflammation, 
-nutrition, and muscle mass domains may identify individuals at risk for 
-functional decline.
+and DEXA-derived appendicular lean mass. Lower IRI was significantly associated
+with fair/poor self-rated health, with a non-significant trend for mobility
+limitations, after adjustment for age, sex, and race/ethnicity. Adults in the lowest IRI quartile had 
+approximately 1.6-fold higher odds of poor self-rated health and a
+non-significant trend toward higher odds of walking difficulty (OR 1.82)
+compared to the highest quartile. These findings support the concept that
+integrated assessment across inflammation, nutrition, and muscle mass
+domains may identify individuals at risk for functional decline.
 
 BIOLOGICAL PLAUSIBILITY
 
@@ -427,10 +428,10 @@ CONCLUSIONS
 
 In this nationally representative sample of U.S. adults, the Inflammatory 
 Resilience Index—a simple composite of hs-CRP, serum albumin, and 
-appendicular lean mass—was significantly associated with self-rated health 
-and mobility limitations. Adults in the lowest IRI quartile had 2-fold 
-higher odds of fair/poor health and 4.5-fold higher odds of walking 
-difficulty compared to the highest quartile. These findings support IRI 
+appendicular lean mass—was significantly associated with self-rated health,
+with a non-significant trend for mobility limitations. Adults in the lowest IRI quartile had 1.6-fold
+higher odds of fair/poor health and a non-significant trend toward higher
+odds of walking difficulty (OR 1.82) compared to the highest quartile. These findings support IRI 
 as an integrative marker of physiologic resilience capturing inflammation, 
 nutrition, and muscle mass domains.
 
@@ -544,23 +545,23 @@ TABLE 1. Baseline Characteristics by IRI Quartile
 
                           Q1 (Lowest)  Q2        Q3        Q4 (Highest)  p-value
 --------------------------------------------------------------------------------
-N                         652          757       743       577           --
-Age, years                42.3±11.2    41.4±11.4 39.6±10.9 34.3±10.7    <0.001
-Female, %                 68.6         57.5      40.6      25.1          <0.001
-BMI, kg/m²                29.5±7.0     29.2±6.2  29.2±6.7  27.4±6.3     <0.001
+N (unweighted)            604          757       743       577           --
+Age, years                42.3±11.7    42.1±11.6 40.4±11.0 34.2±10.7    <0.001
+Female, %                 62.7         60.1      42.0      24.7          <0.001
+BMI, kg/m²                29.5±7.0     29.3±6.2  28.8±6.5  27.0±5.9     <0.001
 
 IRI Components:
-  hs-CRP, mg/L            4.08±2.62    2.62±2.07 1.77±1.75 0.77±1.12    <0.001
-  Albumin, g/dL           4.12±0.28    4.32±0.24 4.47±0.22 4.70±0.23    <0.001
-  ALMI z-score*           -0.40±1.09   0.22±0.83 0.49±0.77 0.53±0.81    <0.001
+  hs-CRP, mg/L            4.10±2.65    2.69±2.08 1.74±1.73 0.70±0.96    <0.001
+  Albumin, g/dL           4.16±0.28    4.35±0.24 4.50±0.21 4.73±0.24    <0.001
+  ALMI z-score*           -0.56±1.17   0.15±0.88 0.43±0.73 0.48±0.75    <0.001
 
 Comorbidities:
-  Diabetes, %             15.6         11.8      9.6       5.7           <0.001
-  Hypertension, %         41.0         40.3      39.4      33.1          0.20
-  CVD history, %          5.4          3.0       3.8       2.3           0.12
+  Diabetes, %             13.2         10.1      7.6       4.8           <0.001
+  Hypertension, %         37.2         41.6      36.2      31.9          0.20
+  CVD history, %          4.5          2.6       3.2       1.8           0.12
   Current smoker, %       25.8         18.7      21.9      16.5          0.03
 
-*ALMI values are standardized z-scores, not raw kg/m² values.
+*All values are survey-weighted population estimates. ALMI z-scores are sex-specific.
 Abbreviations: BMI=body mass index; CVD=cardiovascular disease; 
 hs-CRP=high-sensitivity C-reactive protein; ALMI=appendicular lean mass index
 
@@ -571,16 +572,16 @@ TABLE 2. Association of IRI with Functional Outcomes
                           Prevalence by Quartile (%)           
 Outcome                   Q1      Q2      Q3      Q4      
 --------------------------------------------------------------------------------
-Fair/Poor Health          19.2    17.5    13.8    9.2     
-Difficulty Walking        12.4    8.7     7.8     2.5     
-Depression (PHQ-9≥10)     8.5     7.0     6.6     5.3     
+Fair/Poor Health          17.4    17.4    13.7    9.3
+Difficulty Walking        3.5     4.3     3.8     1.2
+Depression (PHQ-9≥10)     7.7     7.0     6.6     5.6     
 
                           Adjusted Odds Ratios* (95% CI)
 Outcome                   Continuous IRI    p       Q1 vs Q4          p
                           (per 1-unit)              
 --------------------------------------------------------------------------------
-Fair/Poor Health          0.81 (0.74-0.89)  <0.001  2.07 (1.42-3.01)  0.004
-Difficulty Walking        0.78 (0.67-0.91)  0.005   4.51 (1.96-10.42) 0.006
+Fair/Poor Health          0.84 (0.75-0.93)  0.005   1.64 (1.02-2.64)  0.04
+Difficulty Walking        0.86 (0.72-1.03)  0.08    1.82 (0.74-4.48)  0.15
 Depression                0.90 (0.77-1.05)  0.14    1.40 (0.79-2.49)  0.19
 
 *Adjusted for age, sex, and race/ethnicity.

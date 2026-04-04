@@ -19,10 +19,16 @@ iri_colors <- list(
   gray = "#7F7F7F"
 )
 
+# Project paths
+project_root <- normalizePath(file.path(dirname(sys.frame(1)$ofile %||% "."), ".."), mustWork = FALSE)
+if (!dir.exists(project_root)) {
+  project_root <- normalizePath(file.path(getwd(), ".."), mustWork = FALSE)
+}
+
 # Paths
-data_path <- "/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/data/processed/iri_functional_cohort.csv"
-output_dir <- "/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/output"
-manuscript_dir <- "/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/manuscript/figures"
+data_path <- file.path(project_root, "data", "processed", "iri_functional_cohort.csv")
+output_dir <- file.path(project_root, "output")
+manuscript_dir <- file.path(project_root, "manuscript", "figures")
 
 cat("Loading data...\n")
 df <- read.csv(data_path)
@@ -72,18 +78,13 @@ cat("Health status:\n"); print(table(df$health_status, useNA = "ifany"))
 cat("Walk status:\n"); print(table(df$walk_status, useNA = "ifany"))
 cat("Depression status:\n"); print(table(df$depression_status, useNA = "ifany"))
 
-# Check IRI score exists
-if (!"iri_score" %in% names(df)) {
-  # Calculate IRI if not present (standardized sum of components)
-  cat("\nCalculating IRI score from components...\n")
-  df <- df %>%
-    mutate(
-      z_crp = -scale(log(hscrp + 0.1)),  # Inverted: lower CRP = higher resilience
-      z_alb = scale(albumin),
-      z_almi = scale(z_almi),
-      iri_score = z_crp + z_alb + z_almi
-    )
+# Use the pre-computed IRI column (not iri_score)
+if (!"iri" %in% names(df)) {
+  stop("IRI column not found in data. Re-run 02_build_cohort.py first.")
 }
+
+# Create iri_score alias for plotting code below
+df$iri_score <- df$iri
 
 cat("IRI score range:", range(df$iri_score, na.rm = TRUE), "\n")
 
@@ -152,7 +153,7 @@ combined <- p1 + p2 + p3 +
   plot_layout(ncol = 3) +
   plot_annotation(
     title = "IRI Score Distribution by Functional Outcome Status",
-    subtitle = "NHANES 2015-2020 | Lower IRI indicates lower inflammatory resilience",
+    subtitle = "NHANES 2015-2016 | Lower IRI indicates lower inflammatory resilience",
     caption = "Violin plots show full distribution; box plots show median and IQR; red diamonds indicate means.\nParticipants with adverse outcomes have lower IRI scores (worse resilience).",
     theme = theme(
       plot.title = element_text(size = 13, face = "bold"),

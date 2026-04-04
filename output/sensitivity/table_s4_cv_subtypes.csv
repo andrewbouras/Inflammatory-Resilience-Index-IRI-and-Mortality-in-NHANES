@@ -1,0 +1,5 @@
+outcome,n_events,hr,hr_lower,hr_upper,p_value,hr_ci,p
+All-cause mortality,16,0.8402539784273783,0.5497662110931709,1.2842308858144502,0.42130422540147244,0.84 (0.55 - 1.28),0.4213
+CV mortality (combined),1,NA,NA,NA,NA,NE,—
+Heart disease mortality,1,NA,NA,NA,NA,NE,—
+Stroke mortality,0,NA,NA,NA,NA,NE,—

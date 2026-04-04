@@ -1,10 +1,19 @@
 """
-IRI Study - Variable Harmonization and IRI Construction
-Processes NHANES 2011-2014 and 2017-2020 data for the Inflammatory Resilience Index study
+DEPRECATED — This script uses the ORIGINAL grip-strength-based IRI formula.
+The current/canonical formula uses ALMI (appendicular lean mass index) instead.
+See 02_build_cohort.py for the active cohort construction script.
 
-IRI = (-z_hsCRP) + z_albumin + z_grip_strength
-Higher IRI = greater inflammatory resilience
+Original formula: IRI = (-z_hsCRP) + z_albumin + z_grip_strength
+Current formula:  IRI = (-z_hsCRP) + z_albumin + z_ALMI
+
+This file is retained for reference only. Do NOT use for analysis.
 """
+
+raise DeprecationWarning(
+    "This script uses the old grip-strength IRI formula. "
+    "Use 02_build_cohort.py (ALMI-based) instead."
+)
+
 
 import pandas as pd
 import numpy as np

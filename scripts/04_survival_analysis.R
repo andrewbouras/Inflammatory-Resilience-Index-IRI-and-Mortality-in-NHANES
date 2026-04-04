@@ -13,12 +13,9 @@ suppressPackageStartupMessages({
 options(survey.lonely.psu = "adjust")
 
 # Get project root
-args <- commandArgs(trailingOnly = FALSE)
-script_path <- sub("--file=", "", args[grep("--file=", args)])
-if (length(script_path) > 0) {
-  project_root <- dirname(dirname(normalizePath(script_path)))
-} else {
-  project_root <- getwd()
+project_root <- normalizePath(file.path(dirname(sys.frame(1)$ofile %||% "."), ".."), mustWork = FALSE)
+if (!dir.exists(project_root)) {
+  project_root <- normalizePath(file.path(getwd(), ".."), mustWork = FALSE)
 }
 
 # =============================================================================
@@ -60,8 +57,9 @@ df <- df %>%
     iri_q_ref = relevel(iri_q, ref = "Q4")
   )
 
-# Number of cycles for weight adjustment
-n_cycles <- 2
+# Weight adjustment: DEXA data only available in 2015-2016 (single 2-year cycle).
+# Per NCHS guidelines, use WTMEC2YR directly without dividing for a single cycle.
+n_cycles <- 1
 
 # =============================================================================
 # SURVEY DESIGN
@@ -138,15 +136,19 @@ print(tidy(model2_all, conf.int = TRUE, exponentiate = TRUE) %>%
         filter(str_detect(term, "iri_q")) %>%
         select(term, estimate, conf.low, conf.high, p.value))
 
-# Model 3: + key clinical comorbidities (simplified to avoid singularity)
+# Model 3: + key clinical comorbidities
+# NOTE: With only ~20 deaths, the full model may fail due to near-singularity.
+# If it does, a simplified model is used, and a warning is logged.
 model3_all <- tryCatch({
   svycoxph(
-    Surv(followup_years, mort_all) ~ iri_q_ref + age + sex_f + bmi + 
+    Surv(followup_years, mort_all) ~ iri_q_ref + age + sex_f + bmi +
       smoking_f + hypertension + diabetes + cvd_history,
     design = design
   )
 }, error = function(e) {
-  cat("Model 3 failed, using simplified version\n")
+  cat("WARNING: Full Model 3 failed (", conditionMessage(e), ").\n")
+  cat("Using simplified Model 3 (age, sex, BMI, diabetes only).\n")
+  cat("This differs from the fully adjusted model described in manuscript.\n")
   svycoxph(
     Surv(followup_years, mort_all) ~ iri_q_ref + age + sex_f + bmi + diabetes,
     design = design
@@ -160,11 +162,12 @@ print(tidy(model3_all, conf.int = TRUE, exponentiate = TRUE) %>%
 # IRI as continuous variable (per SD increase)
 model_cont_all <- tryCatch({
   svycoxph(
-    Surv(followup_years, mort_all) ~ iri + age + sex_f + bmi + 
+    Surv(followup_years, mort_all) ~ iri + age + sex_f + bmi +
       smoking_f + hypertension + diabetes + cvd_history,
     design = design
   )
 }, error = function(e) {
+  cat("WARNING: Full continuous model failed, using simplified version.\n")
   svycoxph(
     Surv(followup_years, mort_all) ~ iri + age + sex_f + bmi + diabetes,
     design = design

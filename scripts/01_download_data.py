@@ -52,6 +52,7 @@ FILES_2015_2016 = {
     "MCQ_I.xpt": f"{BASE_URL}/2015/DataFiles/MCQ_I.xpt",              # Medical conditions
     "KIQ_U_I.xpt": f"{BASE_URL}/2015/DataFiles/KIQ_U_I.xpt",          # Kidney questionnaire
     "ALB_CR_I.xpt": f"{BASE_URL}/2015/DataFiles/ALB_CR_I.xpt",        # Urine albumin/creatinine
+    "PAQ_I.xpt": f"{BASE_URL}/2015/DataFiles/PAQ_I.xpt",              # Physical activity
 }
 
 FILES_2017_2020 = {
@@ -77,6 +78,7 @@ FILES_2017_2020 = {
     "P_MCQ.xpt": f"{BASE_URL}/2017/DataFiles/P_MCQ.xpt",
     "P_KIQ_U.xpt": f"{BASE_URL}/2017/DataFiles/P_KIQ_U.xpt",
     "P_ALB_CR.xpt": f"{BASE_URL}/2017/DataFiles/P_ALB_CR.xpt",
+    "P_PAQ.xpt": f"{BASE_URL}/2017/DataFiles/P_PAQ.xpt",              # Physical activity
 }
 
 # Mortality linkage files

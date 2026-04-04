@@ -10,8 +10,10 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
 import os
 
+from pathlib import Path
+
 # Paths
-BASE_DIR = "/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES"
+BASE_DIR = str(Path(__file__).parent.parent)
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 MANUSCRIPT_DIR = os.path.join(BASE_DIR, "manuscript")
 

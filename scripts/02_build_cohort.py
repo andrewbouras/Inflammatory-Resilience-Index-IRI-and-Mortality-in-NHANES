@@ -127,8 +127,8 @@ def calculate_alm(df: pd.DataFrame) -> pd.Series:
     available = [c for c in alm_cols if c in df.columns]
     
     if len(available) == 4:
-        # Sum in grams, convert to kg
-        alm_g = df[available].sum(axis=1)
+        # Sum in grams, convert to kg (require all 4 limbs to be non-null)
+        alm_g = df[available].sum(axis=1, min_count=4)
         alm_kg = alm_g / 1000
         return alm_kg
     else:
@@ -147,6 +147,22 @@ def build_iri_cohort(df: pd.DataFrame) -> pd.DataFrame:
     df['sex'] = df['RIAGENDR']  # 1=Male, 2=Female
     df['female'] = (df['sex'] == 2).astype(int)
     df['race_eth'] = df.get('RIDRETH3', pd.Series([np.nan] * len(df), index=df.index))
+    
+    # Socioeconomic variables (for sensitivity analyses)
+    # Education: 1=<9th, 2=9-11th, 3=HS/GED, 4=Some college/AA, 5=College+
+    df['education'] = df.get('DMDEDUC2', pd.Series([np.nan] * len(df), index=df.index))
+    df.loc[df['education'] > 5, 'education'] = np.nan  # 7=Refused, 9=Don't know
+    # Binary: Less than HS vs HS or higher
+    df['edu_less_than_hs'] = (df['education'].isin([1, 2])).astype(float)
+    df.loc[df['education'].isna(), 'edu_less_than_hs'] = np.nan
+    print(f"  Education available: {df['education'].notna().sum():,}")
+    
+    # Poverty-Income Ratio: 0-5 (top-coded at 5)
+    df['pir'] = df.get('INDFMPIR', pd.Series([np.nan] * len(df), index=df.index))
+    # Binary: Below poverty (<1) vs at/above poverty (>=1)
+    df['below_poverty'] = (df['pir'] < 1).astype(float)
+    df.loc[df['pir'].isna(), 'below_poverty'] = np.nan
+    print(f"  PIR available: {df['pir'].notna().sum():,}")
     
     # Survey design
     df['mec_weight'] = df.get('WTMEC2YR', df.get('WTMECPRP', pd.Series([np.nan] * len(df), index=df.index)))
@@ -182,28 +198,59 @@ def build_iri_cohort(df: pd.DataFrame) -> pd.DataFrame:
     # ==========================================================================
     
     print("\n  Calculating z-scores...")
-    
+
+    # Preliminary eligibility mask: compute z-score means/SDs on the analytic
+    # sample only (age >= 20, CRP <= 10, non-missing components and weights).
+    # This prevents pediatric participants and acute inflammation (CRP > 10)
+    # from influencing the standardization parameters.
+    eligible_for_zscore = (
+        (df['age'] >= 20) &
+        (df['hscrp'] <= 10) &
+        df['hscrp'].notna() &
+        df['albumin'].notna() &
+        df['almi'].notna() &
+        df['mec_weight'].notna()
+    )
+    print(f"  Eligible for z-score computation: {eligible_for_zscore.sum():,}")
+
     # z_log_CRP (inverted: multiply by -1 so higher = less inflammation)
     df['log_hscrp'] = np.log(df['hscrp'].replace(0, np.nan))
-    mean_log_crp = df['log_hscrp'].mean()
-    std_log_crp = df['log_hscrp'].std()
+    mean_log_crp = df.loc[eligible_for_zscore, 'log_hscrp'].mean()
+    std_log_crp = df.loc[eligible_for_zscore, 'log_hscrp'].std()
     df['z_crp'] = (df['log_hscrp'] - mean_log_crp) / std_log_crp
     df['z_crp_inv'] = df['z_crp'] * -1  # Inverted
-    
+
     # z_Albumin
-    mean_alb = df['albumin'].mean()
-    std_alb = df['albumin'].std()
+    mean_alb = df.loc[eligible_for_zscore, 'albumin'].mean()
+    std_alb = df.loc[eligible_for_zscore, 'albumin'].std()
     df['z_albumin'] = (df['albumin'] - mean_alb) / std_alb
-    
+
     # z_ALMI (sex-specific)
     df['z_almi'] = np.nan
+    almi_params = {}
     for sex_val in [1, 2]:
-        mask = df['sex'] == sex_val
+        mask = (df['sex'] == sex_val) & eligible_for_zscore
         subset = df.loc[mask, 'almi']
         mean_almi = subset.mean()
         std_almi = subset.std()
+        almi_params[sex_val] = {'mean': mean_almi, 'std': std_almi}
         if std_almi > 0:
-            df.loc[mask, 'z_almi'] = (subset - mean_almi) / std_almi
+            # Apply z-scores to ALL participants of this sex (using eligible means/SDs)
+            sex_mask = df['sex'] == sex_val
+            df.loc[sex_mask, 'z_almi'] = (df.loc[sex_mask, 'almi'] - mean_almi) / std_almi
+
+    # Save derivation cohort standardization parameters for validation use
+    import json
+    zscore_params = {
+        'log_crp': {'mean': float(mean_log_crp), 'std': float(std_log_crp)},
+        'albumin': {'mean': float(mean_alb), 'std': float(std_alb)},
+        'almi_male': {'mean': float(almi_params[1]['mean']), 'std': float(almi_params[1]['std'])},
+        'almi_female': {'mean': float(almi_params[2]['mean']), 'std': float(almi_params[2]['std'])},
+    }
+    params_path = DATA_PROCESSED / "derivation_zscore_params.json"
+    with open(params_path, 'w') as f:
+        json.dump(zscore_params, f, indent=2)
+    print(f"  Saved z-score standardization parameters to {params_path}")
     
     # ==========================================================================
     # MODIFIED IRI CONSTRUCTION
@@ -212,8 +259,13 @@ def build_iri_cohort(df: pd.DataFrame) -> pd.DataFrame:
     df['iri'] = df['z_crp_inv'] + df['z_albumin'] + df['z_almi']
     print(f"  IRI calculated for: {df['iri'].notna().sum():,}")
     
-    # IRI quartiles
-    df['iri_quartile'] = pd.qcut(df['iri'], q=4, labels=['Q1', 'Q2', 'Q3', 'Q4'])
+    # IRI quartiles (computed on eligible subset only, so quartile boundaries
+    # reflect the analytic population, not those who will be excluded)
+    df['iri_quartile'] = np.nan
+    elig_iri = df.loc[eligible_for_zscore & df['iri'].notna(), 'iri']
+    df.loc[elig_iri.index, 'iri_quartile'] = pd.qcut(
+        elig_iri, q=4, labels=['Q1', 'Q2', 'Q3', 'Q4']
+    )
     
     # ==========================================================================
     # COVARIATES
@@ -276,11 +328,13 @@ def build_iri_cohort(df: pd.DataFrame) -> pd.DataFrame:
     df['poor_health'] = (df['self_rated_health'] >= 4).astype(float)
     df.loc[df['self_rated_health'].isna(), 'poor_health'] = np.nan
     
-    # Mobility limitations (PFQ049): Difficulty walking 1/4 mile
-    # 1 = Some difficulty or unable, 2 = No difficulty
-    pfq049 = df.get('PFQ049', pd.Series([np.nan] * len(df), index=df.index))
-    df['difficulty_walking'] = (pfq049 == 1).astype(float)
-    df.loc[pfq049.isna() | (pfq049 > 2), 'difficulty_walking'] = np.nan
+    # Mobility limitations (PFQ054): Difficulty walking without special equipment
+    # "Because of a health problem, do you have difficulty walking without
+    #  using any special equipment?"
+    # 1 = Yes (has difficulty), 2 = No, 7 = Refused, 9 = Don't know
+    pfq054 = df.get('PFQ054', pd.Series([np.nan] * len(df), index=df.index))
+    df['difficulty_walking'] = (pfq054 == 1).astype(float)
+    df.loc[pfq054.isna() | (pfq054 > 2), 'difficulty_walking'] = np.nan
     
     # Difficulty climbing stairs (PFQ054)
     pfq054 = df.get('PFQ054', pd.Series([np.nan] * len(df), index=df.index))
@@ -363,6 +417,7 @@ def main():
         'SEQN', 'cycle',
         'mec_weight', 'psu', 'strata',
         'age', 'sex', 'female', 'race_eth',
+        'education', 'edu_less_than_hs', 'pir', 'below_poverty',
         'hscrp', 'albumin', 'alm_kg', 'almi',
         'z_crp_inv', 'z_albumin', 'z_almi',
         'iri', 'iri_quartile',

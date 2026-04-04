@@ -8,13 +8,19 @@ library(tableone)
 
 options(survey.lonely.psu = "adjust")
 
+# Project paths
+project_root <- normalizePath(file.path(dirname(sys.frame(1)$ofile %||% "."), ".."), mustWork = FALSE)
+if (!dir.exists(project_root)) {
+  project_root <- normalizePath(file.path(getwd(), ".."), mustWork = FALSE)
+}
+
 # Load data
-dat <- read.csv("/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/data/processed/iri_functional_cohort.csv")
+dat <- read.csv(file.path(project_root, "data", "processed", "iri_functional_cohort.csv"))
 
 cat("Generating tables for IRI manuscript...\n\n")
 
-# Scale weights
-dat$wt_scaled <- dat$mec_weight / 2
+# DEXA only available in 2015-2016 (single cycle); use weights directly
+dat$wt_scaled <- dat$mec_weight
 
 # Create survey design
 svy <- svydesign(
@@ -52,7 +58,7 @@ print(tab1_print)
 
 # Save Table 1 as CSV
 tab1_csv <- print(tab1, smd = FALSE, quote = FALSE, noSpaces = TRUE, printToggle = FALSE)
-write.csv(tab1_csv, "/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/output/table1_baseline_characteristics.csv")
+write.csv(tab1_csv, file.path(project_root, "output", "table1_baseline_characteristics.csv"))
 
 cat("\nTable 1 saved to output/table1_baseline_characteristics.csv\n")
 
@@ -63,28 +69,56 @@ cat("\nTable 1 saved to output/table1_baseline_characteristics.csv\n")
 cat("\n\n")
 cat("="," TABLE 2: FUNCTIONAL OUTCOMES BY IRI ", "=\n\n", sep = paste(rep("=", 15), collapse = ""))
 
-# Results table
+# Load results dynamically from functional outcomes analysis
+results_path <- file.path(project_root, "output", "functional_outcomes_results.csv")
+if (file.exists(results_path)) {
+  fo_results <- read.csv(results_path)
+  cat("  Loaded functional outcomes results from CSV\n")
+} else {
+  stop("functional_outcomes_results.csv not found. Run 05_functional_analysis.R first.")
+}
+
+# Compute survey-weighted prevalence by quartile
+fmt_prev <- function(outcome_var) {
+  prev_vec <- c()
+  for (q in c("Q1", "Q2", "Q3", "Q4")) {
+    sub_svy <- subset(svy, iri_quartile == q & !is.na(dat[[outcome_var]]))
+    prev <- svymean(as.formula(paste0("~", outcome_var)), sub_svy)
+    prev_vec <- c(prev_vec, sprintf("%.1f%% (%.1f)", 100 * coef(prev), 100 * SE(prev)))
+  }
+  prev_vec
+}
+
+health_prev <- fmt_prev("poor_health")
+walk_prev <- fmt_prev("difficulty_walking")
+dep_prev <- fmt_prev("depression")
+
+# Format ORs from results CSV
+fmt_or <- function(row) {
+  sprintf("%.2f (%.2f-%.2f)", row$OR_continuous, row$CI_low_cont, row$CI_high_cont)
+}
+fmt_p <- function(p) {
+  if (p < 0.001) "<0.001" else sprintf("%.3f", p)
+}
+fmt_or_q <- function(row) {
+  sprintf("%.2f (%.2f-%.2f)", row$OR_Q1vsQ4, row$CI_low_Q1, row$CI_high_Q1)
+}
+
 table2 <- data.frame(
-  Outcome = c("Fair/Poor Self-Rated Health", "Difficulty Walking ¼ Mile", "Depression (PHQ-9 ≥10)"),
-  
-  # Prevalence by quartile
-  Q1_prev = c("19.2% (2.0)", "12.4% (1.7)", "8.5% (0.9)"),
-  Q2_prev = c("17.5% (1.6)", "8.7% (1.4)", "7.0% (1.3)"),
-  Q3_prev = c("13.8% (1.9)", "7.8% (1.3)", "6.6% (0.9)"),
-  Q4_prev = c("9.2% (1.0)", "2.5% (0.6)", "5.3% (0.6)"),
-  
-  # Continuous IRI OR
-  OR_continuous = c("0.81 (0.74-0.89)", "0.78 (0.67-0.91)", "0.90 (0.77-1.05)"),
-  p_continuous = c("<0.001", "0.005", "0.14"),
-  
-  # Q1 vs Q4 OR
-  OR_Q1vsQ4 = c("2.07 (1.42-3.01)", "4.51 (1.96-10.42)", "1.40 (0.79-2.49)"),
-  p_Q1vsQ4 = c("0.004", "0.006", "0.19")
+  Outcome = c("Fair/Poor Self-Rated Health", "Difficulty Walking", "Depression (PHQ-9 >=10)"),
+  Q1_prev = c(health_prev[1], walk_prev[1], dep_prev[1]),
+  Q2_prev = c(health_prev[2], walk_prev[2], dep_prev[2]),
+  Q3_prev = c(health_prev[3], walk_prev[3], dep_prev[3]),
+  Q4_prev = c(health_prev[4], walk_prev[4], dep_prev[4]),
+  OR_continuous = sapply(1:3, function(i) fmt_or(fo_results[i, ])),
+  p_continuous = sapply(1:3, function(i) fmt_p(fo_results$p_continuous[i])),
+  OR_Q1vsQ4 = sapply(1:3, function(i) fmt_or_q(fo_results[i, ])),
+  p_Q1vsQ4 = sapply(1:3, function(i) fmt_p(fo_results$p_Q1vsQ4[i]))
 )
 
 print(table2, row.names = FALSE)
 
-write.csv(table2, "/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/output/table2_functional_outcomes.csv", row.names = FALSE)
+write.csv(table2, file.path(project_root, "output", "table2_functional_outcomes.csv"), row.names = FALSE)
 
 cat("\nTable 2 saved to output/table2_functional_outcomes.csv\n")
 
@@ -95,19 +129,30 @@ cat("\nTable 2 saved to output/table2_functional_outcomes.csv\n")
 cat("\n\n")
 cat("="," TABLE 3: IRI COMPONENTS ", "=\n\n", sep = paste(rep("=", 15), collapse = ""))
 
-table3 <- data.frame(
-  Quartile = c("Q1 (Lowest Resilience)", "Q2", "Q3", "Q4 (Highest Resilience)"),
-  N = c(652, 757, 743, 577),
-  IRI_mean_sd = c("-1.20 (0.71)", "0.30 (0.32)", "1.34 (0.31)", "2.72 (0.69)"),
-  CRP_mean_sd = c("4.08 (2.62)", "2.62 (2.07)", "1.77 (1.75)", "0.77 (1.12)"),
-  Albumin_mean_sd = c("4.12 (0.28)", "4.32 (0.24)", "4.47 (0.22)", "4.70 (0.23)"),
-  ALMI_z_mean_sd = c("-0.40 (1.09)", "0.22 (0.83)", "0.49 (0.77)", "0.53 (0.81)")
-)
+# Compute Table 3 dynamically from data
+t3_rows <- list()
+for (q in c("Q1", "Q2", "Q3", "Q4")) {
+  sub <- dat[dat$iri_quartile == q, ]
+  label <- switch(q,
+    "Q1" = "Q1 (Lowest Resilience)",
+    "Q4" = "Q4 (Highest Resilience)",
+    q
+  )
+  t3_rows[[q]] <- data.frame(
+    Quartile = label,
+    N = nrow(sub),
+    IRI_mean_sd = sprintf("%.2f (%.2f)", mean(sub$iri, na.rm=TRUE), sd(sub$iri, na.rm=TRUE)),
+    CRP_mean_sd = sprintf("%.2f (%.2f)", mean(sub$hscrp, na.rm=TRUE), sd(sub$hscrp, na.rm=TRUE)),
+    Albumin_mean_sd = sprintf("%.2f (%.2f)", mean(sub$albumin, na.rm=TRUE), sd(sub$albumin, na.rm=TRUE)),
+    ALMI_z_mean_sd = sprintf("%.2f (%.2f)", mean(sub$z_almi, na.rm=TRUE), sd(sub$z_almi, na.rm=TRUE))
+  )
+}
+table3 <- do.call(rbind, t3_rows)
 
 cat("Note: ALMI values are standardized z-scores, not raw kg/m² values.\n\n")
 print(table3, row.names = FALSE)
 
-write.csv(table3, "/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/output/table3_iri_components.csv", row.names = FALSE)
+write.csv(table3, file.path(project_root, "output", "table3_iri_components.csv"), row.names = FALSE)
 
 cat("\nTable 3 saved to output/table3_iri_components.csv\n")
 
