@@ -12,8 +12,9 @@ library(broom)
 options(survey.lonely.psu = "adjust")
 
 # Project paths
-project_root <- normalizePath(file.path(dirname(sys.frame(1)$ofile %||% "."), ".."), mustWork = FALSE)
-if (!dir.exists(project_root)) {
+script_dir <- tryCatch(dirname(sys.frame(1)$ofile), error = function(e) ".")
+project_root <- normalizePath(file.path(script_dir, ".."), mustWork = FALSE)
+if (!dir.exists(file.path(project_root, "output"))) {
   project_root <- normalizePath(file.path(getwd(), ".."), mustWork = FALSE)
 }
 

@@ -58,9 +58,9 @@ theme_iri <- function(base_size = 11) {
 }
 
 # Output paths (relative to script location)
-project_root <- normalizePath(file.path(dirname(sys.frame(1)$ofile %||% "."), ".."), mustWork = FALSE)
-if (!dir.exists(project_root)) {
-  # Fallback for interactive use
+script_dir <- tryCatch(dirname(sys.frame(1)$ofile), error = function(e) ".")
+project_root <- normalizePath(file.path(script_dir, ".."), mustWork = FALSE)
+if (!dir.exists(file.path(project_root, "output"))) {
   project_root <- normalizePath(file.path(getwd(), ".."), mustWork = FALSE)
 }
 output_dir <- file.path(project_root, "output")
@@ -129,6 +129,7 @@ cat("\n[Figure 2: Prevalence by Quartile]\n")
 prev_csv <- file.path(project_root, "data", "processed", "iri_functional_cohort.csv")
 if (file.exists(prev_csv)) {
   library(survey)
+  options(survey.lonely.psu = "adjust")
   prev_df <- read.csv(prev_csv)
   prev_df <- prev_df %>%
     filter(iri_quartile %in% c("Q1", "Q2", "Q3", "Q4")) %>%
@@ -162,13 +163,7 @@ if (file.exists(prev_csv)) {
   prev_data <- do.call(rbind, prev_rows)
   cat("  Computed survey-weighted prevalence from cohort data\n")
 } else {
-  cat("  WARNING: Cohort CSV not found, using fallback prevalence values\n")
-  prev_data <- data.frame(
-    Quartile = rep(c("Q1\n(Lowest)", "Q2", "Q3", "Q4\n(Highest)"), 3),
-    Outcome = rep(c("Fair/Poor Health", "Difficulty Walking", "Depression"), each = 4),
-    Prevalence = c(19.2, 17.5, 13.8, 9.2, 12.4, 8.7, 7.8, 2.5, 8.5, 7.0, 6.6, 5.3),
-    SE = c(2.0, 1.6, 1.9, 1.0, 1.7, 1.4, 1.3, 0.6, 0.9, 1.3, 0.9, 0.6)
-  )
+  stop("iri_functional_cohort.csv not found. Run 02_build_cohort.py first.")
 }
 
 prev_data$Quartile <- factor(prev_data$Quartile, levels = c("Q1\n(Lowest)", "Q2", "Q3", "Q4\n(Highest)"))
