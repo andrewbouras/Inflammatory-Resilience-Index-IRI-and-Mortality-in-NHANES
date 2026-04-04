@@ -153,9 +153,9 @@ def main():
         # Calculate follow-up time
         df['followup_years'] = df['permth_exm'] / 12
         # For those not in mortality file, use approximate follow-up
-        # 2015-2016 to 2019 = ~3-4 years; 2017-2018 to 2019 = ~1-2 years
+        # Mortality linkage file covers through Dec 31, 2019
+        # 2015-2016 midpoint ~2016 to 2019 = ~3.5 years
         df.loc[df['followup_years'].isna() & (df['cycle'] == '2015-2016'), 'followup_years'] = 3.5
-        df.loc[df['followup_years'].isna() & (df['cycle'] == '2017-2020'), 'followup_years'] = 2.0
     
     # Save linked dataset
     output_path = DATA_PROCESSED / "iri_cohort_mortality.parquet"

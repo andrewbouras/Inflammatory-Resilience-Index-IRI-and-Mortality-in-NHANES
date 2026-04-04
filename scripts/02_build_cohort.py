@@ -389,9 +389,10 @@ def main():
     print("IRI = (-z_CRP) + z_Albumin + z_ALM")
     print("="*60)
     
+    # Only 2015-2016 has whole-body DEXA (required for ALMI component of IRI).
+    # 2017-2020 lacks DEXA data, so all participants would be ineligible.
     cycles = [
         ("2015-2016", DATA_RAW / "2015-2016"),
-        ("2017-2020", DATA_RAW / "2017-2020"),
     ]
     
     all_data = []

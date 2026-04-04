@@ -73,11 +73,11 @@ Where:
 
 ## Cohort Summary
 
-- **Total eligible:** 4,595
-- **Cycles:** 2015-2016, 2017-2020
-- **Mean follow-up:** 3.5 years
-- **Deaths:** 178 (3.9%)
-- **CV deaths:** 40 (0.9%)
+- **Total eligible:** 2,416
+- **Cycles:** 2015-2016 (DEXA only available in this cycle)
+- **Mean follow-up:** ~3.5 years
+- **Deaths:** 16 (0.7%)
+- **CV deaths:** 1 (0.04%)
 
 ---
 

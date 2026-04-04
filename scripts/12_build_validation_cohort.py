@@ -200,11 +200,23 @@ def process_cycle(cycle: str) -> pd.DataFrame:
     elif 'RIDRETH3' in df.columns:
         df['race_eth'] = df['RIDRETH3']
     
-    # Weight variable - use MEC weight
+    # Weight variable - use MEC 2-year weight (standard for individual 2-year cycles)
+    # NHANES 1999-2006 each cycle provides WTMEC2YR; combined multi-cycle analysis
+    # divides by n_cycles in the R analysis scripts (13, 14)
     if 'WTMEC2YR' in df.columns:
         df['weight_mec'] = df['WTMEC2YR']
     elif 'WTMEC4YR' in df.columns:
         df['weight_mec'] = df['WTMEC4YR']
+    else:
+        print(f"  WARNING: No MEC weight column found for {cycle}")
+
+    # Validate survey design variables are present and aligned
+    for col in ['SDMVPSU', 'SDMVSTRA', 'weight_mec']:
+        if col not in df.columns or df[col].isna().all():
+            print(f"  ERROR: Survey design variable '{col}' missing or all NaN for {cycle}")
+        else:
+            n_valid = df[col].notna().sum()
+            print(f"  Survey variable {col}: {n_valid:,} valid values")
     
     # Load CRP
     crp_file, crp_var = CRP_VAR_MAP[cycle]
@@ -213,12 +225,14 @@ def process_cycle(cycle: str) -> pd.DataFrame:
         crp_df = load_xpt(crp_path)
         if crp_var in crp_df.columns:
             crp_df['hscrp'] = crp_df[crp_var]
-            # NHANES 1999-2004 LBXCRP is in mg/dL (typical median ~0.2-0.3)
-            # NHANES 2005+ LBXHSCRP is in mg/L (typical median ~1.5-3.0)
-            # Convert mg/dL to mg/L: multiply by 10
-            if crp_df['hscrp'].median() < 1.0 and cycle in ['1999-2000', '2001-2002', '2003-2004', '2005-2006']:
+            # NHANES 1999-2004: LBXCRP reported in mg/dL — convert to mg/L
+            # NHANES 2005-2006: LBXCRP reported in mg/dL (CRP_D.xpt still uses old assay units)
+            # Per NHANES documentation, all cycles using LBXCRP are mg/dL
+            cycles_mgdl = ['1999-2000', '2001-2002', '2003-2004', '2005-2006']
+            if cycle in cycles_mgdl:
+                pre_median = crp_df['hscrp'].median()
                 crp_df['hscrp'] = crp_df['hscrp'] * 10  # Convert mg/dL to mg/L
-                print(f"  Converted CRP from mg/dL to mg/L (median was {crp_df['hscrp'].median()/10:.2f} mg/dL)")
+                print(f"  Converted CRP from mg/dL to mg/L (pre-conversion median: {pre_median:.3f} mg/dL)")
             df = df.merge(crp_df[['SEQN', 'hscrp']], on='SEQN', how='left')
             print(f"  Merged CRP: {crp_df['hscrp'].notna().sum():,} valid values")
     else:
