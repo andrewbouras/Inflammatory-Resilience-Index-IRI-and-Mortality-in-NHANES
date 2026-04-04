@@ -267,14 +267,14 @@ cat("\nCreating combined comparison figure...\n")
 # Create a simple comparison bar chart
 comparison_data <- tribble(
   ~Cohort, ~Outcome, ~HR,
-  "Derivation\n(2015-2020)", "All-cause", 4.03,
-  "Derivation\n(2015-2020)", "CV*", NA,
+  "Derivation\n(2015-2016)", "All-cause", 4.03,
+  "Derivation\n(2015-2016)", "CV*", NA,
   "Validation\n(1999-2006)", "All-cause", 2.93,
   "Validation\n(1999-2006)", "CV", 2.35
 ) %>%
   mutate(
     Outcome = factor(Outcome, levels = c("All-cause", "CV", "CV*")),
-    Cohort = factor(Cohort, levels = c("Derivation\n(2015-2020)", "Validation\n(1999-2006)"))
+    Cohort = factor(Cohort, levels = c("Derivation\n(2015-2016)", "Validation\n(1999-2006)"))
   )
 
 p_comparison <- ggplot(comparison_data %>% filter(!is.na(HR)), 

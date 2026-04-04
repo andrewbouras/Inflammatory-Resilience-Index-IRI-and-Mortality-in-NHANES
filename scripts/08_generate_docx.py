@@ -35,7 +35,7 @@ def create_manuscript():
     # TITLE PAGE
     # =========================================================================
     title = doc.add_paragraph()
-    title_run = title.add_run('Inflammatory Resilience Index Combining High-Sensitivity C-Reactive Protein, Albumin, and Appendicular Lean Mass Predicts Functional Limitations and Self-Rated Health in U.S. Adults: NHANES 2015-2020')
+    title_run = title.add_run('Inflammatory Resilience Index Combining High-Sensitivity C-Reactive Protein, Albumin, and Appendicular Lean Mass Is Associated with Self-Rated Health and Functional Outcomes in U.S. Adults: NHANES 2015-2016')
     title_run.bold = True
     title_run.font.size = Pt(14)
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -88,7 +88,7 @@ def create_manuscript():
     # Methods
     p = doc.add_paragraph()
     p.add_run('Methods: ').bold = True
-    p.add_run('Using NHANES 2015-2020 with dual-energy X-ray absorptiometry (DEXA) data, we constructed the IRI as the sum of inverted standardized hs-CRP, standardized albumin, and sex-specific standardized ALMI, where higher values indicate better resilience. Among 2,729 adults aged 20 years or older with complete data, we examined associations between IRI quartiles and functional outcomes, including fair or poor self-rated health, difficulty walking one-quarter mile, and depression defined as Patient Health Questionnaire-9 score of 10 or higher, using survey-weighted logistic regression adjusted for age, sex, and race/ethnicity.')
+    p.add_run('Using NHANES 2015-2016 with dual-energy X-ray absorptiometry (DEXA) data, we constructed the IRI as the sum of inverted standardized hs-CRP, standardized albumin, and sex-specific standardized ALMI, where higher values indicate better resilience. Among 2,729 adults aged 20 years or older with complete data, we examined associations between IRI quartiles and functional outcomes, including fair or poor self-rated health, difficulty walking one-quarter mile, and depression defined as Patient Health Questionnaire-9 score of 10 or higher, using survey-weighted logistic regression adjusted for age, sex, and race/ethnicity.')
     
     doc.add_paragraph()
     
@@ -133,7 +133,7 @@ def create_manuscript():
     
     doc.add_paragraph()
     
-    doc.add_paragraph('We hypothesized that an Inflammatory Resilience Index (IRI) combining hs-CRP, serum albumin, and appendicular lean mass index (ALMI) from dual-energy X-ray absorptiometry (DEXA) would identify individuals with poor self-rated health and functional limitations. Using nationally representative data from NHANES 2015-2020, we aimed to construct the IRI as a simple additive z-score composite, characterize the demographic and clinical profiles of adults across IRI quartiles, and evaluate associations between IRI and functional outcomes including self-rated health, mobility limitations, and depressive symptoms.')
+    doc.add_paragraph('We hypothesized that an Inflammatory Resilience Index (IRI) combining hs-CRP, serum albumin, and appendicular lean mass index (ALMI) from dual-energy X-ray absorptiometry (DEXA) would identify individuals with poor self-rated health and functional limitations. Using nationally representative data from NHANES 2015-2016, we aimed to construct the IRI as a simple additive z-score composite, characterize the demographic and clinical profiles of adults across IRI quartiles, and evaluate associations between IRI and functional outcomes including self-rated health, mobility limitations, and depressive symptoms.')
     
     doc.add_paragraph()
     
@@ -223,7 +223,7 @@ def create_manuscript():
     
     doc.add_paragraph()
     
-    doc.add_paragraph('Of 25,531 NHANES 2015-2020 participants, 2,729 adults aged 20 years or older met eligibility criteria with complete IRI components. The mean age was 39.6 years (standard deviation 11.4), 48.6% were female, and the racial and ethnic distribution was 61.5% non-Hispanic White, 11.0% non-Hispanic Black, 8.4% Mexican American, 10.8% Asian, and 8.3% other. The IRI ranged from -5.16 to 5.24, with a mean of 0.74 and standard deviation of 1.48. Quartile boundaries were Q1 at -0.28 or less representing lowest resilience, Q2 from -0.28 to 0.83, Q3 from 0.83 to 1.90, and Q4 greater than 1.90 representing highest resilience.')
+    doc.add_paragraph('Of 25,531 NHANES 2015-2016 participants, 2,729 adults aged 20 years or older met eligibility criteria with complete IRI components. The mean age was 39.6 years (standard deviation 11.4), 48.6% were female, and the racial and ethnic distribution was 61.5% non-Hispanic White, 11.0% non-Hispanic Black, 8.4% Mexican American, 10.8% Asian, and 8.3% other. The IRI ranged from -5.16 to 5.24, with a mean of 0.74 and standard deviation of 1.48. Quartile boundaries were Q1 at -0.28 or less representing lowest resilience, Q2 from -0.28 to 0.83, Q3 from 0.83 to 1.90, and Q4 greater than 1.90 representing highest resilience.')
     
     doc.add_paragraph()
     

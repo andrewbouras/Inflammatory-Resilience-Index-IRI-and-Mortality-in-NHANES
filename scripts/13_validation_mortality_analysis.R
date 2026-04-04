@@ -9,6 +9,8 @@ library(survey)
 library(survival)
 library(broom)
 
+options(survey.lonely.psu = "adjust")
+
 # Project paths
 project_root <- normalizePath(file.path(dirname(sys.frame(1)$ofile %||% "."), ".."), mustWork = FALSE)
 if (!dir.exists(project_root)) {
@@ -140,7 +142,10 @@ print(hr_model1_all)
 
 # Model 2: Fully adjusted (if variables available)
 available_covariates <- c()
-if ("race_eth" %in% names(eligible)) available_covariates <- c(available_covariates, "race_eth")
+if ("race_eth" %in% names(eligible)) {
+    eligible$race_eth_f <- as.factor(eligible$race_eth)
+    available_covariates <- c(available_covariates, "race_eth_f")
+}
 if ("bmi" %in% names(eligible)) available_covariates <- c(available_covariates, "bmi")
 if ("diabetes" %in% names(eligible)) available_covariates <- c(available_covariates, "diabetes")
 if ("hypertension" %in% names(eligible)) available_covariates <- c(available_covariates, "hypertension")

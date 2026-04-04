@@ -76,24 +76,20 @@ cat("[Figure 1: Forest Plot]\n")
 results_file <- file.path(output_dir, "functional_outcomes_results.csv")
 if (file.exists(results_file)) {
   results_raw <- read.csv(results_file)
-  # Extract Q1 vs Q4 rows
-  q1_rows <- results_raw[grepl("Q1", results_raw$comparison, ignore.case = TRUE) |
-                          grepl("quartile", results_raw$model, ignore.case = TRUE), ]
-  cat("  Loaded results dynamically from", results_file, "\n")
+  results <- data.frame(
+    Outcome = results_raw$Outcome,
+    OR = results_raw$OR_Q1vsQ4,
+    CI_low = results_raw$CI_low_Q1,
+    CI_high = results_raw$CI_high_Q1,
+    p = results_raw$p_Q1vsQ4,
+    significant = results_raw$p_Q1vsQ4 < 0.05
+  )
+  # Clean outcome labels for plot
+  results$Outcome <- c("Fair/Poor Self-Rated Health", "Difficulty Walking 1/4 Mile", "Depression (PHQ-9 >=10)")
+  cat("  Loaded Q1 vs Q4 results dynamically from", results_file, "\n")
 } else {
-  cat("  WARNING: functional_outcomes_results.csv not found, using fallback values.\n")
-  cat("  Run 05_functional_analysis.R first to generate results.\n")
+  stop("functional_outcomes_results.csv not found. Run 05_functional_analysis.R first.")
 }
-# Fallback to known values if dynamic read fails or format unexpected
-results <- data.frame(
-  Outcome = c("Fair/Poor Self-Rated Health", "Difficulty Walking 1/4 Mile", "Depression (PHQ-9 >=10)"),
-  OR = c(2.07, 4.51, 1.40),
-  CI_low = c(1.42, 1.96, 0.79),
-  CI_high = c(3.01, 10.42, 2.49),
-  p = c(0.0042, 0.0057, 0.1926),
-  significant = c(TRUE, TRUE, FALSE)
-)
-cat("  NOTE: Update this block to parse results_raw when format is confirmed.\n")
 
 results$Outcome <- factor(results$Outcome, levels = rev(results$Outcome))
 results$OR_label <- sprintf("%.2f (%.2f-%.2f)", results$OR, results$CI_low, results$CI_high)
@@ -105,10 +101,10 @@ p1 <- ggplot(results, aes(x = OR, y = Outcome)) +
   geom_text(aes(label = OR_label, x = CI_high + 0.8), hjust = 0, size = 3.2) +
   scale_color_manual(values = c("TRUE" = iri_colors$significant, "FALSE" = iri_colors$nonsignificant), 
                      guide = "none") +
-  scale_x_log10(breaks = c(0.5, 1, 2, 4, 8, 12), limits = c(0.5, 18)) +
+  scale_x_log10(breaks = c(0.5, 1, 2, 4), limits = c(0.4, 8)) +
   labs(
     title = "Lowest IRI Quartile (Q1) vs Highest (Q4) and Functional Outcomes",
-    subtitle = "NHANES 2015-2020 | Adjusted for age, sex, and race/ethnicity",
+    subtitle = "NHANES 2015-2016 | Adjusted for age, sex, and race/ethnicity",
     x = "Odds Ratio (95% CI)",
     y = ""
   ) +
@@ -190,7 +186,7 @@ p2 <- ggplot(prev_data, aes(x = Quartile, y = Prevalence, fill = Quartile)) +
   scale_fill_manual(values = quartile_colors, guide = "none") +
   labs(
     title = "Functional Outcome Prevalence by IRI Quartile",
-    subtitle = "Survey-weighted estimates | NHANES 2015-2020",
+    subtitle = "Survey-weighted estimates | NHANES 2015-2016",
     x = "IRI Quartile",
     y = "Prevalence (%)",
     caption = "Error bars represent 95% CI. Lower quartiles indicate lower inflammatory resilience."

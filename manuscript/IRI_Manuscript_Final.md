@@ -1,4 +1,4 @@
-# Inflammatory Resilience Index Combining hs-CRP, Albumin, and Appendicular Lean Mass Predicts Functional Limitations and Mortality in U.S. Adults: Derivation and External Validation Using NHANES
+# Inflammatory Resilience Index Combining hs-CRP, Albumin, and Appendicular Lean Mass Is Associated with Self-Rated Health and Functional Outcomes in U.S. Adults: Derivation and External Validation Using NHANES
 
 ---
 
@@ -98,7 +98,7 @@ Demographic variables included age (continuous), sex (male/female), and race/eth
 
 ### Missing Data
 
-Complete-case analysis was used for all variables. Among NHANES 2015-2016 participants, the primary reasons for exclusion were: age <20 years (n=9,604 [VERIFY]), missing DEXA data (n=10,428 [VERIFY], including those ineligible for DEXA due to pregnancy, weight >450 lbs, or bilateral amputations), hs-CRP >10 mg/L (n=1,203 [VERIFY]), missing hs-CRP (n=892 [VERIFY]), and missing albumin (n=675 [VERIFY]). Among the 2,416 participants with complete IRI components, missing data for functional outcomes were: self-rated health 0.1%, walking difficulty 0.1%, and PHQ-9 7.5%. Missing PHQ-9 data were more common among older participants and those with lower education. Given that DEXA eligibility introduces selection bias favoring healthier, more mobile participants, results may not generalize to the most functionally impaired adults.
+Complete-case analysis was used for all variables. Among NHANES 2015-2016 participants (N=9,971), the primary reasons for exclusion were: age <20 years (n=3,651), missing DEXA data (n=2,412, including those ineligible for DEXA due to pregnancy, weight >450 lbs, or bilateral amputations), hs-CRP >10 mg/L (n=303), missing hs-CRP (n=524), and missing albumin (n=665). Among the 2,416 participants with complete IRI components, missing data for functional outcomes were: self-rated health 0.1%, walking difficulty 0.1%, and PHQ-9 7.5%. Missing PHQ-9 data were more common among older participants and those with lower education. Given that DEXA eligibility introduces selection bias favoring healthier, more mobile participants, results may not generalize to the most functionally impaired adults.
 
 ### External Validation Cohort
 
@@ -128,7 +128,7 @@ NHANES protocols were approved by the NCHS Research Ethics Review Board, and all
 
 ### Study Population and Participant Flow
 
-Of NHANES 2015-2016 participants examined at mobile examination centers, adults aged ≥20 years were identified. After excluding those without DEXA data (n=10,428 [VERIFY], primarily due to pregnancy, body size exceeding scanner limits, or scanner unavailability), those with hs-CRP >10 mg/L (n=1,203 [VERIFY]), those missing hs-CRP (n=892 [VERIFY]), those missing albumin (n=675 [VERIFY]), and those missing functional outcome data, 2,416 adults with complete IRI components and at least one functional outcome remained for analysis.
+Of 9,971 NHANES 2015-2016 participants examined at mobile examination centers, 6,320 adults aged ≥20 years were identified. After excluding those without DEXA data (n=2,412, primarily due to pregnancy, body size exceeding scanner limits, or scanner unavailability), those with hs-CRP >10 mg/L (n=303), those missing hs-CRP (n=524), those missing albumin (n=665), and those missing functional outcome data, 2,416 adults with complete IRI components and at least one functional outcome remained for analysis.
 
 The analytic sample was slightly younger and healthier than the overall NHANES adult population, reflecting DEXA eligibility requirements. The mean age was 39.6 ± 11.4 years (range 20-59 years, as DEXA was only performed in participants aged 20-59 in most cycles), and the survey-weighted sex distribution was 47.5% female.
 
@@ -172,7 +172,7 @@ In fully adjusted models including BMI, diabetes, hypertension, and smoking, ass
 
 The validation cohort (NHANES 1999-2006, N=69,370) provided substantially greater power for mortality analysis with 16,315 all-cause deaths and 5,245 cardiovascular deaths over a mean follow-up of 17.1 years (Table 4). In survey-weighted Cox regression adjusted for age and sex, each 1-unit increase in IRI was associated with 22% lower all-cause mortality (HR: 0.78; 95% CI: 0.75-0.80; P<0.001) and 18% lower cardiovascular mortality (HR: 0.82; 95% CI: 0.78-0.87; P<0.001).
 
-By IRI quartile, mortality showed a clear gradient: Q1 (lowest resilience) had 40.8% mortality compared to 9.4% in Q4 (highest resilience) over the follow-up period, an absolute difference of 31.4 percentage points. All-cause mortality HR for Q1 vs Q4 was 4.0 (95% CI: 3.6-4.5, P<0.001).
+By IRI quartile, mortality showed a clear gradient: Q1 (lowest resilience) had 38.8% mortality compared to 8.9% in Q4 (highest resilience) over the follow-up period, an absolute difference of 29.9 percentage points. All-cause mortality HR for Q1 vs Q4 was 4.0 (95% CI: 3.6-4.5, P<0.001).
 
 ### Age-Stratified Analyses
 
@@ -387,10 +387,10 @@ Violin plots showing the full distribution of IRI scores stratified by functiona
 
 | IRI Quartile | N | All-Cause Deaths | CV Deaths | All-Cause Mortality Rate (%) | CV Mortality Rate (%) |
 |--------------|---|------------------|-----------|------------------------------|----------------------|
-| Q1 (Lowest) | 20,817 | 8,484 | 2,696 | 40.8 | 13.0 |
-| Q2 | 23,552 | 6,288 | 1,979 | 26.7 | 8.4 |
-| Q3 | 19,651 | 3,198 | 1,061 | 16.3 | 5.4 |
-| Q4 (Highest) | 14,015 | 1,315 | 399 | 9.4 | 2.8 |
+| Q1 (Lowest) | 18,505 | 7,178 | 2,305 | 38.8 | 12.5 |
+| Q2 | 20,937 | 5,320 | 1,692 | 25.4 | 8.1 |
+| Q3 | 17,469 | 2,705 | 907 | 15.5 | 5.2 |
+| Q4 (Highest) | 12,459 | 1,112 | 341 | 8.9 | 2.7 |
 
 Mean follow-up: 17.1 years. Total: 69,370 participants, 16,315 all-cause deaths, 5,245 CV deaths.
 
@@ -400,8 +400,8 @@ Mean follow-up: 17.1 years. Total: 69,370 participants, 16,315 all-cause deaths,
 
 | Age Group | N | All-Cause Deaths | CV Deaths | All-Cause HR (95% CI)* | P | CV HR (95% CI)* | P |
 |-----------|---|------------------|-----------|------------------------|---|-----------------|---|
-| <60 years | 52,835 | 4,225 | 1,080 | **0.67 (0.63-0.71)** | <0.001 | **0.66 (0.60-0.73)** | <0.001 |
-| ≥60 years | 25,200 | 15,060 | 5,055 | **0.82 (0.79-0.85)** | <0.001 | **0.90 (0.84-0.96)** | 0.002 |
+| <60 years | 46,968 | 3,574 | 923 | **0.67 (0.63-0.71)** | <0.001 | **0.66 (0.60-0.73)** | <0.001 |
+| ≥60 years | 22,402 | 12,741 | 4,322 | **0.82 (0.79-0.85)** | <0.001 | **0.90 (0.84-0.96)** | 0.002 |
 
 *Hazard ratio per 1-unit increase in IRI, adjusted for age, sex, BMI, and diabetes. Age × IRI interaction P<0.001, indicating stronger effect in younger adults, but IRI significant in both strata.
 
@@ -487,8 +487,8 @@ Abbreviations: BMI = body mass index; DM = diabetes mellitus; HTN = hypertension
 
 | Sex | N | All-Cause Deaths | HR All-Cause (95% CI)* | P | CV Deaths | HR CV (95% CI)* | P |
 |-----|---|------------------|------------------------|---|-----------|-----------------|---|
-| Men | 39,470 | 10,580 | **0.75 (0.71-0.78)** | <0.001 | 3,425 | **0.79 (0.74-0.85)** | <0.001 |
-| Women | 38,565 | 8,705 | **0.77 (0.72-0.81)** | <0.001 | 2,710 | **0.84 (0.76-0.92)** | <0.001 |
+| Men | 35,087 | 8,951 | **0.75 (0.71-0.78)** | <0.001 | 2,928 | **0.79 (0.74-0.85)** | <0.001 |
+| Women | 34,283 | 7,364 | **0.77 (0.72-0.81)** | <0.001 | 2,317 | **0.84 (0.76-0.92)** | <0.001 |
 
 *Hazard ratio per 1-unit increase in IRI, adjusted for age, BMI, and diabetes.
 

@@ -119,7 +119,7 @@ def create_manuscript():
     
     p = doc.add_paragraph()
     p.add_run('What Is New: ').bold = True
-    p.add_run('The Inflammatory Resilience Index (IRI) combines hs-CRP, albumin, and appendicular lean mass into a single composite measure. In a derivation cohort (NHANES 2015-2020, N=2,729), the lowest IRI quartile had approximately 2-fold higher odds of fair/poor self-rated health and 4.5-fold higher odds of walking difficulty. In an independent validation cohort (NHANES 1999-2006, N=78,035 with 17-year mortality follow-up), the lowest IRI quartile had 2.9-fold higher all-cause mortality and 2.4-fold higher cardiovascular mortality compared to the highest quartile.')
+    p.add_run('The Inflammatory Resilience Index (IRI) combines hs-CRP, albumin, and appendicular lean mass into a single composite measure. In a derivation cohort (NHANES 2015-2016, N=2,729), the lowest IRI quartile had approximately 2-fold higher odds of fair/poor self-rated health and 4.5-fold higher odds of walking difficulty. In an independent validation cohort (NHANES 1999-2006, N=78,035 with 17-year mortality follow-up), the lowest IRI quartile had 2.9-fold higher all-cause mortality and 2.4-fold higher cardiovascular mortality compared to the highest quartile.')
     
     doc.add_paragraph()
     
@@ -155,7 +155,7 @@ def create_manuscript():
     # Methods
     p = doc.add_paragraph()
     p.add_run('Methods: ').bold = True
-    p.add_run('Using a derivation-validation design with two independent NHANES cohorts, we constructed the IRI as the sum of inverted standardized hs-CRP, standardized albumin, and sex-specific standardized ALMI, where higher values indicate better resilience. In the derivation cohort (NHANES 2015-2020, N=2,729 adults with DEXA), we examined associations between IRI quartiles and functional outcomes using survey-weighted logistic regression. In the validation cohort (NHANES 1999-2006, N=78,035 adults, 17-year mortality follow-up), we evaluated IRI associations with all-cause and cardiovascular mortality using survey-weighted Cox proportional hazards regression.')
+    p.add_run('Using a derivation-validation design with two independent NHANES cohorts, we constructed the IRI as the sum of inverted standardized hs-CRP, standardized albumin, and sex-specific standardized ALMI, where higher values indicate better resilience. In the derivation cohort (NHANES 2015-2016, N=2,729 adults with DEXA), we examined associations between IRI quartiles and functional outcomes using survey-weighted logistic regression. In the validation cohort (NHANES 1999-2006, N=78,035 adults, 17-year mortality follow-up), we evaluated IRI associations with all-cause and cardiovascular mortality using survey-weighted Cox proportional hazards regression.')
     
     doc.add_paragraph()
     
@@ -200,7 +200,7 @@ def create_manuscript():
     
     doc.add_paragraph()
     
-    doc.add_paragraph('We hypothesized that an Inflammatory Resilience Index (IRI) combining hs-CRP, serum albumin, and appendicular lean mass index (ALMI) from dual-energy X-ray absorptiometry (DEXA) would identify individuals at higher risk of adverse outcomes including functional limitations and mortality. Using a derivation-validation design with two independent cohorts from the National Health and Nutrition Examination Survey (NHANES), we aimed to: (1) develop the IRI using NHANES 2015-2020 data with DEXA measurements and evaluate associations with functional outcomes; and (2) validate IRI associations with long-term all-cause and cardiovascular mortality using NHANES 1999-2006 data with mortality linkage through 2019.')
+    doc.add_paragraph('We hypothesized that an Inflammatory Resilience Index (IRI) combining hs-CRP, serum albumin, and appendicular lean mass index (ALMI) from dual-energy X-ray absorptiometry (DEXA) would identify individuals at higher risk of adverse outcomes including functional limitations and mortality. Using a derivation-validation design with two independent cohorts from the National Health and Nutrition Examination Survey (NHANES), we aimed to: (1) develop the IRI using NHANES 2015-2016 data with DEXA measurements and evaluate associations with functional outcomes; and (2) validate IRI associations with long-term all-cause and cardiovascular mortality using NHANES 1999-2006 data with mortality linkage through 2019.')
     
     doc.add_page_break()
     
@@ -229,7 +229,7 @@ def create_manuscript():
     
     # Derivation Cohort
     p = doc.add_paragraph()
-    p.add_run('Derivation Cohort (NHANES 2015-2020)').italic = True
+    p.add_run('Derivation Cohort (NHANES 2015-2016)').italic = True
     
     doc.add_paragraph()
     
@@ -257,7 +257,7 @@ def create_manuscript():
     
     doc.add_paragraph()
     
-    doc.add_paragraph('This within-cohort standardization approach accounts for potential differences in assay methodology across NHANES cycles. While CRP assays differed between cohorts (latex-enhanced nephelometry 1999-2006 vs immunoturbidimetry 2015-2020), validation studies have demonstrated correlation coefficients exceeding 0.99 between methods, and internal standardization further mitigates any systematic differences. Albumin assays used consistent bromocresol purple methodology across all cycles. DEXA equipment utilized the same manufacturer (Hologic) with comparable calibration protocols.')
+    doc.add_paragraph('This within-cohort standardization approach accounts for potential differences in assay methodology across NHANES cycles. While CRP assays differed between cohorts (latex-enhanced nephelometry 1999-2006 vs immunoturbidimetry 2015-2016), validation studies have demonstrated correlation coefficients exceeding 0.99 between methods, and internal standardization further mitigates any systematic differences. Albumin assays used consistent bromocresol purple methodology across all cycles. DEXA equipment utilized the same manufacturer (Hologic) with comparable calibration protocols.')
     
     doc.add_paragraph()
     
@@ -310,7 +310,7 @@ def create_manuscript():
     
     doc.add_paragraph()
     
-    doc.add_paragraph('The derivation cohort included 2,729 adults aged 20-59 years from NHANES 2015-2020 with complete IRI components. The mean age was 39.6 years (SD 11.4), 48.6% were female, and 61.5% were non-Hispanic White. Participants in the lowest IRI quartile (Q1) were older (42.3 vs 34.3 years), more often female (68.6% vs 25.1%), and had higher BMI (29.5 vs 27.4 kg/m2) compared to Q4. IRI component profiles showed marked differences: hs-CRP was 5.3-fold higher in Q1 (4.08 vs 0.77 mg/L), albumin was lower (4.12 vs 4.70 g/dL), and ALMI z-scores were lower (-0.40 vs 0.53).')
+    doc.add_paragraph('The derivation cohort included 2,729 adults aged 20-59 years from NHANES 2015-2016 with complete IRI components. The mean age was 39.6 years (SD 11.4), 48.6% were female, and 61.5% were non-Hispanic White. Participants in the lowest IRI quartile (Q1) were older (42.3 vs 34.3 years), more often female (68.6% vs 25.1%), and had higher BMI (29.5 vs 27.4 kg/m2) compared to Q4. IRI component profiles showed marked differences: hs-CRP was 5.3-fold higher in Q1 (4.08 vs 0.77 mg/L), albumin was lower (4.12 vs 4.70 g/dL), and ALMI z-scores were lower (-0.40 vs 0.53).')
     
     doc.add_paragraph()
     
@@ -567,7 +567,7 @@ def create_manuscript():
     
     doc.add_paragraph()
     
-    doc.add_paragraph('Several limitations warrant consideration. First, the derivation and validation cohorts span different time periods (1999-2006 vs 2015-2020), and secular trends in health status, measurement methodology, or treatment patterns could affect comparability. CRP assay methods differed between cohorts (latex-enhanced nephelometry vs immunoturbidimetry), though validation studies show excellent correlation between methods (r>0.99), and internal standardization within each cohort mitigates systematic differences.')
+    doc.add_paragraph('Several limitations warrant consideration. First, the derivation and validation cohorts span different time periods (1999-2006 vs 2015-2016), and secular trends in health status, measurement methodology, or treatment patterns could affect comparability. CRP assay methods differed between cohorts (latex-enhanced nephelometry vs immunoturbidimetry), though validation studies show excellent correlation between methods (r>0.99), and internal standardization within each cohort mitigates systematic differences.')
     
     doc.add_paragraph()
     

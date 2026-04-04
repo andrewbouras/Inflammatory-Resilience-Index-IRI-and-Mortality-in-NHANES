@@ -5,7 +5,7 @@ Design
 Prospective cohort analysis leveraging NHANES examination data (with DEXA body composition) and linked mortality files.
 
 Population
-Derivation cohort: NHANES 2015-2020, adults ≥18 years with DEXA body composition data.
+Derivation cohort: NHANES 2015-2016, adults ≥18 years with DEXA body composition data.
 Validation cohort: NHANES 1999-2006, adults ≥18 years with hs-CRP, albumin, and BMI-estimated ALMI.
 Inclusion: Adults ≥18 years with
 • hs-CRP,

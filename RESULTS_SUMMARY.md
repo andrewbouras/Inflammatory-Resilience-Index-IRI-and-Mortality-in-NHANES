@@ -1,7 +1,7 @@
 # Modified IRI Study: Results Summary
 
 ## Study Design
-**Title:** Inflammatory Resilience Index and Mortality in U.S. Adults: NHANES 2015-2020
+**Title:** Inflammatory Resilience Index and Mortality in U.S. Adults: NHANES 2015-2016
 
 **Modified IRI = (-z_log_CRP) + z_Albumin + z_ALM**
 

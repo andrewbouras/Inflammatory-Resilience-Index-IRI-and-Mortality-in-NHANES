@@ -336,10 +336,7 @@ def build_iri_cohort(df: pd.DataFrame) -> pd.DataFrame:
     df['difficulty_walking'] = (pfq054 == 1).astype(float)
     df.loc[pfq054.isna() | (pfq054 > 2), 'difficulty_walking'] = np.nan
     
-    # Difficulty climbing stairs (PFQ054)
-    pfq054 = df.get('PFQ054', pd.Series([np.nan] * len(df), index=df.index))
-    df['difficulty_stairs'] = (pfq054 == 1).astype(float)
-    df.loc[pfq054.isna() | (pfq054 > 2), 'difficulty_stairs'] = np.nan
+    # Note: difficulty_stairs removed — was duplicate of difficulty_walking (both PFQ054)
     
     # PHQ-9 Depression score (DPQ010-DPQ090, each 0-3)
     phq_items = ['DPQ010', 'DPQ020', 'DPQ030', 'DPQ040', 'DPQ050', 
@@ -429,7 +426,7 @@ def main():
         'cvd_history', 'cancer_history',
         # Functional outcomes
         'self_rated_health', 'poor_health',
-        'difficulty_walking', 'difficulty_stairs',
+        'difficulty_walking',
         'phq9_score', 'depression',
         'eligible',
     ]
@@ -446,8 +443,13 @@ def main():
     combined[export_vars].to_csv(csv_path, index=False)
     print(f"Saved: {csv_path}")
     
-    # Summary
+    # Save eligible-only subset for functional analysis scripts (05, 06, 07, 09)
     eligible = combined[combined['eligible'] == 1]
+    functional_path = DATA_PROCESSED / "iri_functional_cohort.csv"
+    eligible[export_vars].to_csv(functional_path, index=False)
+    print(f"Saved: {functional_path} (N={len(eligible):,} eligible)")
+
+    # Summary
     print("\n" + "="*60)
     print("COHORT SUMMARY")
     print("="*60)

@@ -367,11 +367,9 @@ def construct_iri_validation(df: pd.DataFrame) -> pd.DataFrame:
         print(f"  IRI mean: {df['iri'].mean():.3f}, std: {df['iri'].std():.3f}")
         print(f"  IRI range: [{df['iri'].min():.3f}, {df['iri'].max():.3f}]")
     
-    # Create IRI quartiles
-    df['iri_quartile'] = pd.qcut(df['iri'].dropna(), q=4, labels=['Q1', 'Q2', 'Q3', 'Q4'])
-    df['iri_quartile'] = df['iri_quartile'].cat.rename_categories({
-        'Q1': 'Q1 (lowest)', 'Q2': 'Q2', 'Q3': 'Q3', 'Q4': 'Q4 (highest)'
-    })
+    # Note: IRI quartiles are computed later, after eligibility criteria are applied,
+    # so that quartile boundaries reflect the analytic sample only.
+    df['iri_quartile'] = np.nan
     
     return df
 
@@ -428,13 +426,11 @@ def link_mortality(df: pd.DataFrame) -> pd.DataFrame:
                  'followup_months', 'followup_years', 'ucod_leading', 'eligstat']
     df = df.merge(combined_mort[mort_vars], on='SEQN', how='left')
     
-    # Fill missing (assume alive if not linked, which is conservative)
-    # Only for those with eligstat = 1 (eligible for linkage)
-    df['mort_all'] = df['mort_all'].fillna(0).astype(int)
-    df['mort_cv'] = df['mort_cv'].fillna(0).astype(int)
-    df['mort_heart'] = df['mort_heart'].fillna(0).astype(int)
-    df['mort_stroke'] = df['mort_stroke'].fillna(0).astype(int)
-    df['mort_cancer'] = df['mort_cancer'].fillna(0).astype(int)
+    # Fill missing mortality as 0 (alive) only for those eligible for linkage
+    linkage_eligible = df['eligstat'] == 1
+    for col in ['mort_all', 'mort_cv', 'mort_heart', 'mort_stroke', 'mort_cancer']:
+        df.loc[linkage_eligible & df[col].isna(), col] = 0
+        df[col] = df[col].astype('Int64')  # nullable int to preserve NaN for ineligible
     
     # For those without follow-up time, estimate based on cycle
     cycle_to_followup = {
@@ -496,7 +492,15 @@ def apply_eligibility_criteria(df: pd.DataFrame) -> pd.DataFrame:
     # Final eligible
     n_eligible = df['eligible'].sum()
     print(f"\n  Total eligible for analysis: {n_eligible:,} ({100*n_eligible/n_start:.1f}%)")
-    
+
+    # Compute IRI quartiles on eligible subset only
+    elig_mask = df['eligible'] == 1
+    elig_iri = df.loc[elig_mask & df['iri'].notna(), 'iri']
+    df.loc[elig_iri.index, 'iri_quartile'] = pd.qcut(
+        elig_iri, q=4, labels=['Q1 (lowest)', 'Q2', 'Q3', 'Q4 (highest)']
+    )
+    print(f"  IRI quartiles computed on eligible subset (N={len(elig_iri):,})")
+
     return df
 
 

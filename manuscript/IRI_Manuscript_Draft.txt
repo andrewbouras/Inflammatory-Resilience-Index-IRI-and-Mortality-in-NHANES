@@ -275,24 +275,24 @@ Clear gradients in functional outcome prevalence were observed across IRI
 quartiles:
 
 Fair/Poor Self-Rated Health:
-• Q1 (lowest resilience): 17.4% (SE 2.0%)
-• Q2: 17.4% (SE 1.6%)
-• Q3: 13.7% (SE 1.9%)
-• Q4 (highest resilience): 9.3% (SE 1.0%)
+• Q1 (lowest resilience): 17.4% (SE 2.6%)
+• Q2: 17.4% (SE 1.5%)
+• Q3: 13.7% (SE 1.7%)
+• Q4 (highest resilience): 9.3% (SE 1.1%)
 • Absolute difference Q1 vs Q4: 8.1 percentage points
 
 Difficulty Walking ¼ Mile:
-• Q1: 3.5% (SE 1.7%)
-• Q2: 4.3% (SE 1.4%)
-• Q3: 3.8% (SE 1.3%)
-• Q4: 1.2% (SE 0.6%)
+• Q1: 3.5% (SE 0.5%)
+• Q2: 4.3% (SE 0.7%)
+• Q3: 3.8% (SE 1.2%)
+• Q4: 1.2% (SE 0.4%)
 • Absolute difference Q1 vs Q4: 2.3 percentage points
 
 Depression (PHQ-9 ≥10):
-• Q1: 7.7% (SE 0.9%)
-• Q2: 7.0% (SE 1.3%)
-• Q3: 6.6% (SE 0.9%)
-• Q4: 5.6% (SE 0.6%)
+• Q1: 7.7% (SE 1.0%)
+• Q2: 7.0% (SE 1.4%)
+• Q3: 6.7% (SE 1.5%)
+• Q4: 5.6% (SE 0.9%)
 • Absolute difference Q1 vs Q4: 2.1 percentage points
 
 MULTIVARIABLE ASSOCIATIONS (TABLE 2)
@@ -302,14 +302,14 @@ Each 1-unit increase in IRI was associated with lower odds of
 adverse functional outcomes after adjustment for age, sex, and race/ethnicity:
 • Fair/poor health: OR 0.84 (95% CI: 0.75-0.93), p=0.005
 • Walking difficulty: OR 0.86 (95% CI: 0.72-1.03), p=0.08 (not significant)
-• Depression: OR 0.90 (95% CI: 0.77-1.05), p=0.14 (not significant)
+• Depression: OR 0.88 (95% CI: 0.74-1.04), p=0.12 (not significant)
 
 Quartile Analysis (Q4 reference):
 Compared to participants in the highest IRI quartile (Q4), those in the 
 lowest quartile (Q1) had elevated odds:
 • Fair/poor health: OR 1.64 (95% CI: 1.02-2.64), p=0.04
 • Walking difficulty: OR 1.82 (95% CI: 0.74-4.48), p=0.15 (not significant)
-• Depression: OR 1.40 (95% CI: 0.79-2.49), p=0.19 (not significant)
+• Depression: OR 1.34 (95% CI: 0.59-3.04), p=0.40 (not significant)
 
 The intermediate quartiles showed graded associations, with Q2 and Q3 
 generally having odds ratios between Q1 and Q4, supporting a dose-response 
@@ -419,7 +419,7 @@ Fifth, the IRI is proposed as an exploratory composite. Its components
 are weighted equally, and the optimal weighting scheme was not empirically 
 derived. The index has not been validated in external cohorts. An 
 exploratory mortality analysis is presented in the Supplemental Materials; 
-however, only 20 deaths occurred, and mortality findings are severely 
+however, only 16 deaths occurred, and mortality findings are severely
 underpowered and should be interpreted with caution.
 
 ================================================================================
@@ -582,7 +582,7 @@ Outcome                   Continuous IRI    p       Q1 vs Q4          p
 --------------------------------------------------------------------------------
 Fair/Poor Health          0.84 (0.75-0.93)  0.005   1.64 (1.02-2.64)  0.04
 Difficulty Walking        0.86 (0.72-1.03)  0.08    1.82 (0.74-4.48)  0.15
-Depression                0.90 (0.77-1.05)  0.14    1.40 (0.79-2.49)  0.19
+Depression                0.88 (0.74-1.04)  0.12    1.34 (0.59-3.04)  0.40
 
 *Adjusted for age, sex, and race/ethnicity.
 Abbreviations: CI=confidence interval; IRI=Inflammatory Resilience Index; 
