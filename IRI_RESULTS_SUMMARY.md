@@ -64,22 +64,22 @@ Where:
 | Quartile | All-cause HR (95% CI) | P | CV HR (95% CI) | P |
 |----------|----------------------|---|----------------|---|
 | Q4 (highest) | 1.00 (Reference) | — | 1.00 (Reference) | — |
-| Q3 | 1.37 (1.14–1.64) | <0.001 | 1.66 (1.23–2.24) | <0.001 |
-| Q2 | 1.90 (1.59–2.27) | <0.001 | 2.12 (1.49–3.02) | <0.001 |
-| Q1 (lowest) | 2.70 (2.21–3.30) | <0.001 | 2.39 (1.63–3.50) | <0.001 |
+| Q3 | 1.32 (1.09–1.61) | <0.001 | 1.25 (0.88–1.76) | 0.21 |
+| Q2 | 1.94 (1.66–2.26) | <0.001 | 1.82 (1.34–2.47) | <0.001 |
+| Q1 (lowest) | 2.55 (2.11–3.07) | <0.001 | 1.91 (1.35–2.69) | <0.001 |
 
 **Fully Adjusted (Model 2: + race/ethnicity, BMI, diabetes, smoking):**
 
 | Quartile | All-cause HR (95% CI) | P | CV HR (95% CI) | P |
 |----------|----------------------|---|----------------|---|
 | Q4 (highest) | 1.00 (Reference) | — | 1.00 (Reference) | — |
-| Q3 | 1.33 (1.12–1.58) | <0.001 | 1.68 (1.28–2.22) | <0.001 |
-| Q2 | 1.83 (1.55–2.16) | <0.001 | 2.18 (1.58–3.01) | <0.001 |
-| Q1 (lowest) | 2.62 (2.18–3.15) | <0.001 | 2.54 (1.82–3.56) | <0.001 |
+| Q3 | 1.31 (1.10–1.57) | <0.001 | 1.26 (0.92–1.74) | 0.15 |
+| Q2 | 1.88 (1.62–2.18) | <0.001 | 1.88 (1.41–2.51) | <0.001 |
+| Q1 (lowest) | 2.53 (2.11–3.02) | <0.001 | 2.05 (1.49–2.81) | <0.001 |
 
 ### Key Findings (Validation)
 
-1. **Strong mortality gradient**: Q1 had **2.7x higher all-cause mortality** and **2.4x higher CV mortality** vs Q4 (age/sex adjusted).
+1. **Strong mortality gradient**: Q1 had **2.6x higher all-cause mortality** and **1.9x higher CV mortality** vs Q4 (age/sex adjusted).
 2. **Robust to adjustment**: HRs attenuated modestly but remained highly significant after full covariate adjustment.
 3. **Dose-response**: Clear graded relationship across all quartiles for both outcomes.
 
@@ -116,4 +116,4 @@ Where:
 
 ## Conclusion
 
-The IRI, combining inflammation (hs-CRP), nutritional reserve (albumin), and muscle mass (ALMI), is significantly associated with self-rated health in U.S. adults (derivation cohort) and strongly predicts long-term all-cause and cardiovascular mortality (validation cohort, HR 2.7 for Q1 vs Q4). The consistent mortality gradient across two independent NHANES cohorts supports IRI as a marker of integrated physiologic resilience, though the derivation cohort functional outcome associations were weaker than anticipated due to the healthy DEXA-eligible subsample.
+The IRI, combining inflammation (hs-CRP), nutritional reserve (albumin), and muscle mass (ALMI), is significantly associated with self-rated health in U.S. adults (derivation cohort) and strongly predicts long-term all-cause and cardiovascular mortality (validation cohort, HR 2.6 for Q1 vs Q4). The consistent mortality gradient across two independent NHANES cohorts supports IRI as a marker of integrated physiologic resilience, though the derivation cohort functional outcome associations were weaker than anticipated due to the healthy DEXA-eligible subsample.

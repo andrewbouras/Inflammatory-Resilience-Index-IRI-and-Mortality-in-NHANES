@@ -172,7 +172,7 @@ In fully adjusted models including BMI, diabetes, hypertension, and smoking, ass
 
 The validation cohort (NHANES 1999-2006, N=69,370) provided substantially greater power for mortality analysis with 16,315 all-cause deaths and 5,245 cardiovascular deaths over a mean follow-up of 17.1 years (Table 4). In survey-weighted Cox regression adjusted for age and sex, each 1-unit increase in IRI was associated with 22% lower all-cause mortality (HR: 0.78; 95% CI: 0.75-0.80; P<0.001) and 18% lower cardiovascular mortality (HR: 0.82; 95% CI: 0.78-0.87; P<0.001).
 
-By IRI quartile, mortality showed a clear gradient: Q1 (lowest resilience) had 38.8% mortality compared to 8.9% in Q4 (highest resilience) over the follow-up period, an absolute difference of 29.9 percentage points. All-cause mortality HR for Q1 vs Q4 was 4.0 (95% CI: 3.6-4.5, P<0.001).
+By IRI quartile, mortality showed a clear gradient: Q1 (lowest resilience) had 40.1% mortality compared to 9.1% in Q4 (highest resilience) over the follow-up period, an absolute difference of 31.0 percentage points. All-cause mortality HR for Q1 vs Q4 was 2.55 (95% CI: 2.11-3.07, P<0.001) after adjustment for age and sex.
 
 ### Age-Stratified Analyses
 
@@ -387,10 +387,10 @@ Violin plots showing the full distribution of IRI scores stratified by functiona
 
 | IRI Quartile | N | All-Cause Deaths | CV Deaths | All-Cause Mortality Rate (%) | CV Mortality Rate (%) |
 |--------------|---|------------------|-----------|------------------------------|----------------------|
-| Q1 (Lowest) | 18,505 | 7,178 | 2,305 | 38.8 | 12.5 |
-| Q2 | 20,937 | 5,320 | 1,692 | 25.4 | 8.1 |
-| Q3 | 17,469 | 2,705 | 907 | 15.5 | 5.2 |
-| Q4 (Highest) | 12,459 | 1,112 | 341 | 8.9 | 2.7 |
+| Q1 (Lowest) | 17,917 | 7,183 | 2,251 | 40.1 | 12.6 |
+| Q2 | 20,504 | 5,173 | 1,723 | 25.2 | 8.4 |
+| Q3 | 17,906 | 2,774 | 938 | 15.5 | 5.2 |
+| Q4 (Highest) | 13,043 | 1,185 | 333 | 9.1 | 2.6 |
 
 Mean follow-up: 17.1 years. Total: 69,370 participants, 16,315 all-cause deaths, 5,245 CV deaths.
 

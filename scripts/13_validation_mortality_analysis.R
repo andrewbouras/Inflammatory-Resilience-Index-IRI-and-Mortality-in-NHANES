@@ -68,6 +68,12 @@ if ("weight_mec" %in% names(eligible)) {
     weight_col <- NA
 }
 
+# Create all derived covariates BEFORE survey design (svycoxph requires
+# all variables to be present in the design object)
+if ("race_eth" %in% names(eligible)) {
+    eligible$race_eth_f <- as.factor(eligible$race_eth)
+}
+
 # Check for PSU and strata
 # NHANES 1999-2006 = 4 two-year cycles; divide weights by n_cycles
 n_cycles <- 4
@@ -142,8 +148,7 @@ print(hr_model1_all)
 
 # Model 2: Fully adjusted (if variables available)
 available_covariates <- c()
-if ("race_eth" %in% names(eligible)) {
-    eligible$race_eth_f <- as.factor(eligible$race_eth)
+if ("race_eth_f" %in% names(eligible)) {
     available_covariates <- c(available_covariates, "race_eth_f")
 }
 if ("bmi" %in% names(eligible)) available_covariates <- c(available_covariates, "bmi")
