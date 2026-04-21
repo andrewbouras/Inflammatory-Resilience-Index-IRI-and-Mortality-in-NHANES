@@ -6,9 +6,9 @@
 
 What Is Known: Inflammation, nutritional status, and muscle mass independently predict adverse health outcomes. The Glasgow Prognostic Score uses CRP and albumin to predict cancer outcomes, and frailty indices incorporate measures of strength and functional status. However, a simple composite specifically integrating inflammation, nutrition, and objective muscle mass measurement has not been widely evaluated in population-based samples.
 
-What Is New: The Inflammatory Resilience Index (IRI) combines hs-CRP, albumin, and appendicular lean mass into a single composite measure. In a validation cohort of 69,370 adults with 17 years of follow-up, each 1-unit IRI increase was associated with 22% lower all-cause mortality (HR 0.78) and 18% lower cardiovascular mortality (HR 0.82). These associations persisted after adjustment for socioeconomic factors and were consistent across age groups, supporting IRI as an independent marker of physiologic resilience.
+What Is New: The Inflammatory Resilience Index (IRI) combines hs-CRP, albumin, and appendicular lean mass into a single composite measure. In the external validation cohort, 13,874 eligible adults from NHANES 1999-2006 contributed 3,263 all-cause deaths and 1,049 cardiovascular deaths over 17.1 years of follow-up. Higher IRI was associated with lower all-cause mortality (HR 0.78 per 1-unit increase) and with lower cardiovascular mortality in the primary validation models (HR 0.84), with supportive but more sensitivity-dependent cardiovascular results across supplementary analyses.
 
-Clinical Implications: IRI captures integrated physiologic resilience across inflammation, nutrition, and muscle mass domains. The index outperforms hs-CRP alone in mortality discrimination (ΔC-statistic +0.011 vs +0.000) and provides incremental prognostic value. Adults in the lowest IRI quartile have 2.6-fold higher adjusted mortality risk and higher functional impairment, supporting its potential utility as a composite marker of physiologic reserve.
+Clinical Implications: IRI captures integrated physiologic resilience across inflammation, nutrition, and muscle mass domains. Adults in the lowest IRI quartile had 2.55-fold higher all-cause mortality and 1.91-fold higher cardiovascular mortality than those in the highest quartile after age- and sex-adjustment. These findings support IRI as a candidate research marker of physiologic reserve that merits external validation in additional cohorts before any clinical implementation.
 
 ---
 
@@ -18,11 +18,11 @@ BACKGROUND: Inflammation, nutritional status, and muscle mass independently pred
 
 OBJECTIVES: To develop an Inflammatory Resilience Index (IRI) combining high-sensitivity C-reactive protein (hs-CRP), serum albumin, and appendicular lean mass index (ALMI), and evaluate its association with functional outcomes and mortality in U.S. adults.
 
-METHODS: We constructed the IRI as: (−z_hs-CRP) + z_Albumin + z_ALMI, where higher values indicate better resilience. In the derivation cohort (NHANES 2015-2016, N=2,416), we examined associations with functional outcomes using survey-weighted logistic regression. External validation used NHANES 1999-2006 (N=69,370) with mortality follow-up through 2019 (17.1 years). Sensitivity analyses tested age-stratification, extended covariate adjustment, and incremental discrimination over individual components.
+METHODS: We constructed the IRI as: (−z_hs-CRP) + z_Albumin + z_ALMI, where higher values indicate better resilience. In the derivation cohort (NHANES 2015-2016, N=2,416 adults aged 20–59 years, reflecting the age range for available whole-body DEXA), we examined associations with functional outcomes using survey-weighted logistic regression. External validation used NHANES 1999-2006, which includes adults aged ≥20 years. Because the validation DEXA files contain 5 multiply imputed records per participant, descriptive validation summaries used one participant-level record per person and Cox models were fit separately within each imputation and pooled with Rubin's rules. Sensitivity analyses tested age-stratification, extended covariate adjustment, sex stratification, component-separated models, and competing-risk sensitivity.
 
-RESULTS: In the derivation cohort, each 1-unit IRI increase was associated with 16% lower odds of fair/poor health (OR: 0.84; 95% CI: 0.75-0.93; P=0.005) and a non-significant trend toward 14% lower odds of walking difficulty (OR: 0.86; 95% CI: 0.72-1.03; P=0.08). In the validation cohort (16,315 deaths, 5,245 CV deaths), each 1-unit IRI increase was associated with 22% lower all-cause mortality (HR: 0.78; 95% CI: 0.75-0.80; P<0.001), 18% lower cardiovascular mortality (HR: 0.82; 95% CI: 0.78-0.87; P<0.001), and 20% lower heart disease mortality (HR: 0.80; 95% CI: 0.75-0.85; P<0.001). In age-stratified analyses, IRI was significantly associated with mortality in both younger (<60 years: HR 0.67) and older (≥60 years: HR 0.82) adults. After adjustment for education and poverty-income ratio, associations remained unchanged (HR 0.78; 95% CI: 0.76-0.81). The IRI improved C-statistic by 0.011 over the base model and outperformed hs-CRP alone (ΔC +0.011 vs +0.000) and ALMI alone (ΔC +0.011 vs +0.001) in mortality discrimination.
+RESULTS: In the derivation cohort, each 1-unit IRI increase was associated with 16% lower odds of fair/poor health (OR: 0.84; 95% CI: 0.75-0.93; P=0.005) and a non-significant trend toward lower odds of walking difficulty (OR: 0.86; 95% CI: 0.72-1.03; P=0.08). In the validation cohort, 13,874 eligible adults contributed 3,263 all-cause deaths and 1,049 cardiovascular deaths over a mean follow-up of 17.1 years. Each 1-unit IRI increase was associated with lower all-cause mortality (HR: 0.78; 95% CI: 0.75-0.81; P<0.001), lower cardiovascular mortality (HR: 0.84; 95% CI: 0.78-0.89; P<0.001), and lower heart disease mortality (HR: 0.80; 95% CI: 0.75-0.85; P<0.001). In age-stratified analyses, IRI remained associated with all-cause mortality in both younger (<60 years: HR 0.67) and older (≥60 years: HR 0.81) adults. After adjustment for education and poverty-income ratio, the all-cause mortality association was unchanged (HR: 0.78; 95% CI: 0.76-0.81).
 
-CONCLUSIONS: The Inflammatory Resilience Index integrating inflammation, nutritional reserve, and muscle mass independently predicts mortality across age groups, after adjustment for socioeconomic factors, and provides incremental discrimination over individual components. IRI may serve as a composite marker of physiologic reserve for risk stratification.
+CONCLUSIONS: A novel Inflammatory Resilience Index integrating inflammation, nutritional reserve, and muscle mass is significantly associated with self-rated health in young to middle-aged U.S. adults, and with all-cause mortality in an older external validation cohort. Lower IRI identifies individuals with substantially higher odds of poor functional outcomes and higher mortality risk, supporting its potential utility as a formative composite marker of physiologic reserve. Cardiovascular mortality results were supportive but more sensitivity-dependent than the all-cause findings. IRI should be viewed as a candidate research marker warranting further external validation rather than as a finalized clinical risk tool.
 
 Keywords: Inflammation; C-reactive protein; albumin; sarcopenia; functional status; NHANES
 
@@ -38,7 +38,7 @@ Previous composite indices have combined subsets of these domains. The Glasgow P
 
 We hypothesized that an Inflammatory Resilience Index (IRI) combining hs-CRP, serum albumin, and appendicular lean mass index (ALMI) from dual-energy X-ray absorptiometry (DEXA) would identify individuals with poor self-rated health and functional limitations. Using nationally representative data from NHANES 2015-2016, we aimed to construct the IRI as a simple additive z-score composite, characterize the demographic and clinical profiles of adults across IRI quartiles, and evaluate associations between IRI and functional outcomes including self-rated health, mobility limitations, and depressive symptoms.
 
-We emphasize that the IRI is proposed as an exploratory composite index, not a validated clinical score. This analysis represents an initial step toward understanding whether integrated assessment of these three domains provides incremental information beyond individual biomarkers.
+We emphasize that the IRI is proposed as an exploratory composite index, not a validated clinical score. This analysis represents an initial step toward understanding whether integrated assessment of these three domains is associated with functional outcomes and later mortality.
 
 ---
 
@@ -50,11 +50,11 @@ This analysis used data from the National Health and Nutrition Examination Surve
 
 We used data from the NHANES 2015-2016 cycle (cycle I), which includes dual-energy X-ray absorptiometry (DEXA) body composition measurements. Earlier cycles were excluded because DEXA protocols and equipment differed substantially, and the 2011-2014 cycles did not include whole-body DEXA scans.
 
-The analytic sample included adults aged ≥20 years with complete data for all three IRI components: hs-CRP (≤10 mg/L, to exclude acute infection), serum albumin, and DEXA-derived appendicular lean mass. Participants were excluded if they had hs-CRP >10 mg/L (to focus on chronic low-grade inflammation rather than acute infectious or inflammatory conditions),¹³ were pregnant (DEXA contraindicated), had missing DEXA data (scanner malfunction, participant refusal, body size exceeding scanner limits, or presence of radiocontrast from recent procedures), or lacked functional outcome questionnaire data. The final eligible cohort included 2,416 participants with complete IRI components and functional outcome data.
+The derivation analytic sample included adults aged 20–59 years with complete data for all three IRI components: hs-CRP (≤10 mg/L, to exclude acute infection), serum albumin, and DEXA-derived appendicular lean mass. The upper age bound reflects the NHANES 2015–2016 whole-body DEXA protocol, which limits scanning to adults aged 20–59 years. Participants were excluded if they were outside the 20–59-year DEXA eligibility window, had hs-CRP >10 mg/L (to focus on chronic low-grade inflammation rather than acute infectious or inflammatory conditions),¹³ were pregnant (DEXA contraindicated), had missing DEXA data (scanner malfunction, participant refusal, body size exceeding scanner limits, or presence of radiocontrast from recent procedures), or lacked functional outcome questionnaire data. The final eligible derivation cohort included 2,416 participants with complete IRI components and functional outcome data.
 
 ### NHANES Data Files
 
-The following NHANES public-use data files were accessed: demographics (DEMO_I), DEXA body composition (DXX_I), biochemistry profile including albumin (BIOPRO_I), hs-CRP (HSCRP_I), body measures (BMX_I), blood pressure (BPX_I), glycohemoglobin (GHB_I), smoking questionnaire (SMQ_I), diabetes questionnaire (DIQ_I), depression screening (DPQ_I), current health status (HUQ_I), and physical functioning (PFQ_I). All files were downloaded from the NCHS website in SAS transport format (.XPT) and processed using Python 3.11 with pandas 2.1.
+The following NHANES public-use data files were accessed: demographics (DEMO_I), DEXA body composition (DXX_I), biochemistry profile including albumin (BIOPRO_I), hs-CRP (HSCRP_I), body measures (BMX_I), blood pressure (BPX_I), glycohemoglobin (GHB_I), smoking questionnaire (SMQ_I), diabetes questionnaire (DIQ_I), depression screening (DPQ_I), current health status (HUQ_I), and physical functioning (PFQ_I). All files were downloaded from the NCHS website in SAS transport format (.XPT) and processed using Python 3.9.1 with pandas 2.3.3.
 
 ### Inflammatory Resilience Index Construction
 
@@ -74,11 +74,11 @@ For hs-CRP and albumin, z-scores were calculated using the pooled sample mean an
 
 **Appendicular Lean Mass Index (ALMI).** Whole-body DEXA scans were performed using a Hologic Discovery model A densitometer (Hologic, Inc., Bedford, MA) by trained technologists following standardized positioning protocols. Quality control procedures included daily calibration with a spine phantom, and scans were reviewed centrally for positioning and artifacts. Participants were excluded if they exceeded the scanner weight limit (450 lbs/204 kg), had bilateral limb amputations, or had radiocontrast agents administered within the previous 7 days.
 
-Appendicular lean mass (ALM) was calculated as the sum of lean soft tissue mass in the arms and legs (DXXLLTM + DXXULTM + DXXRLTM + DXXRUTM), excluding bone mineral content and fat mass. ALMI was calculated as ALM (kg) divided by height squared (m²), consistent with the Foundation for the National Institutes of Health (FNIH) Sarcopenia Project methodology.¹⁴ Reference values for low ALMI (consistent with sarcopenia) are <7.0 kg/m² for men and <5.4 kg/m² for women.¹⁴ For the IRI, ALMI was converted to sex-specific z-scores (standardized separately within men and women) to account for known sexual dimorphism in muscle mass while facilitating combination with other index components.
+Appendicular lean mass (ALM) was calculated as the sum of lean soft tissue mass in the arms and legs, excluding bone mineral content and fat mass, using the NHANES DXX_I variables DXDLALE (left arm lean, excluding BMC), DXDRALE (right arm lean, excluding BMC), DXDLLLE (left leg lean, excluding BMC), and DXDRLLE (right leg lean, excluding BMC), reported in grams and converted to kilograms (ALM = [DXDLALE + DXDRALE + DXDLLLE + DXDRLLE] / 1000). ALMI was calculated as ALM (kg) divided by height squared (m²), consistent with the Foundation for the National Institutes of Health (FNIH) Sarcopenia Project methodology.¹⁴ Reference values for low ALMI (consistent with sarcopenia) are <7.0 kg/m² for men and <5.4 kg/m² for women.¹⁴ For the IRI, ALMI was converted to sex-specific z-scores (standardized separately within men and women) to account for known sexual dimorphism in muscle mass while facilitating combination with other index components.
 
 ### IRI Validation and Internal Consistency
 
-The three IRI components (inverted hs-CRP, albumin, ALMI) showed modest pairwise correlations, supporting their contribution of distinct information. Spearman correlations were: inverted log(hs-CRP) with albumin, r=0.21 (P<0.001); inverted log(hs-CRP) with ALMI z-score, r=0.18 (P<0.001); albumin with ALMI z-score, r=0.15 (P<0.001). Cronbach's alpha for the three-component index was 0.42, indicating low internal consistency as expected for a formative composite index combining distinct physiologic domains rather than a reflective scale measuring a single latent construct.
+The three IRI components (inverted hs-CRP, albumin, ALMI) showed modest pairwise correlations, supporting their contribution of distinct information. Spearman correlations were: inverted log(hs-CRP) with albumin, r=0.21 (P<0.001); inverted log(hs-CRP) with ALMI z-score, r=0.18 (P<0.001); albumin with ALMI z-score, r=0.15 (P<0.001). Cronbach's alpha for the three-component index was 0.42, indicating low internal consistency. This is expected and appropriate for a formative composite index, in which distinct physiologic domains (inflammation, nutrition, and muscle mass) contribute independently to the construct, rather than a reflective scale in which items are expected to be highly correlated because they all reflect a single underlying latent trait.
 
 The IRI distribution was approximately normal (Shapiro-Wilk W=0.992, P<0.001 due to large sample size; skewness=-0.18, kurtosis=0.34). Visual inspection of histograms and Q-Q plots confirmed approximate normality suitable for regression analyses.
 
@@ -102,21 +102,21 @@ Complete-case analysis was used for all variables. Among NHANES 2015-2016 partic
 
 ### External Validation Cohort
 
-External validation used NHANES 1999-2006 cycles (1999-2000, 2001-2002, 2003-2004, 2005-2006), which included whole-body DEXA and have extended mortality follow-up through December 31, 2019 via the NHANES-Linked Mortality Files. The IRI was constructed using the same formula (IRI = −z_hs-CRP + z_Albumin + z_ALMI) with z-scores standardized using the derivation cohort means and standard deviations to ensure proper external validation. Among 157,578 participants, 69,370 adults aged ≥20 years met eligibility criteria (complete IRI components, hs-CRP ≤10 mg/L). Over a mean follow-up of 17.1 years, 16,315 all-cause deaths and 5,245 cardiovascular deaths occurred, providing substantially greater statistical power than the derivation cohort.
+External validation used NHANES 1999-2006 cycles (1999-2000, 2001-2002, 2003-2004, 2005-2006), which included whole-body DEXA and have extended mortality follow-up through December 31, 2019 via the NHANES-Linked Mortality Files. The IRI was constructed using the same formula (IRI = −z_hs-CRP + z_Albumin + z_ALMI) with z-scores standardized using the derivation cohort means and standard deviations to ensure proper external validation. The 1999-2006 NHANES whole-body DEXA files contain 5 multiply imputed records per participant. We therefore created a participant-level validation cohort for counts and descriptive summaries by averaging ALMI across imputations, and a parallel imputation-specific cohort in which Cox models were fit separately within each DEXA imputation and pooled using Rubin's rules. The full 1999-2006 source population included 41,474 unique participants; 13,874 adults aged ≥20 years met eligibility criteria (complete IRI components, hs-CRP ≤10 mg/L) for the mortality analyses. Over a mean follow-up of 17.1 years, 3,263 all-cause deaths and 1,049 cardiovascular deaths occurred.
 
 ### Sensitivity Analyses
 
-To address potential concerns that IRI may be a surrogate for age-related sarcopenia, we conducted age-stratified analyses (<60 vs ≥60 years) with tests for age × IRI interaction. To evaluate whether associations were confounded by socioeconomic status, we fit extended models adjusting for education (DMDEDUC2: <high school, high school/GED, some college or higher) and poverty-income ratio (INDFMPIR: continuous 0-5). Model discrimination was compared using C-statistics: we compared the incremental gain in C-statistic from adding IRI versus adding each individual component (hs-CRP, albumin, ALMI) to a base model containing age, sex, BMI, smoking, and diabetes. Cardiovascular mortality was analyzed by subtype: combined CV (heart disease + stroke), heart disease alone (UCOD_LEADING=1), and stroke alone (UCOD_LEADING=5).
+To address potential concerns that IRI may be a surrogate for age-related sarcopenia, we conducted age-stratified analyses (<60 vs ≥60 years) with tests for age × IRI interaction. To evaluate whether associations were confounded by socioeconomic status, we fit extended models adjusting for education (DMDEDUC2: <high school, high school/GED, some college or higher) and poverty-income ratio (INDFMPIR: continuous 0-5). Additional sensitivity analyses evaluated the component-separated models underlying the composite, sex-stratified associations, and cardiovascular mortality subtypes. For competing risk sensitivity, we compared the primary pooled cause-specific Cox model with an unweighted Fine-Gray subdistribution hazards model pooled across DEXA imputations; the latter was interpreted cautiously because `cmprsk::crr()` does not support the NHANES survey design.
 
 ### Statistical Analysis
 
-All analyses incorporated NHANES complex survey design elements: primary sampling units (SDMVPSU), strata (SDMVSTRA), and examination weights (WTMEC2YR for 2015-2016).¹⁷ The lonely primary sampling unit adjustment was applied. Because DEXA is performed in a subsample of examined participants, estimates are nationally representative of U.S. adults eligible for and completing DEXA body composition assessment; older adults and those with mobility limitations may be underrepresented.
+All analyses — including baseline descriptive statistics, logistic-regression models for functional outcomes, and Cox proportional-hazards models for validation-cohort mortality — incorporated NHANES complex survey design elements: primary sampling units (SDMVPSU), strata (SDMVSTRA), and MEC examination weights (WTMEC2YR for 2015–2016; cycle-appropriate WTMEC4YR/WTMEC2YR combinations for 1999–2006).¹⁷ Survey-weighted logistic regression used the `svyglm` function and survey-weighted Cox regression used `svycoxph` (fit separately within each of the five NHANES DEXA imputations for the validation cohort and pooled across imputations using Rubin's rules). The lonely primary sampling unit adjustment was applied. Because DEXA is performed in a subsample of examined participants, estimates are nationally representative of U.S. adults eligible for and completing DEXA body composition assessment; older adults and those with mobility limitations may be underrepresented.
 
 Baseline characteristics were compared across IRI quartiles using survey-weighted means (continuous variables) and proportions (categorical variables). Standard errors were estimated using Taylor series linearization. P-values for trend were obtained from Wald tests in survey-adjusted linear (continuous outcomes) or logistic (binary outcomes) regression models with IRI quartile coded as an ordinal predictor (1-4).
 
-Associations between IRI and functional outcomes were evaluated using survey-weighted logistic regression. Three modeling approaches were used: (1) continuous IRI analysis, reporting odds ratio per 1-unit increase in IRI with 95% confidence intervals; (2) quartile analysis, reporting odds ratios for Q1, Q2, and Q3 compared to Q4 (highest resilience, reference); and (3) sensitivity analysis with fully adjusted models including age, sex, race/ethnicity, BMI, diabetes, hypertension, and smoking to assess confounding. Model discrimination was assessed using survey-weighted C-statistics. Prevalence of each outcome by IRI quartile was calculated with survey-weighted standard errors.
+Associations between IRI and functional outcomes were evaluated using survey-weighted logistic regression. Three modeling approaches were used: (1) continuous IRI analysis, reporting odds ratio per 1-unit increase in IRI with 95% confidence intervals; (2) quartile analysis, reporting odds ratios for Q1, Q2, and Q3 compared to Q4 (highest resilience, reference); and (3) sensitivity analysis with fully adjusted models including age, sex, race/ethnicity, BMI, diabetes, hypertension, and smoking to assess confounding. Prevalence of each outcome by IRI quartile was calculated with survey-weighted standard errors.
 
-Given the sample size (N=2,416) and outcome prevalence (5.6-17.4%), this study had 80% power to detect odds ratios ≥1.3 for continuous IRI and ≥1.5 for quartile comparisons at α=0.05. A two-sided P<0.05 defined statistical significance. Given the evaluation of three primary functional outcomes, results should be interpreted with consideration of multiple comparisons; sensitivity analyses (age-stratified, sex-stratified, extended covariate adjustment) were pre-specified and considered exploratory. Analyses were performed using R version 4.3.2 (R Foundation for Statistical Computing) with the survey package version 4.2.¹⁸
+Given the sample size (N=2,416) and outcome prevalence (5.6-17.4%), this study had 80% power to detect odds ratios ≥1.3 for continuous IRI and ≥1.5 for quartile comparisons at α=0.05. A two-sided P<0.05 defined statistical significance. Given the evaluation of three primary functional outcomes, results should be interpreted with consideration of multiple comparisons; sensitivity analyses were pre-specified and considered exploratory. Analyses were performed using R version 4.4.1 (R Foundation for Statistical Computing) with the survey package version 4.4.8.¹⁸ Exploratory concordance summaries were generated for internal comparison, but we did not treat them as formal pooled survey-weighted discrimination estimates and therefore did not use them for inferential claims.
 
 ### Ethical Statement
 
@@ -142,142 +142,6 @@ Individual IRI component distributions were: hs-CRP median 1.4 mg/L (IQR 0.6-3.2
 
 Participants in the lowest IRI quartile (Q1) differed substantially from those in the highest quartile (Q4) (Table 1). Regarding demographics, Q1 participants were older (42.7 vs 34.5 years, P<0.001), more often female (66.2% vs 30.6%, P<0.001), and had similar BMI (28.1 vs 27.9 kg/m², P=0.01).
 
-For IRI components (Table 3, Figure 3), hs-CRP was 4.3-fold higher in Q1 (3.98 vs 0.92 mg/L, P<0.001), albumin was lower in Q1 (4.10 vs 4.68 g/dL, P<0.001), and ALMI z-score was lower in Q1 (-0.31 vs 0.26, P<0.001).
-
-Regarding comorbidities, diabetes was more prevalent in Q1 (10.7% vs 5.2%, P=0.001), hypertension was similar across quartiles (33-39%, P=0.39), CVD history was higher in Q1 (3.8% vs 1.6%, P=0.03), and current smoking was more prevalent in Q1 (24.6% vs 16.9%, P=0.04).
-
-### Functional Outcomes by IRI Quartile
-
-Clear gradients in functional outcome prevalence were observed across IRI quartiles (Table 2, Figure 2). For fair/poor self-rated health, prevalence was 17.4% (SE 2.6%) in Q1, 17.4% (SE 1.5%) in Q2, 13.7% (SE 1.7%) in Q3, and 9.3% (SE 1.1%) in Q4, representing an absolute difference of 8.1 percentage points between Q1 and Q4.
-
-For difficulty walking without special equipment, prevalence was 3.5% (SE 0.5%) in Q1, 4.3% (SE 0.7%) in Q2, 3.8% (SE 1.2%) in Q3, and 1.2% (SE 0.4%) in Q4, representing an absolute difference of 2.3 percentage points between Q1 and Q4.
-
-For depression (PHQ-9 ≥10), prevalence was 7.7% (SE 1.0%) in Q1, 7.0% (SE 1.4%) in Q2, 6.7% (SE 1.5%) in Q3, and 5.6% (SE 0.9%) in Q4, representing an absolute difference of 2.1 percentage points between Q1 and Q4.
-
-### Multivariable Associations
-
-In continuous IRI analysis, each 1-unit increase in IRI was associated with lower odds of adverse functional outcomes after adjustment for age, sex, and race/ethnicity (Table 2, Figure 1). For fair/poor health, the OR was 0.84 (95% CI: 0.75-0.93, P=0.005), indicating 16% lower odds per 1-unit IRI increase. For walking difficulty, the OR was 0.86 (95% CI: 0.72-1.03, P=0.08), showing a trend toward 14% lower odds per 1-unit IRI increase that did not reach statistical significance. For depression, the OR was 0.88 (95% CI: 0.74-1.04, P=0.12), which was not statistically significant, with a 12% point estimate in the protective direction.
-
-In quartile analysis with Q4 (highest resilience) as reference, participants in Q1 (lowest resilience) had elevated odds compared to those in Q4. For fair/poor health, the OR was 1.64 (95% CI: 1.02-2.64, P=0.04), indicating 1.6-fold higher odds. For walking difficulty, the OR was 1.82 (95% CI: 0.74-4.48, P=0.15), a non-significant trend. For depression, the OR was 1.34 (95% CI: 0.59-3.04, P=0.40), which was not statistically significant. Intermediate quartiles (Q2, Q3) showed graded associations for fair/poor health (P-trend <0.05).
-
-Model discrimination was moderate. Survey-weighted C-statistics were 0.69 (95% CI: 0.66-0.72) for fair/poor health, 0.82 (95% CI: 0.78-0.86) for walking difficulty, and 0.61 (95% CI: 0.56-0.66) for depression. The higher discrimination for walking difficulty likely reflects the strong association between ALMI (a direct measure of muscle mass) and physical function. The IRI distributions by functional outcome status are illustrated in Figure 4, showing that participants with adverse outcomes had lower IRI scores across all three outcomes.
-
-The intermediate quartiles showed graded associations, with Q2 and Q3 generally having odds ratios between Q1 and Q4, supporting a dose-response relationship.
-
-### Sensitivity Analyses (Derivation Cohort)
-
-In fully adjusted models including BMI, diabetes, hypertension, and smoking, associations with functional outcomes were modestly attenuated but remained significant for self-rated health (continuous IRI OR: 0.85, 95% CI: 0.76-0.95, P=0.02). This attenuation is consistent with obesity and metabolic factors lying on a potential pathway between inflammatory resilience and functional outcomes.
-
-### External Validation: Mortality Analysis
-
-The validation cohort (NHANES 1999-2006, N=69,370) provided substantially greater power for mortality analysis with 16,315 all-cause deaths and 5,245 cardiovascular deaths over a mean follow-up of 17.1 years (Table 4). In survey-weighted Cox regression adjusted for age and sex, each 1-unit increase in IRI was associated with 22% lower all-cause mortality (HR: 0.78; 95% CI: 0.75-0.80; P<0.001) and 18% lower cardiovascular mortality (HR: 0.82; 95% CI: 0.78-0.87; P<0.001).
-
-By IRI quartile, mortality showed a clear gradient: Q1 (lowest resilience) had 40.3% mortality compared to 10.3% in Q4 (highest resilience) over the follow-up period, an absolute difference of 30.0 percentage points. All-cause mortality HR for Q1 vs Q4 was 2.55 (95% CI: 2.11-3.07, P<0.001) after adjustment for age and sex.
-
-### Age-Stratified Analyses
-
-To address whether IRI is merely a surrogate for age-related sarcopenia, we conducted age-stratified analyses (Table S1). IRI was significantly associated with mortality in both younger (<60 years: HR 0.67, 95% CI: 0.63-0.71, P<0.001) and older (≥60 years: HR 0.82, 95% CI: 0.79-0.85, P<0.001) adults. Although the association was stronger in younger adults (age × IRI interaction P<0.001), IRI remained a highly significant predictor in both strata, indicating it captures independent physiologic resilience beyond age-related changes.
-
-Cardiovascular mortality showed a similar pattern: <60 years HR 0.66 (95% CI: 0.60-0.73, P<0.001) and ≥60 years HR 0.90 (95% CI: 0.84-0.96, P=0.002).
-
-### Extended Covariate Adjustment
-
-To evaluate potential confounding by socioeconomic factors, we fit extended models (Table S2). After sequential adjustment, IRI-mortality associations remained unchanged:
-- Model 1 (Age, Sex): HR 0.78 (95% CI: 0.75-0.80)
-- Model 2 (+ BMI, Smoking, Diabetes): HR 0.78 (95% CI: 0.75-0.81)
-- Model 3 (+ Education, Poverty-Income Ratio): HR 0.78 (95% CI: 0.76-0.81)
-
-The minimal attenuation after adjustment for socioeconomic factors supports IRI as capturing physiologic resilience independent of social determinants of health.
-
-### Model Discrimination: C-Statistics
-
-To assess incremental value of IRI over individual components, we compared C-statistics (Table S3). The base model (age, sex, BMI, smoking, diabetes) had C-statistic 0.823 for all-cause mortality. Adding IRI improved discrimination by ΔC = +0.011 (C = 0.834). In comparison:
-- Adding hs-CRP alone: ΔC = +0.000 (C = 0.823)
-- Adding albumin alone: ΔC = +0.018 (C = 0.841)
-- Adding ALMI alone: ΔC = +0.001 (C = 0.824)
-
-The IRI substantially outperformed hs-CRP alone (ΔC +0.011 vs +0.000) and ALMI alone (ΔC +0.011 vs +0.001), supporting the value of the composite index. Albumin alone performed best (ΔC +0.018), though the IRI's integrative approach captures complementary information from all three physiologic domains.
-
-### Cardiovascular Mortality Subtypes
-
-Analysis by CV mortality subtype (Table S4) showed that IRI was significantly associated with heart disease mortality (4,330 deaths; HR 0.80, 95% CI: 0.75-0.85, P<0.001) but not stroke mortality (915 deaths; HR 0.87, 95% CI: 0.76-1.00, P=0.051). This differential pattern is pathophysiologically plausible: inflammatory burden and nutritional status more directly influence atherosclerotic heart disease than embolic or hemorrhagic stroke mechanisms.
-
-### Component-Adjusted Model: Incremental Value Assessment
-
-To address whether IRI provides prognostic information beyond its individual components, we fit sequential models adding hs-CRP, albumin, and ALMI, then IRI (Table S6). As expected for an additive index (IRI = −z_hs-CRP + z_Albumin + z_ALMI by construction), IRI did not remain independently significant after including all three components (HR 1.14, 95% CI: 0.76-1.71, P=0.53). However, the key clinical question is whether IRI as a composite outperforms individual components when used alone—as demonstrated by C-statistic comparisons (ΔC for IRI = +0.011 vs +0.000 for CRP alone, +0.001 for ALMI alone). The likelihood ratio test confirmed that adding IRI to the base model significantly improved fit (χ² = 1405, P < 10⁻³⁰⁰).
-
-### Sex-Stratified Analysis
-
-To evaluate whether IRI associations differ by sex, we conducted stratified analyses (Table S7). IRI was significantly associated with all-cause mortality in both men (HR 0.75, 95% CI: 0.71-0.78, P<0.001) and women (HR 0.77, 95% CI: 0.72-0.81, P<0.001). For cardiovascular mortality, similar associations were observed: men HR 0.79 (95% CI: 0.74-0.85) and women HR 0.84 (95% CI: 0.76-0.92). The sex × IRI interaction term was not significant (P=0.45), indicating no heterogeneity of effect by sex.
-
-### Competing Risk Analysis
-
-For cardiovascular mortality, we conducted competing risk analysis using the Fine-Gray subdistribution hazard model with non-CV death as the competing event (Table S8). The subdistribution hazard ratio for IRI was 0.91 (95% CI: 0.90-0.93, P<0.001), slightly attenuated compared to the cause-specific HR of 0.86 (95% CI: 0.84-0.87). This difference is expected because Fine-Gray accounts for the "removal" of individuals who die from non-CV causes, but both models demonstrate significant protective association of higher IRI with CV mortality.
-
-### Nonlinearity Assessment
-
-Restricted cubic spline analysis with 4 knots assessed the linearity of the IRI-mortality relationship (Figure S1). Although formal testing detected statistically significant nonlinearity (P=0.0002), visual inspection of the dose-response curve demonstrated a monotonically decreasing hazard ratio across the IRI range, supporting a protective effect at all IRI levels. The relationship was approximately log-linear, and use of continuous IRI in primary analyses is appropriate.
-
-### Net Reclassification Improvement
-
-Using risk tertiles, addition of IRI to the base model resulted in a Net Reclassification Improvement (NRI) of +0.009 (NRI-events = +0.007, NRI-non-events = +0.002), indicating correct reclassification of individuals to higher risk categories when deaths occurred.
-
----
-
-## DISCUSSION
-
-In this nationally representative sample of U.S. adults, we developed and evaluated an Inflammatory Resilience Index integrating hs-CRP, serum albumin, and DEXA-derived appendicular lean mass. Lower IRI was significantly associated with fair/poor self-rated health after adjustment for age, sex, and race/ethnicity. Adults in the lowest IRI quartile had 1.6-fold higher odds of poor self-rated health compared to the highest quartile; walking difficulty showed a non-significant trend (OR 1.82, 95% CI: 0.74-4.48, P=0.15). These findings support the concept that integrated assessment across inflammation, nutrition, and muscle mass domains may identify individuals at risk for functional decline.
-
-### Biological Plausibility
-
-The associations observed are biologically plausible given the well-established interrelationships between the IRI components. Chronic low-grade inflammation promotes muscle catabolism through activation of the ubiquitin-proteasome pathway and suppression of protein synthesis.⁷ Inflammatory cytokines including interleukin-6 and tumor necrosis factor-α directly impair myocyte function and promote sarcopenia.¹⁹ Albumin, beyond its role as a nutritional marker, functions as an antioxidant and anti-inflammatory mediator; hypoalbuminemia reflects both inadequate nutritional intake and increased catabolism during inflammatory states.²⁰
-
-The convergence of these pathways on functional outcomes is supported by prior literature. The Glasgow Prognostic Score (CRP + albumin) predicts survival in cancer patients, demonstrating the prognostic value of combining inflammation and nutrition.¹⁰ Sarcopenia, defined by low muscle mass and/or function, is associated with increased mortality, disability, and poor quality of life.⁶ Our IRI extends these concepts by integrating all three domains in a general adult population.
-
-### Comparison with Prior Literature
-
-Prior NHANES analyses have examined individual IRI components in isolation. Elevated hs-CRP is associated with increased cardiovascular mortality and all-cause mortality, even after adjustment for traditional risk factors.⁴ Low serum albumin predicts mortality across age groups and is incorporated into prognostic scores for heart failure and chronic kidney disease.²¹ Low appendicular lean mass, particularly when indexed to height, identifies individuals at risk for falls, fractures, and functional decline.¹⁴
-
-Our analysis extends this literature by demonstrating that a simple additive composite of standardized components is associated with self-reported functional outcomes. The use of z-score transformation allows equal weighting of each domain and facilitates interpretation: a 1-unit increase in IRI represents a 1-standard-deviation improvement in overall resilience.
-
-### Clinical Implications
-
-The external validation with 17-year follow-up and over 16,000 deaths strengthens the case for IRI as a clinically meaningful composite marker. Several findings support potential clinical utility: (1) the association was consistent across age groups, indicating IRI is not merely a surrogate for age-related sarcopenia; (2) adjustment for socioeconomic factors did not attenuate associations, supporting physiologic independence; (3) IRI outperformed hs-CRP alone and ALMI alone in mortality discrimination, justifying the composite approach.
-
-Routine clinical assessment already includes serum albumin and inflammatory markers; DEXA body composition is increasingly available. Integration of these measurements into a composite score could identify individuals who might benefit from interventions targeting inflammation (anti-inflammatory therapies, lifestyle modification), nutrition (protein supplementation, dietary counseling), or muscle mass (resistance exercise, physical therapy).
-
-The strong association between IRI and self-rated health is particularly notable, as self-rated health is itself a powerful predictor of mortality and health care utilization.¹⁵ Identifying modifiable contributors to poor self-rated health could inform targeted interventions.
-
-### Limitations
-
-Several limitations warrant consideration. First, the cross-sectional design precludes causal inference. We cannot determine whether low IRI causes poor functional outcomes, whether functional limitations lead to inflammation and muscle loss, or whether both reflect underlying comorbid conditions. Prospective validation with incident outcomes is needed.
-
-Second, the derivation cohort (N=2,416) had only 16 all-cause deaths and 1 cardiovascular death, rendering mortality analyses in this cohort severely underpowered. Hazard ratio estimates are imprecise, and C-statistic comparisons are unreliable with so few events. The external validation cohort (16,315 deaths) provides the definitive mortality evidence. Additionally, the derivation sample was restricted to participants with DEXA data, representing a younger and healthier subset of NHANES (mean age 39.6 years). Results may not generalize to older or sicker populations.
-
-Third, ALMI values were standardized to z-scores rather than using established sarcopenia cutoffs. This approach facilitates combination with other components but limits comparison with prior sarcopenia literature. Future analyses could evaluate IRI using clinically defined low muscle mass.
-
-Fourth, functional outcomes were self-reported and subject to reporting bias. Objective measures of physical function (e.g., gait speed, grip strength, 6-minute walk) would strengthen causal inference.
-
-Fifth, although external validation confirmed mortality associations, both cohorts were drawn from NHANES with similar eligibility criteria. Validation in different healthcare settings (e.g., clinical populations, non-U.S. cohorts) would strengthen generalizability.
-
-Sixth, NHANES provides mortality outcomes only; we could not evaluate incident non-fatal cardiovascular events (MI, stroke). The null association with stroke mortality (vs significant for heart disease) warrants investigation with event data.
-
-Seventh, C-statistic improvement from IRI was observed only in the validation cohort (ΔC = +0.011), while the derivation cohort showed no improvement (ΔC = -0.011). This discrepancy likely reflects the derivation cohort's severe underpowering for mortality (only 16 deaths), which renders discrimination metrics unstable. The validation cohort, with over 16,000 deaths, provides a far more reliable estimate of IRI's discriminative value.
-
-### Future Directions
-
-Prospective validation of the IRI in diverse populations, with hard endpoints including mortality and incident disability, is needed to establish clinical utility. Research is also needed to determine whether interventions targeting IRI components improve functional outcomes.
-
-### Conclusions
-
-The Inflammatory Resilience Index, a simple composite of hs-CRP, serum albumin, and appendicular lean mass, was significantly associated with functional limitations in a derivation cohort and with all-cause mortality (HR 0.78, 95% CI: 0.75-0.80 per 1-unit increase) and cardiovascular mortality (HR 0.82, 95% CI: 0.78-0.87) in an external validation cohort with 17 years of follow-up. Critically, IRI remained associated with mortality in both younger and older adults, after adjustment for socioeconomic factors, and provided incremental discrimination over individual components. Adults in the lowest IRI quartile had 2.6-fold higher adjusted mortality risk (HR 2.55, 95% CI: 2.11-3.07), supporting IRI as an integrative marker of physiologic resilience.
-
-These findings suggest IRI may inform risk stratification and identify targets for intervention in individuals at risk for functional decline and adverse outcomes.
-
----
-
-\newpage
-
 ## TABLE 1. Baseline Characteristics by IRI Quartile
 
 | Characteristic | Q1 (Lowest) | Q2 | Q3 | Q4 (Highest) | P-value |
@@ -298,9 +162,30 @@ These findings suggest IRI may inform risk stratification and identify targets f
 
 Values are survey-weighted means (SD) or proportions (%). N is unweighted sample size. P-values from Wald tests for trend in survey-adjusted models. Abbreviations: ALMI = appendicular lean mass index; BMI = body mass index; CVD = cardiovascular disease; hs-CRP = high-sensitivity C-reactive protein; IRI = Inflammatory Resilience Index.
 
----
+For IRI components (Table 3, Figure 3), hs-CRP was 4.3-fold higher in Q1 (3.98 vs 0.92 mg/L, P<0.001), albumin was lower in Q1 (4.10 vs 4.68 g/dL, P<0.001), and ALMI z-score was lower in Q1 (-0.31 vs 0.26, P<0.001).
 
-\newpage
+## TABLE 3. IRI Component Values by Quartile
+
+| Quartile | N | IRI, mean (SD) | hs-CRP, mg/L | Albumin, g/dL | ALMI z-score |
+|----------|---|----------------|--------------|---------------|--------------|
+| Q1 (Lowest Resilience) | 604 | -1.97 (0.73) | 3.98 (2.53) | 4.10 (0.26) | -0.31 (0.85) |
+| Q2 | 604 | -0.54 (0.31) | 2.53 (2.00) | 4.34 (0.22) | -0.09 (0.89) |
+| Q3 | 604 | 0.49 (0.30) | 1.77 (1.78) | 4.47 (0.23) | 0.14 (1.00) |
+| Q4 (Highest Resilience) | 604 | 2.01 (0.80) | 0.92 (1.34) | 4.68 (0.24) | 0.26 (1.14) |
+
+Values are unweighted sample means (SD), reflecting the analytic sample used for IRI construction. Survey-weighted population estimates are shown in Table 1. Abbreviations: ALMI = appendicular lean mass index; hs-CRP = high-sensitivity C-reactive protein; IRI = Inflammatory Resilience Index.
+
+## FIGURE 3. IRI Component Profiles by Quartile
+
+![Figure 3](figures/figure3_iri_components.png)
+
+Mean values of hs-CRP (mg/L), serum albumin (g/dL), and ALMI z-score across IRI quartiles, illustrating the distribution of each component contributing to the composite index. hs-CRP decreases 4.3-fold from Q1 to Q4 (3.98 to 0.92 mg/L), while albumin increases (4.10 to 4.68 g/dL) and ALMI z-score increases (-0.31 to 0.26). These divergent patterns across components demonstrate the integrated nature of the IRI.
+
+Regarding comorbidities, diabetes was more prevalent in Q1 (10.7% vs 5.2%, P=0.001), hypertension was similar across quartiles (33-39%, P=0.39), CVD history was higher in Q1 (3.8% vs 1.6%, P=0.03), and current smoking was more prevalent in Q1 (24.6% vs 16.9%, P=0.04).
+
+### Functional Outcomes by IRI Quartile
+
+Clear gradients in functional outcome prevalence were observed across IRI quartiles (Table 2, Figure 2). For fair/poor self-rated health, prevalence was 17.4% (SE 2.6%) in Q1, 17.4% (SE 1.5%) in Q2, 13.7% (SE 1.7%) in Q3, and 9.3% (SE 1.1%) in Q4, representing an absolute difference of 8.1 percentage points between Q1 and Q4.
 
 ## TABLE 2. Association of IRI with Functional Outcomes
 
@@ -322,129 +207,41 @@ Values are survey-weighted means (SD) or proportions (%). N is unweighted sample
 
 *Adjusted for age, sex, and race/ethnicity. Values in parentheses are 95% CI. Abbreviations: CI = confidence interval; IRI = Inflammatory Resilience Index; PHQ-9 = Patient Health Questionnaire-9; SE = standard error.
 
----
-
-\newpage
-
-## TABLE 3. IRI Component Values by Quartile
-
-| Quartile | N | IRI, mean (SD) | hs-CRP, mg/L | Albumin, g/dL | ALMI z-score |
-|----------|---|----------------|--------------|---------------|--------------|
-| Q1 (Lowest Resilience) | 604 | -1.97 (0.73) | 3.98 (2.53) | 4.10 (0.26) | -0.31 (0.85) |
-| Q2 | 604 | -0.54 (0.31) | 2.53 (2.00) | 4.34 (0.22) | -0.09 (0.89) |
-| Q3 | 604 | 0.49 (0.30) | 1.77 (1.78) | 4.47 (0.23) | 0.14 (1.00) |
-| Q4 (Highest Resilience) | 604 | 2.01 (0.80) | 0.92 (1.34) | 4.68 (0.24) | 0.26 (1.14) |
-
-Values are unweighted sample means (SD), reflecting the analytic sample used for IRI construction. Survey-weighted population estimates are shown in Table 1. Abbreviations: ALMI = appendicular lean mass index; hs-CRP = high-sensitivity C-reactive protein; IRI = Inflammatory Resilience Index.
-
----
-
-\newpage
-
-## FIGURE 1. Forest Plot of IRI Quartile Associations with Functional Outcomes
-
-![Figure 1](/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/manuscript/figures/figure1_forest_plot.png)
-
-Odds ratios comparing the lowest IRI quartile (Q1) to the highest (Q4, reference) for three functional outcomes, adjusted for age, sex, and race/ethnicity. Red points indicate statistically significant associations (P<0.05). Error bars represent 95% confidence intervals. Fair/poor self-rated health (OR 1.64, 95% CI: 1.02-2.64) was significantly associated with low IRI. Walking difficulty (OR 1.82, 95% CI: 0.74-4.48) and depression (OR 1.34, 95% CI: 0.59-3.04) were not statistically significant.
-
----
-
-\newpage
-
 ## FIGURE 2. Prevalence of Functional Outcomes by IRI Quartile
 
-![Figure 2](/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/manuscript/figures/figure2_prevalence_by_quartile.png)
+![Figure 2](figures/figure2_prevalence_by_quartile.png)
 
 Survey-weighted prevalence (with standard error bars) of fair/poor self-rated health, difficulty walking without special equipment, and depression (PHQ-9 ≥10) across IRI quartiles. Q1 represents lowest inflammatory resilience (highest inflammation, lowest albumin, lowest muscle mass) and Q4 represents highest resilience. A gradient is observed for self-rated health (8.1 percentage point difference between Q1 and Q4) and a modest gradient for walking difficulty (2.3 percentage points). NHANES 2015-2016 (N = 2,416).
 
----
+For difficulty walking without special equipment, prevalence was 3.5% (SE 0.5%) in Q1, 4.3% (SE 0.7%) in Q2, 3.8% (SE 1.2%) in Q3, and 1.2% (SE 0.4%) in Q4, representing an absolute difference of 2.3 percentage points between Q1 and Q4.
 
-\newpage
+For depression (PHQ-9 ≥10), prevalence was 7.7% (SE 1.0%) in Q1, 7.0% (SE 1.4%) in Q2, 6.7% (SE 1.5%) in Q3, and 5.6% (SE 0.9%) in Q4, representing an absolute difference of 2.1 percentage points between Q1 and Q4.
 
-## FIGURE 3. IRI Component Profiles by Quartile
+### Multivariable Associations
 
-![Figure 3](/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/manuscript/figures/figure3_iri_components.png)
+In continuous IRI analysis, each 1-unit increase in IRI was associated with lower odds of adverse functional outcomes after adjustment for age, sex, and race/ethnicity (Table 2, Figure 1). For fair/poor health, the OR was 0.84 (95% CI: 0.75-0.93, P=0.005), indicating 16% lower odds per 1-unit IRI increase. For walking difficulty, the OR was 0.86 (95% CI: 0.72-1.03, P=0.08), showing a trend toward 14% lower odds per 1-unit IRI increase that did not reach statistical significance. For depression, the OR was 0.88 (95% CI: 0.74-1.04, P=0.12), which was not statistically significant, with a 12% point estimate in the protective direction.
 
-Mean values of hs-CRP (mg/L), serum albumin (g/dL), and ALMI z-score across IRI quartiles, illustrating the distribution of each component contributing to the composite index. hs-CRP decreases 4.3-fold from Q1 to Q4 (3.98 to 0.92 mg/L), while albumin increases (4.10 to 4.68 g/dL) and ALMI z-score increases (-0.31 to 0.26). These divergent patterns across components demonstrate the integrated nature of the IRI.
+## FIGURE 1. Forest Plot of IRI Quartile Associations with Functional Outcomes
 
----
+![Figure 1](figures/figure1_forest_plot.png)
 
-\newpage
+Odds ratios comparing the lowest IRI quartile (Q1) to the highest (Q4, reference) for three functional outcomes, adjusted for age, sex, and race/ethnicity. Red points indicate statistically significant associations (P<0.05). Error bars represent 95% confidence intervals. Fair/poor self-rated health (OR 1.64, 95% CI: 1.02-2.64) was significantly associated with low IRI. Walking difficulty (OR 1.82, 95% CI: 0.74-4.48) and depression (OR 1.34, 95% CI: 0.59-3.04) were not statistically significant.
+
+In quartile analysis with Q4 (highest resilience) as reference, participants in Q1 (lowest resilience) had elevated odds compared to those in Q4. For fair/poor health, the OR was 1.64 (95% CI: 1.02-2.64, P=0.04), indicating 1.6-fold higher odds. For walking difficulty, the OR was 1.82 (95% CI: 0.74-4.48, P=0.15), a non-significant trend. For depression, the OR was 1.34 (95% CI: 0.59-3.04, P=0.40), which was not statistically significant. Intermediate quartiles (Q2, Q3) showed graded associations for fair/poor health (P-trend <0.05).
+
+Formal survey-weighted discrimination metrics (e.g., C-statistics with appropriate variance estimation and base-model comparison) for these logistic-regression outcomes were not implemented in this workflow and are therefore not reported. The IRI distributions by functional outcome status are illustrated in Figure 4, showing that participants with adverse outcomes had lower IRI scores across all three outcomes.
 
 ## FIGURE 4. IRI Score Distribution by Functional Outcome Status
 
-![Figure 4](/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/manuscript/figures/figure4_violin_iri.png)
+![Figure 4](figures/figure4_violin_iri.png)
 
 Violin plots showing the full distribution of IRI scores stratified by functional outcome status. Each panel compares participants with and without the adverse outcome. For self-rated health, participants reporting fair/poor health had lower mean IRI scores (-0.38) compared to those with good/excellent health (+0.09). For difficulty walking without special equipment, those with difficulty had lower IRI (-0.79) than those without (+0.03). For depression (PHQ-9 >=10), a similar pattern was observed (-0.31 vs +0.01). Box plots show median and interquartile range; red diamonds indicate group means. Lower IRI scores reflect reduced inflammatory resilience. NHANES 2015-2016 (N = 2,416).
 
----
+The intermediate quartiles showed graded associations, with Q2 and Q3 generally having odds ratios between Q1 and Q4, supporting a dose-response relationship.
 
-\newpage
+### Sensitivity Analyses (Derivation Cohort)
 
-## SUPPLEMENTAL MATERIALS
-
-### Table 4. Validation Cohort Mortality by IRI Quartile (NHANES 1999-2006)
-
-| IRI Quartile | N | All-Cause Deaths | CV Deaths | All-Cause Mortality Rate (%) | CV Mortality Rate (%) |
-|--------------|---|------------------|-----------|------------------------------|----------------------|
-| Q1 (Lowest) | 17,343 | 6,986 | 2,197 | 40.3 | 12.7 |
-| Q2 | 17,345 | 4,712 | 1,575 | 27.2 | 9.1 |
-| Q3 | 17,342 | 2,837 | 917 | 16.4 | 5.3 |
-| Q4 (Highest) | 17,340 | 1,780 | 556 | 10.3 | 3.2 |
-
-Mean follow-up: 17.1 years. Total: 69,370 participants, 16,315 all-cause deaths, 5,245 CV deaths.
-
----
-
-### eTable S1. Age-Stratified Mortality Analysis (Validation Cohort)
-
-| Age Group | N | All-Cause Deaths | CV Deaths | All-Cause HR (95% CI)* | P | CV HR (95% CI)* | P |
-|-----------|---|------------------|-----------|------------------------|---|-----------------|---|
-| <60 years | 46,968 | 3,574 | 923 | **0.67 (0.63-0.71)** | <0.001 | **0.66 (0.60-0.73)** | <0.001 |
-| ≥60 years | 22,402 | 12,741 | 4,322 | **0.82 (0.79-0.85)** | <0.001 | **0.90 (0.84-0.96)** | 0.002 |
-
-*Hazard ratio per 1-unit increase in IRI, adjusted for age, sex, BMI, and diabetes. Age × IRI interaction P<0.001, indicating stronger effect in younger adults, but IRI significant in both strata.
-
----
-
-### eTable S2. Extended Covariate Adjustment (Validation Cohort)
-
-| Model | Covariates | HR (95% CI)* | P |
-|-------|------------|--------------|---|
-| Model 1 | Age, Sex | 0.78 (0.75-0.80) | <0.001 |
-| Model 2 | + BMI, Smoking, Diabetes | 0.78 (0.75-0.81) | <0.001 |
-| Model 3 | + Education, Poverty-Income Ratio | **0.78 (0.76-0.81)** | <0.001 |
-
-*Hazard ratio per 1-unit increase in IRI for all-cause mortality. Minimal attenuation after adjustment for socioeconomic factors supports physiologic independence of IRI.
-
----
-
-### eTable S3. C-Statistic Comparison: IRI vs Individual Components (Validation Cohort)
-
-| Model | C-Statistic | ΔC from Base |
-|-------|-------------|--------------|
-| Base (Age, Sex, BMI, Smoking, Diabetes) | 0.823 | Reference |
-| Base + hs-CRP (z-score, inverted) | 0.823 | +0.000 |
-| Base + Albumin (z-score) | **0.841** | +0.018 |
-| Base + ALMI (z-score) | 0.824 | +0.001 |
-| **Base + IRI** | **0.834** | **+0.011** |
-
-IRI outperforms hs-CRP alone (ΔC +0.011 vs +0.000) and ALMI alone (ΔC +0.011 vs +0.001), supporting incremental value of the composite. Albumin alone performs best (+0.018), but IRI integrates complementary physiologic information.
-
----
-
-### eTable S4. Cardiovascular Mortality Subtypes (Validation Cohort)
-
-| Outcome | Events | HR (95% CI)* | P |
-|---------|--------|--------------|---|
-| All-cause mortality | 16,315 | **0.77 (0.74-0.79)** | <0.001 |
-| CV mortality (combined) | 5,245 | **0.81 (0.76-0.86)** | <0.001 |
-| Heart disease mortality | 4,330 | **0.80 (0.75-0.85)** | <0.001 |
-| Stroke mortality | 915 | 0.87 (0.76-1.00) | 0.051 |
-
-*Hazard ratio per 1-unit increase in IRI, adjusted for age, sex, BMI, and diabetes (note: this model specification differs from the primary model, which adjusts for age and sex only; Model 2, which also includes smoking, yields HR 0.78 for all-cause mortality — see eTable S2). IRI significantly associated with heart disease but not stroke mortality, consistent with pathophysiologic expectations.
-
----
+In fully adjusted models including BMI, diabetes, hypertension, and smoking, associations with functional outcomes were modestly attenuated but remained significant for self-rated health (continuous IRI OR: 0.85, 95% CI: 0.76-0.95, P=0.02) (eTable S5). This attenuation is consistent with obesity and metabolic factors lying on a potential pathway between inflammatory resilience and functional outcomes.
 
 ### eTable S5. Derivation Cohort Sensitivity Analysis (Functional Outcomes)
 
@@ -460,65 +257,197 @@ IRI outperforms hs-CRP alone (ΔC +0.011 vs +0.000) and ALMI alone (ΔC +0.011 v
 
 Abbreviations: BMI = body mass index; DM = diabetes mellitus; HTN = hypertension; OR = odds ratio.
 
----
+Note: An intermediate "+ BMI only" adjustment is presented for fair/poor self-rated health but is not presented for walking difficulty or depression, for which only the base and fully adjusted models are shown; this reflects that BMI is the most likely single mediator for self-rated health, while the fully adjusted model is the primary sensitivity analysis for the mobility and depression outcomes. In both the base and the fully adjusted models for walking difficulty, the point estimate for IRI was in the protective direction.
 
-### eTable S6. Component-Adjusted Models (Validation Cohort)
+### External Validation: Mortality Analysis
+
+The external validation dataset comprised 41,474 unique NHANES 1999-2006 participants, of whom 13,874 met analytic eligibility criteria after restricting to adults aged ≥20 years with complete IRI components and hs-CRP ≤10 mg/L (Table 4). Over a mean follow-up of 17.1 years, 3,263 all-cause deaths and 1,049 cardiovascular deaths occurred. In pooled survey-weighted Cox regression adjusted for age and sex, each 1-unit increase in IRI was associated with lower all-cause mortality (HR: 0.78; 95% CI: 0.75-0.81; P<0.001) and lower cardiovascular mortality (HR: 0.84; 95% CI: 0.78-0.89; P<0.001).
+
+### Table 4. Validation Cohort Mortality by IRI Quartile (NHANES 1999-2006)
+
+| IRI Quartile | N | All-Cause Deaths | CV Deaths | All-Cause Mortality Rate (%) | CV Mortality Rate (%) |
+|--------------|---|------------------|-----------|------------------------------|----------------------|
+| Q1 (Lowest) | 3,469 | 1,399 | 438 | 40.3 | 12.6 |
+| Q2 | 3,468 | 942 | 316 | 27.2 | 9.1 |
+| Q3 | 3,468 | 569 | 185 | 16.4 | 5.3 |
+| Q4 (Highest) | 3,469 | 353 | 110 | 10.2 | 3.2 |
+
+Mean follow-up: 17.1 years. Total: 13,874 participants, 3,263 all-cause deaths, 1,049 CV deaths.
+
+By IRI quartile, mortality showed a clear gradient: all-cause mortality ranged from 40.3% in Q1 (lowest resilience) to 10.2% in Q4 (highest resilience), and cardiovascular mortality ranged from 12.6% to 3.2%. The age- and sex-adjusted hazard ratio for Q1 versus Q4 was 2.55 (95% CI: 2.12-3.07, P<0.001) for all-cause mortality and 1.91 (95% CI: 1.35-2.70, P<0.001) for cardiovascular mortality. In fully adjusted quartile models, the corresponding hazard ratios were 2.53 (95% CI: 2.11-3.03) and 2.05 (95% CI: 1.48-2.82).
+
+### Age-Stratified Analyses
+
+To address whether IRI is merely a surrogate for age-related sarcopenia, we conducted age-stratified analyses (Table S1). IRI was associated with all-cause mortality in both younger (<60 years: HR 0.67, 95% CI: 0.62-0.73, P<0.001) and older (≥60 years: HR 0.81, 95% CI: 0.78-0.85, P<0.001) adults. Although the association was stronger in younger adults (age × IRI interaction P<0.001), IRI remained a significant predictor in both strata, indicating that it captures more than age-related change alone.
+
+Cardiovascular mortality showed a similar pattern: <60 years HR 0.64 (95% CI: 0.56-0.73, P<0.001) and ≥60 years HR 0.89 (95% CI: 0.82-0.96, P=0.003).
+
+### eTable S1. Age-Stratified Mortality Analysis (Validation Cohort)
+
+| Age Group | N | All-Cause Deaths | CV Deaths | All-Cause HR (95% CI)* | P | CV HR (95% CI)* | P |
+|-----------|---|------------------|-----------|------------------------|---|-----------------|---|
+| <60 years | 9,506 | 698 | 184 | **0.67 (0.62-0.73)** | <0.001 | **0.64 (0.56-0.73)** | <0.001 |
+| ≥60 years | 4,368 | 2,565 | 865 | **0.81 (0.78-0.85)** | <0.001 | **0.89 (0.82-0.96)** | 0.003 |
+
+*Hazard ratio per 1-unit increase in IRI, adjusted for age, sex, BMI, and diabetes. Age × IRI interaction P<0.001.
+
+### Extended Covariate Adjustment
+
+To evaluate potential confounding by socioeconomic factors, we fit extended models (Table S2). After sequential adjustment, IRI-mortality associations remained unchanged:
+- Model 1 (Age, Sex): HR 0.78 (95% CI: 0.75-0.81)
+- Model 2 (+ BMI, Smoking, Diabetes): HR 0.78 (95% CI: 0.75-0.81)
+- Model 3 (+ Education, Poverty-Income Ratio): HR 0.78 (95% CI: 0.76-0.81)
+
+The minimal attenuation after adjustment for socioeconomic factors supports IRI as capturing physiologic resilience independent of social determinants of health.
+
+### eTable S2. Extended Covariate Adjustment (Validation Cohort)
+
+| Model | Covariates | HR (95% CI)* | P |
+|-------|------------|--------------|---|
+| Model 1 | Age, Sex | 0.78 (0.75-0.81) | <0.001 |
+| Model 2 | + BMI, Smoking, Diabetes | 0.78 (0.75-0.81) | <0.001 |
+| Model 3 | + Education, Poverty-Income Ratio | **0.78 (0.76-0.81)** | <0.001 |
+
+*Hazard ratio per 1-unit increase in IRI for all-cause mortality. Minimal attenuation after adjustment for socioeconomic factors supports physiologic independence of IRI.
+
+### Exploratory Concordance Summaries
+
+We generated exploratory concordance summaries across imputations (Table S3), but we do not treat these as formal pooled survey-weighted discrimination estimates. They are therefore presented only as internal descriptive context and are not used for inferential claims.
+
+### eTable S3. Exploratory Concordance Summaries (Not Used for Inference)
+
+| Model | Exploratory Mean Concordance | Notes |
+|-------|------------------------------|-------|
+| Base (Age, Sex, BMI, Smoking, Diabetes) | 0.828 | Exploratory only |
+| Base + hs-CRP (inverted) | 0.828 | Exploratory only |
+| Base + Albumin | 0.843 | Exploratory only |
+| Base + ALMI | 0.830 | Exploratory only |
+| Base + IRI | 0.839 | Exploratory only |
+
+These concordance summaries are shown for descriptive context only. We did not treat them as validated pooled survey-weighted discrimination estimates and therefore do not use them for inferential claims.
+
+### Cardiovascular Mortality Subtypes
+
+Analysis by CV mortality subtype (Table S4) showed that IRI was associated with heart disease mortality (866 deaths; HR 0.80, 95% CI: 0.75-0.85, P<0.001) but not stroke mortality (183 deaths; HR 0.87, 95% CI: 0.76-1.00, P=0.053). This differential pattern is pathophysiologically plausible: inflammatory burden and nutritional status more directly influence atherosclerotic heart disease than embolic or hemorrhagic stroke mechanisms.
+
+### eTable S4. Cardiovascular Mortality Subtypes (Validation Cohort)
+
+| Outcome | Events | HR (95% CI)* | P |
+|---------|--------|--------------|---|
+| All-cause mortality | 3,263 | **0.77 (0.74-0.79)** | <0.001 |
+| CV mortality (combined) | 1,049 | **0.81 (0.76-0.86)** | <0.001 |
+| Heart disease mortality | 866 | **0.80 (0.75-0.85)** | <0.001 |
+| Stroke mortality | 183 | 0.87 (0.76-1.00) | 0.053 |
+
+*Hazard ratio per 1-unit increase in IRI, adjusted for age, sex, BMI, and diabetes. These subtype models are sensitivity analyses and therefore are not numerically identical to the primary age- and sex-adjusted mortality models. IRI remained associated with heart disease mortality but not stroke mortality.
+
+### Component-Separated Models
+
+Because IRI is defined as the sum of inverted hs-CRP, albumin, and ALMI, we did not fit a collinear model containing all three components plus IRI. Instead, we compared sequential component-separated models with the composite-alone model (Table S6). In the fully component-separated model, inverted hs-CRP (HR 0.92, 95% CI: 0.87-0.97), albumin (HR 0.67, 95% CI: 0.63-0.71), and ALMI (HR 0.88, 95% CI: 0.83-0.94) were each associated with lower all-cause mortality. In the composite-alone model, IRI remained inversely associated with all-cause mortality (HR 0.78, 95% CI: 0.75-0.81). The pooled Wald test for adding IRI to the base model was significant (χ² = 203.4, P < 0.001), but this should be interpreted as a model-fit approximation rather than a likelihood-ratio test.
+
+### eTable S6. Component-Separated Models (Validation Cohort)
 
 | Model | Variable | HR (95% CI) | P |
 |-------|----------|-------------|---|
-| M2: + CRP | z_hs-CRP (inverted) | 0.83 (0.79-0.86) | <0.001 |
-| M3: + CRP, Albumin | z_hs-CRP (inverted) | 0.93 (0.89-0.97) | 0.001 |
-| | z_Albumin | 0.65 (0.62-0.69) | <0.001 |
-| M4: + CRP, Albumin, ALMI | z_hs-CRP (inverted) | 0.92 (0.88-0.96) | <0.001 |
-| | z_Albumin | 0.65 (0.62-0.69) | <0.001 |
-| | z_ALMI | 0.92 (0.89-0.96) | <0.001 |
-| **M5: + All Components + IRI** | z_hs-CRP (inverted) | 0.82 (0.59-1.16) | 0.26 |
-| | z_Albumin | 0.58 (0.41-0.83) | 0.003 |
-| | z_ALMI | 0.84 (0.62-1.13) | 0.25 |
-| | **IRI** | **1.14 (0.76-1.71)** | **0.53** |
+| M2: + CRP | z_hs-CRP (inverted) | 0.85 (0.81-0.89) | <0.001 |
+| M3: + CRP, Albumin | z_hs-CRP (inverted) | 0.94 (0.89-0.99) | 0.025 |
+| | z_Albumin | 0.67 (0.63-0.72) | <0.001 |
+| M4: + CRP, Albumin, ALMI | z_hs-CRP (inverted) | 0.92 (0.87-0.97) | 0.003 |
+| | z_Albumin | 0.67 (0.63-0.71) | <0.001 |
+| | z_ALMI | 0.88 (0.83-0.94) | <0.001 |
+| M5: + IRI (composite) | IRI | **0.78 (0.75-0.81)** | <0.001 |
 
-*IRI is not significant after including all components—expected since IRI = −z_hs-CRP + z_Albumin + z_ALMI by construction. The relevant comparison is C-statistic (IRI vs components separately).
+Because IRI is exactly defined as the sum of inverted hs-CRP, albumin, and ALMI, we did not fit a collinear model containing all three components plus IRI.
 
-**Likelihood Ratio Test (Base vs Base+IRI)**: χ² = 1405, P < 10⁻³⁰⁰
+**Pooled Wald Test (Base vs Base+IRI)**: χ² = 203.4, P < 0.001
 
----
+### Sex-Stratified Analysis
+
+To evaluate whether IRI associations differ by sex, we conducted stratified analyses (Table S7). IRI was associated with all-cause mortality in both men (HR 0.74, 95% CI: 0.71-0.77, P<0.001) and women (HR 0.79, 95% CI: 0.75-0.83, P<0.001). For cardiovascular mortality, similar associations were observed: men HR 0.76 (95% CI: 0.70-0.83) and women HR 0.85 (95% CI: 0.78-0.92). The sex × IRI interaction term was not significant (P=0.885), indicating no heterogeneity of effect by sex.
 
 ### eTable S7. Sex-Stratified Mortality Analysis (Validation Cohort)
 
 | Sex | N | All-Cause Deaths | HR All-Cause (95% CI)* | P | CV Deaths | HR CV (95% CI)* | P |
 |-----|---|------------------|------------------------|---|-----------|-----------------|---|
-| Men | 35,087 | 8,951 | **0.75 (0.71-0.78)** | <0.001 | 2,928 | **0.79 (0.74-0.85)** | <0.001 |
-| Women | 34,283 | 7,364 | **0.77 (0.72-0.81)** | <0.001 | 2,317 | **0.84 (0.76-0.92)** | <0.001 |
+| Men | 7,300 | 1,847 | **0.74 (0.71-0.77)** | <0.001 | 603 | **0.76 (0.70-0.83)** | <0.001 |
+| Women | 6,574 | 1,416 | **0.79 (0.75-0.83)** | <0.001 | 446 | **0.85 (0.78-0.92)** | <0.001 |
 
 *Hazard ratio per 1-unit increase in IRI, adjusted for age, BMI, and diabetes.
 
-**Sex × IRI Interaction**: P = 0.45 (no significant heterogeneity by sex)
+**Sex × IRI Interaction**: P = 0.885 (no significant heterogeneity by sex)
 
----
+### Competing Risk Analysis
+
+For cardiovascular mortality, the unweighted Fine-Gray sensitivity analysis pooled across DEXA imputations produced a subdistribution hazard ratio of 0.90 (95% CI: 0.86-0.94), compared with a weighted cause-specific pooled Cox hazard ratio of 0.81 (95% CI: 0.76-0.86) (Table S8). The attenuation in the Fine-Gray analysis is expected when competing non-CV deaths are incorporated into the cumulative incidence function, but both approaches supported an inverse association between IRI and cardiovascular mortality. Because Fine-Gray estimation was not available with full NHANES survey design support in this workflow, we treat this as a sensitivity analysis rather than a co-primary model.
 
 ### eTable S8. Competing Risk Analysis for CV Mortality (Validation Cohort)
 
 | Model | Hazard Ratio (95% CI) | Interpretation |
 |-------|----------------------|----------------|
-| Cause-specific Cox | 0.86 (0.84-0.87) | Direct effect of IRI on CV death, treating non-CV deaths as censored |
-| Fine-Gray Subdistribution | 0.91 (0.90-0.93) | Cumulative incidence effect, accounting for competing non-CV deaths |
+| Cause-specific Cox (survey-weighted, pooled) | 0.81 (0.76-0.86) | Primary weighted model treating non-CV deaths as censored |
+| Fine-Gray Subdistribution (unweighted, pooled) | 0.90 (0.86-0.94) | Sensitivity analysis accounting for competing non-CV deaths without full NHANES survey design support |
 
-Both models demonstrate significant protective association of higher IRI with CV mortality. The slightly attenuated Fine-Gray estimate reflects the competing event structure but does not change inference.
-
----
-
-### eFigure S1. IRI–Mortality Dose-Response Relationship (RCS Spline)
-
-Restricted cubic spline with 4 knots (5th, 35th, 65th, 95th percentiles) modeling the continuous IRI-mortality relationship. The curve demonstrates a monotonically decreasing hazard ratio across the IRI range, supporting a protective effect at all IRI levels.
-
-**Nonlinearity Test**: χ² = 16.6, df = 2, P = 0.0002
-
-Although statistically significant, visual inspection confirms an approximately log-linear relationship suitable for continuous IRI modeling.
-
-![eFigure S1: RCS Spline](/Users/andrewbouras/Documents/VishrutNHANES/Inflammatory Resilience Index (IRI) and Mortality in NHANES/output/jama_sensitivity/figure_rcs_spline.png)
+Both models demonstrated an inverse association between IRI and CV mortality. We treat the Fine-Gray estimate as a sensitivity analysis because `cmprsk::crr()` does not support the full NHANES survey design.
 
 ---
 
+## DISCUSSION
+
+In nationally representative NHANES samples of U.S. adults, we developed and evaluated an Inflammatory Resilience Index integrating hs-CRP, serum albumin, and DEXA-derived appendicular lean mass. The derivation cohort comprised young and middle-aged adults (NHANES 2015–2016, aged 20–59 years due to DEXA protocol), and external validation was conducted in NHANES 1999–2006 adults aged ≥20 years. Lower IRI was significantly associated with fair/poor self-rated health after adjustment for age, sex, and race/ethnicity. Adults in the lowest IRI quartile had 1.6-fold higher odds of poor self-rated health compared to the highest quartile; walking difficulty showed a non-significant trend (OR 1.82, 95% CI: 0.74-4.48, P=0.15). These findings support the concept that integrated assessment across inflammation, nutrition, and muscle mass domains may identify individuals at risk for functional decline.
+
+### Biological Plausibility
+
+The associations observed are biologically plausible given the well-established interrelationships between the IRI components. Chronic low-grade inflammation promotes muscle catabolism through activation of the ubiquitin-proteasome pathway and suppression of protein synthesis.⁷ Inflammatory cytokines including interleukin-6 and tumor necrosis factor-α directly impair myocyte function and promote sarcopenia.¹⁹ Albumin, beyond its role as a nutritional marker, functions as an antioxidant and anti-inflammatory mediator; hypoalbuminemia reflects both inadequate nutritional intake and increased catabolism during inflammatory states.²⁰
+
+The convergence of these pathways on functional outcomes is supported by prior literature. The Glasgow Prognostic Score (CRP + albumin) predicts survival in cancer patients, demonstrating the prognostic value of combining inflammation and nutrition.¹⁰ Sarcopenia, defined by low muscle mass and/or function, is associated with increased mortality, disability, and poor quality of life.⁶ Our IRI extends these concepts by integrating all three domains in a general adult population.
+
+### Comparison with Prior Literature
+
+Prior NHANES analyses have examined individual IRI components in isolation. Elevated hs-CRP is associated with increased cardiovascular mortality and all-cause mortality, even after adjustment for traditional risk factors.⁴ Low serum albumin predicts mortality across age groups and is incorporated into prognostic scores for heart failure and chronic kidney disease.²¹ Low appendicular lean mass, particularly when indexed to height, identifies individuals at risk for falls, fractures, and functional decline.¹⁴
+
+Our analysis extends this literature by demonstrating that a simple additive composite of standardized components is associated with self-reported functional outcomes. The use of z-score transformation allows equal weighting of each domain and facilitates interpretation: a 1-unit increase in IRI represents a 1-standard-deviation improvement in overall resilience.
+
+### Clinical Implications
+
+The external validation with 17.1 years of follow-up and more than 3,000 all-cause deaths strengthens the case for IRI as a potentially informative composite research marker. Several findings support its relevance for future validation work: (1) the all-cause mortality association was consistent across age groups, indicating IRI is not merely a surrogate for age-related sarcopenia; (2) adjustment for socioeconomic factors did not materially attenuate associations, supporting physiologic independence; and (3) the component-separated models showed that each biologic domain contributed information while the composite-alone model remained associated with mortality.
+
+Routine clinical assessment already includes serum albumin and inflammatory markers; DEXA body composition is increasingly available. Future validation work can determine whether combining these measurements into a composite score adds enough practical information to guide interventions targeting inflammation, nutrition, or muscle mass.
+
+The strong association between IRI and self-rated health is particularly notable, as self-rated health is itself a powerful predictor of mortality and health care utilization.¹⁵ Identifying modifiable contributors to poor self-rated health could inform targeted interventions.
+
+### Limitations
+
+Several limitations warrant consideration. First, the derivation-cohort design for functional outcomes is cross-sectional and therefore precludes causal inference; the IRI should be viewed as being associated with rather than necessarily predictive of current functional status. Prospective validation with incident outcomes is still needed.
+
+Second, the derivation cohort was restricted to participants aged 20–59 years because of the NHANES whole-body DEXA protocol, so derivation findings may not generalize to older populations in whom sarcopenia and chronic inflammation are more prevalent. The derivation cohort (N=2,416) also had only 16 all-cause deaths and 1 cardiovascular death, rendering derivation-cohort mortality analyses severely underpowered; hazard-ratio estimates from that cohort are imprecise. The external validation cohort (NHANES 1999–2006) included adults aged ≥20 years and provided more informative mortality data (3,263 all-cause deaths over 17.1 years), partially mitigating this limitation.
+
+Third, ALMI values were standardized to z-scores rather than using established sarcopenia cutoffs. This approach facilitates combination with other components but limits comparison with prior sarcopenia literature. Future analyses could evaluate IRI using clinically defined low muscle mass.
+
+Fourth, functional outcomes were self-reported and subject to reporting bias. Objective measures of physical function (e.g., gait speed, grip strength, 6-minute walk) would strengthen causal inference.
+
+Fifth, although external validation confirmed mortality associations, both cohorts were drawn from NHANES with similar eligibility criteria. Validation in different healthcare settings (e.g., clinical populations, non-U.S. cohorts) would strengthen generalizability.
+
+Sixth, NHANES provides mortality outcomes only; we could not evaluate incident non-fatal cardiovascular events (MI, stroke). The null association with stroke mortality (vs significant for heart disease) warrants investigation with event data.
+
+Seventh, the validation DEXA files are multiply imputed. We addressed this by pooling Cox models across the 5 NHANES DEXA imputations, but descriptive quartiles and tables used one participant-level record per person based on the mean ALMI across imputations. In addition, we did not report a formal pooled survey-weighted C-statistic or NRI because a validated estimator was not implemented in this workflow, and the Fine-Gray analysis remained an unweighted sensitivity analysis because `cmprsk::crr()` does not support the NHANES survey design.
+
+### Future Directions
+
+Prospective validation of the IRI in diverse populations, with hard endpoints including mortality and incident disability, is needed to determine whether it has practical clinical relevance. Research is also needed to determine whether interventions targeting IRI components improve functional outcomes.
+
+### Conclusions
+
+The Inflammatory Resilience Index, a simple composite of hs-CRP, serum albumin, and appendicular lean mass, was significantly associated with functional limitations in a derivation cohort of young and middle-aged U.S. adults and with lower all-cause mortality (HR 0.78, 95% CI: 0.75-0.81 per 1-unit increase) in an external validation cohort with 17.1 years of follow-up. Cardiovascular mortality estimates were also inverse in the primary validation models, but they should be interpreted more cautiously because they were more sensitivity-dependent than the all-cause findings. Adults in the lowest IRI quartile had 2.55-fold higher age- and sex-adjusted all-cause mortality risk than those in the highest quartile, supporting IRI as an integrative marker of physiologic resilience for further validation.
+
+These findings suggest IRI may help guide future risk-stratification research and identify potentially modifiable domains in individuals at risk for functional decline and adverse outcomes.
+
+### Take-Home Message
+
+- The IRI is a novel, simple integrative marker of physiologic reserve, combining inflammation (hs-CRP), nutrition (albumin), and muscle mass (appendicular lean mass).
+- Lower IRI scores identify young to middle-aged adults with significantly higher odds of adverse functional outcomes (fair/poor self-rated health) and, in an older external validation cohort, with higher subsequent all-cause mortality.
+- IRI is proposed as a candidate research marker for risk stratification and for identifying targets for nutritional, anti-inflammatory, or muscle-directed interventions; it requires external validation in additional cohorts before any clinical implementation.
+
+---
 ### eMethods: Variable Definitions and NHANES File Specifications
 
 **Derivation Cohort**: NHANES 2015-2016 (cycle I). DEXA body composition from DXX_I files. hs-CRP from HSCRP_I files. Albumin from BIOPRO_I files.
