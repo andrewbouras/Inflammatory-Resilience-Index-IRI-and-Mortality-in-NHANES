@@ -781,10 +781,10 @@ def main():
     combined_mi.to_csv(mi_csv, index=False)
     combined_mi.loc[combined_mi["eligible"] == 1].to_csv(mi_eligible_csv, index=False)
 
-    person_parquet_saved <- save_parquet_if_available(combined, person_parquet)
-    eligible_parquet_saved <- save_parquet_if_available(eligible, eligible_parquet)
-    mi_parquet_saved <- save_parquet_if_available(combined_mi, mi_parquet)
-    mi_eligible_parquet_saved <- save_parquet_if_available(
+    person_parquet_saved = save_parquet_if_available(combined, person_parquet)
+    eligible_parquet_saved = save_parquet_if_available(eligible, eligible_parquet)
+    mi_parquet_saved = save_parquet_if_available(combined_mi, mi_parquet)
+    mi_eligible_parquet_saved = save_parquet_if_available(
         combined_mi.loc[combined_mi["eligible"] == 1],
         mi_eligible_parquet,
     )
