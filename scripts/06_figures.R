@@ -85,7 +85,7 @@ if (file.exists(results_file)) {
     significant = results_raw$p_Q1vsQ4 < 0.05
   )
   # Clean outcome labels for plot
-  results$Outcome <- c("Fair/Poor Self-Rated Health", "Difficulty Walking 1/4 Mile", "Depression (PHQ-9 >=10)")
+  results$Outcome <- c("Fair/Poor Self-Rated Health", "Difficulty Walking", "Depression (PHQ-9 >=10)")
   cat("  Loaded Q1 vs Q4 results dynamically from", results_file, "\n")
 } else {
   stop("functional_outcomes_results.csv not found. Run 05_functional_analysis.R first.")

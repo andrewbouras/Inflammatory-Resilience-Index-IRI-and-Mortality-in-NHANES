@@ -132,7 +132,7 @@ cat("\n\n")
 cat("="," OUTCOME 2: MOBILITY LIMITATIONS ", "=\n", sep = paste(rep("=", 20), collapse = ""))
 
 # Difficulty walking prevalence
-cat("\nDifficulty Walking 1/4 Mile by IRI Quartile:\n")
+cat("\nDifficulty Walking by IRI Quartile:\n")
 for (q in c("Q1", "Q2", "Q3", "Q4")) {
   sub_svy <- subset(svy, iri_quartile == q & !is.na(difficulty_walking))
   prev <- svymean(~difficulty_walking, sub_svy)

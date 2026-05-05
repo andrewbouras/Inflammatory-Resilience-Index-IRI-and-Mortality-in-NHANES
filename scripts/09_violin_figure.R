@@ -20,8 +20,9 @@ iri_colors <- list(
 )
 
 # Project paths
-project_root <- normalizePath(file.path(dirname(sys.frame(1)$ofile %||% "."), ".."), mustWork = FALSE)
-if (!dir.exists(project_root)) {
+script_dir <- tryCatch(dirname(sys.frame(1)$ofile), error = function(e) ".")
+project_root <- normalizePath(file.path(script_dir, ".."), mustWork = FALSE)
+if (!dir.exists(file.path(project_root, "output"))) {
   project_root <- normalizePath(file.path(getwd(), ".."), mustWork = FALSE)
 }
 
@@ -143,7 +144,7 @@ make_violin <- function(data, outcome_col, outcome_label, yes_label = "Yes", no_
 
 # Create three violin plots
 p1 <- make_violin(df, "health_status", "Self-Rated Health", "Fair/Poor", "Good/Excellent")
-p2 <- make_violin(df, "walk_status", "Difficulty Walking 1/4 Mile", "Yes", "No")
+p2 <- make_violin(df, "walk_status", "Difficulty Walking", "Yes", "No")
 p3 <- make_violin(df, "depression_status", "Depression (PHQ-9 >=10)", "Yes", "No")
 
 # Combine using patchwork
